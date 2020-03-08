@@ -17,8 +17,8 @@ const Footer = ({ onPageChange }) => {
     return (
         <StyledSearch>
             <BottomNavigation value={value} onChange={handleChange}>
-                <BottomNavigationAction label="Recipe" value="recipe" icon={<ImportContactsTwoToneIcon />} />
                 <BottomNavigationAction label="Search" value="search" icon={<SearchTwoToneIcon />} />
+                <BottomNavigationAction label="Recipe" value="recipe" icon={<ImportContactsTwoToneIcon />} />
                 <BottomNavigationAction label="Bar Surfing" value="surfing" icon={<LocationOnIcon />} />
                 <BottomNavigationAction label="Contact" value="contact" icon={<ContactMailTwoToneIcon />} />
             </BottomNavigation>
