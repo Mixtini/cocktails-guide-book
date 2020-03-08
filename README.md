@@ -44,7 +44,6 @@ A cocktails guide book create by OverPartyLab
 ||story|
 ||url|
 ||images_url|
-|||
 
 * key-word-search
 
@@ -54,7 +53,6 @@ A cocktails guide book create by OverPartyLab
 ||key_list|
 ||recipe_id|
 ||cocktail_id|
-|||
 
 * cocktail-book
 
@@ -64,21 +62,27 @@ A cocktails guide book create by OverPartyLab
 ||cocktail_name|
 ||story|
 ||images_url|
-|||
 
 ### Wireframe
 
 #### Main
+
 ![main](./design/images/wf_main.png "main")
 
 #### Menu
+
 Click arrow icon on th bottom, will shows menu
+
 ![menu](./design/images/wf_menu.png "menu")
 
 #### Search
+
 View in each page
+
 ![search](./design/images/wf_search.png "search")
 
 #### Contact
+
 Contact Page
+
 ![contact](./design/images/wf_contact.png "contact")
