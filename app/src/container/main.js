@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 
 // component
 import Header from './header/header';
@@ -20,6 +21,7 @@ const Main = () => {
     return (
         <>
             <Header />
+            <Container>
             {
                 page === PAGES.SEARCH && (<Search />)
             }
@@ -32,9 +34,15 @@ const Main = () => {
             {
                 page === PAGES.CONTACT && (<Contact />)
             }
+            </Container>
             <Footer onPageChange={setPage} />
         </>
     );
 };
 
 export default Main;
+
+const Container = styled.div`
+    /* display: flex;
+    justify-content: center; */
+`;
