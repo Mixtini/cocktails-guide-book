@@ -16,12 +16,12 @@ const Footer = ({ onPageChange }) => {
     };
     return (
         <StyledSearch>
-            <BottomNavigation value={value} onChange={handleChange}>
+            <StyledBottomNavigation value={value} onChange={handleChange}>
                 <BottomNavigationAction label="Search" value="search" icon={<SearchTwoToneIcon />} />
                 <BottomNavigationAction label="Recipe" value="recipe" icon={<ImportContactsTwoToneIcon />} />
                 <BottomNavigationAction label="Bar Surfing" value="surfing" icon={<LocationOnIcon />} />
                 <BottomNavigationAction label="Contact" value="contact" icon={<ContactMailTwoToneIcon />} />
-            </BottomNavigation>
+            </StyledBottomNavigation>
         </StyledSearch>
     );
 };
@@ -33,7 +33,13 @@ const StyledSearch = styled.div`
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: red;
     color: white;
     text-align: center;
+`;
+
+const StyledBottomNavigation = styled(BottomNavigation)`
+    background-color: #424242;
+    && button > span {
+        color: white;
+    }
 `;
