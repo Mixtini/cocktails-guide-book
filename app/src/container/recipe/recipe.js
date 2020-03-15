@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -7,27 +7,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Select from '@material-ui/core/Select';
 
-const BASE_LIST = [
-    { key: 'all', name: 'All'},
-    { key: 'vodka', name: 'Vodka 伏特加'},
-    { key: 'gin', name: 'Gin 琴酒'},
-    { key: 'rum', name: 'Rum 蘭姆酒'},
-    { key: 'tequila', name: 'Tequila 龍舌蘭'},
-    { key: 'whiskey', name: 'Whiskey 威士忌'}
-];
-
-const ATTACHED_LIST = [
-    { key: 'all', name: 'All'},
-    { key: 'coke', name: 'Coke 可樂'},
-    { key: 'sprite', name: 'Sprite 雪碧'},
-    { key: 'bubble', name: 'Bubble 氣泡水'},
-    { key: 'grapefruit', name: 'Grapefruit 葡萄柚'},
-    { key: 'cranberry', name: 'Cranberry 蔓越梅'},
-    { key: 'orange', name: 'Orange 柳橙'},
-    { key: 'Pineapple', name: 'pineapple 鳳梨'},
-    { key: 'kiwi', name: 'Kiwi 奇異果'}
-];
-
+import { sendRequest, Api } from '../../utils/httpService';
 
 const Selector = ({ title, items, value, handleChange }) => {
     return (
@@ -55,6 +35,9 @@ const InputSearch = () => {
 const Recipe = () => {
     const [base, setBase] = React.useState('');
     const [attached, setAttached] = React.useState('');
+    const [baseList, setBaseList] = React.useState([]);
+    const [attachedList, setAttachedList] = React.useState([]);
+
     const handleChangeBase = event => {
         setBase(event.target.value);
     };
@@ -62,6 +45,19 @@ const Recipe = () => {
         setAttached(event.target.value);
     };
 
+    useEffect(() => {
+        sendRequest(Api.getRecipeCriteriaList)
+        .then((data) => {
+            const { base_list: baseList, attached_list: attachedList } = data;
+            setBaseList(baseList);
+            setAttachedList(attachedList);
+        })
+        .catch((err) => {
+            console.error(err);
+        });
+    }, []);
+
+    
     return (
         <Container>
             <HeaderText>
@@ -70,13 +66,13 @@ const Recipe = () => {
             <FormControlContainer>
                 <Selector
                     title="基酒"
-                    items={BASE_LIST}
+                    items={baseList}
                     value={base}
                     handleChange={handleChangeBase}
                 />
                 <Selector
                     title="附材料"
-                    items={ATTACHED_LIST}
+                    items={attachedList}
                     value={attached}
                     handleChange={handleChangeAttached}
                 />
