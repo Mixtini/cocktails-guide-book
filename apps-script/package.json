@@ -1,0 +1,10 @@
+{
+  "name": "cocktails-guide-book-apps-script",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Sean Chou(@sean1093)",
+  "license": "MIT",
+  "dependencies": {
+    "@types/google-apps-script": "^1.0.11"
+  }
+}
