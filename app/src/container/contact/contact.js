@@ -48,8 +48,9 @@ const ContactContainer = styled.div`
 `;
 
 const Image = styled.div`
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
+    background-size: 75%;
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(${props => props.url});

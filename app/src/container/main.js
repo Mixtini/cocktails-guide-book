@@ -17,7 +17,7 @@ const PAGES = {
 }
 
 const Main = () => {
-    const [page, setPage] = React.useState(PAGES.SEARCH);
+    const [page, setPage] = React.useState(PAGES.RECIPE);
     return (
         <>
             <Header />
