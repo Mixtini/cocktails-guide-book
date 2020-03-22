@@ -78,5 +78,5 @@ choose ```cocktails-guide-api-service```
 ### deploy
 
 ```sh
-firebase deploy --only functions
+npm run deploy
 ```

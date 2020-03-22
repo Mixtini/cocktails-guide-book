@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -23,41 +23,43 @@ const Selector = ({ title, items, value, handleChange }) => {
     );
 };
 
-const InputSearch = () => {
+const InputSearch = ({ inputValue, handleChange, onClickSearch }) => {
     return (
         <StyledForm noValidate autoComplete="off">
-            <TextField label="請直接輸入調酒名稱" fullWidth={true} />
-            <Button variant="contained">搜尋</Button>
+            <TextField
+                label="請直接輸入調酒名稱"
+                fullWidth={true}
+                onChange={handleChange}
+                value={inputValue}
+            />
+            <Button variant="contained" onClick={onClickSearch}>搜尋</Button>
         </StyledForm>
     );
 };
 
-const Recipe = () => {
-    const [base, setBase] = React.useState('');
-    const [attached, setAttached] = React.useState('');
-    const [baseList, setBaseList] = React.useState([]);
-    const [attachedList, setAttachedList] = React.useState([]);
-
-    const handleChangeBase = event => {
-        setBase(event.target.value);
+const Recipe = ({
+    base,
+    baseList,
+    handleChangeBase,
+    attached,
+    attachedList,
+    handleChangeAttached,
+    recipeList
+}) => {
+    const [inputValue, setInputValue] = React.useState('');
+    const handleChange = (e) => {
+        setInputValue(e.target.value)
     };
-    const handleChangeAttached = event => {
-        setAttached(event.target.value);
+    const onClickSearch = () => {
+        const list = Object.values(recipeList);
+        const find = list.find(e => (
+            e.name === inputValue ||
+            e.name_en === inputValue 
+        ));
+        console.log(inputValue, '--search key');
+        console.log(find, '--find');
+        setInputValue('');
     };
-
-    useEffect(() => {
-        sendRequest(Api.getRecipeCriteriaList)
-        .then((data) => {
-            const { base_list: baseList, attached_list: attachedList } = data;
-            setBaseList(baseList);
-            setAttachedList(attachedList);
-        })
-        .catch((err) => {
-            console.error(err);
-        });
-    }, []);
-
-    
     return (
         <Container>
             <HeaderText>
@@ -78,7 +80,11 @@ const Recipe = () => {
                 />
             </FormControlContainer>
             <SearchContainer>
-                <InputSearch />
+                <InputSearch
+                    inputValue={inputValue}
+                    handleChange={handleChange}
+                    onClickSearch={onClickSearch}
+                />
             </SearchContainer>
         </Container>
     );
