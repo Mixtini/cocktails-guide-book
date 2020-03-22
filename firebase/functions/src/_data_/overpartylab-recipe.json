@@ -8,7 +8,7 @@
                 { "ingredients": "gin", "volume": "30" },
                 { "ingredients": "white-rum", "volume": "30" },
                 { "ingredients": "cointreau", "volume": "30" },
-                { "ingredients": "white-tequila", "volume": "10" },
+                { "ingredients": "tequila", "volume": "10" },
                 { "ingredients": "lemon", "volume": "15" },
                 { "ingredients": "orange", "volume": "60" },
                 { "ingredients": "coke", "volume": null }
