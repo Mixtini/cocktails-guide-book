@@ -1,0 +1,32 @@
+{
+    "cocktails_list": {
+        "long-island-iced-tea": {
+            "name": "長島冰茶",
+            "name_en": "Long Island Iced Tea",
+            "recipe": [
+                { "ingredients": "vodka", "volume": "30" },
+                { "ingredients": "gin", "volume": "30" },
+                { "ingredients": "white-rum", "volume": "30" },
+                { "ingredients": "cointreau", "volume": "30" },
+                { "ingredients": "white-tequila", "volume": "10" },
+                { "ingredients": "lemon", "volume": "15" },
+                { "ingredients": "orange", "volume": "60" },
+                { "ingredients": "coke", "volume": null }
+            ],
+            "preparation": "將所有材料放入雪克杯中，搖至雪克杯微冰。取長飲杯置入冰塊，倒入混合過後的材料後再用可樂倒滿。",
+            "tips": null
+        },
+        "cosmopolitan": {
+            "name": "柯夢波丹",
+            "name_en": "Cosmopolitan",
+            "recipe": [
+                { "ingredients": "vodka", "volume": "15" },
+                { "ingredients": "cointreau", "volume": "15" },
+                { "ingredients": "lemon", "volume": "7" },
+                { "ingredients": "cranberry", "volume": "7" }
+            ],
+            "preparation": "先將雞尾酒杯冰杯，並把所有材料放入雪克杯中，搖至雪克杯微冰後，倒入雞尾酒杯中並加上裝飾。",
+            "tips": null
+        }
+    }
+}
