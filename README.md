@@ -77,6 +77,13 @@ choose ```cocktails-guide-api-service```
 
 ### deploy
 
+deploy only functions
 ```sh
 npm run deploy
+```
+
+deploy by single functions
+ex:
+```sh
+firebase deploy --only functions:getAttachedList
 ```

@@ -1,0 +1,55 @@
+{
+    "config": {
+        "baselist" : {
+            "gin" : "琴酒",
+            "rum" : "蘭姆酒",
+            "tequila" : "龍舌蘭",
+            "vodka" : "伏特加",
+            "whiskey" : "威士忌"
+        },
+        "attached": {
+            "coke": "可樂",
+            "sprite": "雪碧",
+            "bubble": "氣泡水",
+            "grapefruit": "葡萄柚",
+            "cranberry": "蔓越梅",
+            "orange": "柳橙",
+            "Pineapple": "鳳梨",
+            "kiwi": "奇異果"
+        }
+    },
+    "overpartylab-recipes": {
+        "long-island-iced-tea": {
+            "name": "長島冰茶",
+            "name_en": "Long Island Iced Tea",
+            "recipe": { 
+                "vodka": "30",
+                "gin": "30",
+                "rum": "30",
+                "cointreau": "30",
+                "tequila": "10",
+                "lemon": "15",
+                "orange": "60",
+                "coke": "適量"
+            },
+            "preparation": "將所有材料放入雪克杯中，搖至雪克杯微冰。取長飲杯置入冰塊，倒入混合過後的材料後再用可樂倒滿。",
+            "tips": null,
+            "keys": ["長島冰茶", "Long Island Iced Tea", "酒感"],
+            "image": ""
+        },
+        "cosmopolitan": {
+            "name": "柯夢波丹",
+            "name_en": "Cosmopolitan",
+            "recipe": {
+                "vodka": "15",
+                "cointreau": "15",
+                "lemon": "7",
+                "cranberry": "7"
+            },
+            "preparation": "先將雞尾酒杯冰杯，並把所有材料放入雪克杯中，搖至雪克杯微冰後，倒入雞尾酒杯中並加上裝飾。",
+            "tips": null,
+            "keys": ["柯夢波丹", "Cosmopolitan", "甜的", "妹酒"],
+            "image": ""
+        }
+    }
+}
