@@ -1,7 +1,9 @@
 # cocktails-guide-book
 A cocktails guide book create by OverPartyLab.
 
-Demo page: [Cocktails Guide Book](https://overpartylab-4c6d2.web.app/)
+Design: [Design Doc](design/design-doc.md)
+
+Demo page: [Cocktails Guide Book #beta](https://overpartylab-4c6d2.web.app/)
 
 ## Env introduction
 
@@ -14,12 +16,11 @@ We use firebase service to development our service.
 
 |Folder  |Function         |Notes      |
 |--------|-----------------|-----------|
-|app     |web portal       ||
-|database|database snapshot||
+|app     |web portal       |react web app|
 |design  |design document  ||
-|docs    |github page      |will remove|
-|friebase|friebase service ||
+|friebase|friebase service |firebase functions, hosting and database|
 |script  |cicd script      ||
+||||
 
 ## Login with firebase
 

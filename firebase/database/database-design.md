@@ -7,8 +7,11 @@ We are using Firebase Realtime Database, the file ```cocktails-guide-api-service
 ## How to contribute
 1. create a temp branch
 2. add data
-3. update database by using script/update-db.sh
+3. update database by using ```script/update-db.sh```
 4. merge branch back to master (no PR needed)
+
+Please see the README to learn how to setup firebase env
+README: [README#login-with-firebase](../../README.md#login-with-firebase)
 
 ## Table Schema
 
