@@ -7,12 +7,18 @@
             "tequila": "龍舌蘭",
             "vodka": "伏特加",
             "whiskey": "威士忌",
+            "bourbon_whiskey": "波本威士忌",
             "cognac": "干邑白蘭地"
         },
         "liqueur": {
             "cointreau": "君度橙酒",
+            "blood_orange_cointreau": "君度血橙酒",
             "midori": "蜜多麗蜜瓜利口酒",
             "dita": "Dita荔枝利口酒",
+            "Fernet": "Fernet苦酒",
+            "calvados": "蘋果白蘭地",
+            "tiffin": "蒂凡茶酒",
+            "dom_benedictine_liqueur": "班尼迪克丁香甜酒",
             "apple_liqueur": "青蘋果利口酒",
             "peach_liqueur": "水蜜桃利口酒",
             "rose_liqueur": "玫瑰花利口酒",
@@ -20,8 +26,20 @@
             "elderflower_liqueur": "接骨木花利口酒",
             "pomegranate_liqueur": "紅石榴利口酒",
             "coffee_liqueur": "咖啡利口酒",
+            "wild_strawberry_liqueur": "野草莓利口酒",
+            "cherry_brandy_liqueur": "櫻桃白蘭地利口酒",
+            "x_rated_tropix_liqueur": "艾絲芮德熔合鳳梨椰子香甜酒",
+            "maraschino_liqueur": "黑櫻桃利口酒",
+            "blue_curacao_liqueur": "藍柑橘利口酒",
+            "tatratea_original_tea_liqueur": "斯洛伐克塔特原味茶香甜酒",
+            "pallini_limoncellos": "意大利檸檬利口酒",
+            "green_tea_umeshu": "茶梅酒",
             "sake": "清酒",
-            "umeshu": "梅酒"
+            "umeshu": "梅酒",
+            "angostura_bitter": "安格式苦精",
+            "tea_beer": "深葉啤酒",
+            "mango_beer": "芒果啤酒",
+            "lychee_beer": "荔枝啤酒"
         },
         "attached": {
             "coke": "可樂",
@@ -32,12 +50,16 @@
             "tonic_water": "通寧水",
             "lemon": "新鮮檸檬汁",
             "grapefruit": "新鮮葡萄柚汁",
+            "grape": "新鮮葡萄汁",
             "cranberry": "蔓越梅汁",
+            "guava": "芭樂汁",
             "orange": "新鮮柳橙汁",
             "pineapple": "新鮮鳳梨汁",
+            "mango": "新鮮芒果汁",
             "kiwi": "新鮮奇異果汁",
             "kumquat": "新鮮金桔汁",
             "sugar_cane": "新鮮甘蔗汁",
+            "banana": "新鮮香蕉汁",
             "almond_tea": "杏仁茶",
             "mint_leaves": "新鮮薄荷葉",
             "white_sugar": "白砂糖",
@@ -45,12 +67,26 @@
             "honey_water": "蜂蜜水",
             "condensed_milk": "煉乳",
             "egg_white": "蛋白",
-            "espresso": "濃縮咖啡"
+            "espresso": "濃縮咖啡",
+            "maple_syrup": "楓糖漿",
+            "grenadine_syrup": "紅石榴糖漿",
+            "elderflower_syrup": "接骨木糖漿"
         },
         "homemade": {
             "vodka_oolong_infusion": "烏龍茶伏特加",
             "vodka_strawberry_infusion": "草莓伏特加",
             "syrup": "糖漿"
+        },
+        "bubble_tea": {
+            "earl_grey_tea_latte": "英式格雷伯爵鮮奶茶",
+            "earl_grey_iced_tea": "格雷冰茶",
+            "fruit_tea": "水果茶",
+            "big_bubble_milk_tea": "波霸奶茶",
+            "tieGuanYin_tea_latte": "觀音拿鐵",
+            "pineapple_green_tea": "鳳梨冰茶",
+            "sugar_cane_green_tea": "甘蔗青茶",
+            "citrus_green_tea_with_aloe_vera": "橙柚青蘆薈蜜",
+            "four_seasons_green_tea": "四季春茶"
         }
     },
     "overpartylab-recipes": {
@@ -77,7 +113,10 @@
                 "zh": "將所有材料放入雪克杯中，搖至雪克杯微冰。取長飲杯置入冰塊，倒入混合過後的材料後再用可樂倒滿。",
                 "en": "Add all ingredients into cocktail shaker filled with ice. Shake it until chilled, then pour into glass and full up with coke."
             },
-            "tips": "",
+            "tips": {
+                "zh": "",
+                "en": ""
+            },
             "keys": ["長島冰茶", "Long Island Iced Tea", "酒感"],
             "image": "",
             "igtoken": "Bt_DxgkFEF9"
