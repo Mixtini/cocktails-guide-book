@@ -1,15 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import WIP from '../../component/wip/wip';
-
 const Surfing = () => {
     return (
         <Container>
             <HeaderText>
                 <div>Surfing</div>
             </HeaderText>
-            <WIP />
         </Container>
     );
 };

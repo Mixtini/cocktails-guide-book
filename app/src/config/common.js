@@ -1,3 +1,3 @@
 export const COMMON = {
-    API_SERVICE_HOST: 'https://us-central1-cocktails-guide-api-service.cloudfunctions.net/'
+    API_SERVICE_HOST: 'us-central1-overpartylab-4c6d2.cloudfunctions.net'
 };

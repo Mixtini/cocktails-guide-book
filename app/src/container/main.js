@@ -36,7 +36,7 @@ const init = (setBaseList, setAttachedList) => {
 };
 
 const getRecipeList = (setRecipeList) => {
-    sendRequest(Api.getCocktailsList)
+    sendRequest(Api.getCocktailsRecipes)
         .then((data) => {
             setRecipeList(data);
         })
@@ -47,7 +47,7 @@ const getRecipeList = (setRecipeList) => {
 
 
 const Main = () => {
-    const [page, setPage] = React.useState(PAGES.RECIPE);
+    const [page, setPage] = React.useState(PAGES.CONTACT);
     // recipe
     const [base, setBase] = React.useState('');
     const [attached, setAttached] = React.useState('');
@@ -71,7 +71,7 @@ const Main = () => {
         <>
             <Header />
             <Container>
-                {
+                {/* {
                     page === PAGES.SEARCH && (<Search />)
                 }
                 {
@@ -89,7 +89,7 @@ const Main = () => {
                 }
                 {
                     page === PAGES.SURFING && (<Surfing />)
-                }
+                } */}
                 {
                     page === PAGES.CONTACT && (<Contact />)
                 }

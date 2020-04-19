@@ -1,15 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import WIP from '../../component/wip/wip';
-
 const Search = () => {
     return (
         <Container>
             <HeaderText>
                 <div>Search</div>
             </HeaderText>
-            <WIP />
         </Container>
     );
 };
