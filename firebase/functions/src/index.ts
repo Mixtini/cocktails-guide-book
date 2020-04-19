@@ -31,32 +31,12 @@ export const getAttachedList = functions.https.onRequest((req: any, res: any) =>
 
 // get overpartylab recipe
 export const getCocktailsRecipes = functions.https.onRequest((req: any, res: any) => {
-    // console.log(req.query, 'req.query');
-    // const { name } = req.query;
     getDatafromDatabase('overpartylab-recipes')
     .then((snap: any) => {
         return cors(req, res, () => {
             res.status(200).send(snap);
         });
     })
-    // .then((snap: any) => {
-    //     if (name) {
-    //         console.log(snap, '--snap');
-    //         const values = Object.values(snap);
-    //         console.log(values, '--values');
-    //         const filter = values.filter((e: any) => { 
-    //             console.log(e, '--e');
-    //             return (e.keys.findIndex(name) > -1)
-    //         });
-    //         return cors(req, res, () => {
-    //             res.status(200).send(filter);
-    //         });
-    //     } else {
-    //         return cors(req, res, () => {
-    //             res.status(200).send(snap);
-    //         });
-    //     }
-    // })
 });
 
 // for testing API

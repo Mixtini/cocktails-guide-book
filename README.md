@@ -48,7 +48,7 @@ cp app/dist docs
 
 ## API Service
 
-We use firebase functions to be our API serverless service. Due to cost considerations, we will not use database in the early stage. All data save as the JSON file in the _data_ folder.
+We use firebase functions to be our API serverless service. And firebase database for our database. The database snapshot will save in /database folder.
 
 ### Install dependency
 
