@@ -4,8 +4,9 @@ const { API_SERVICE_HOST, API_KEY } = COMMON;
 
 // fetch data
 export const sendRequest = (api, resolve, reject) => {
+    const API_PATH = `https://${api}`;
     return new Promise((resolve, reject) => {
-        fetch(api).then((response) => {
+        fetch(API_PATH).then((response) => {
             if (response.status === 200 || response.status === 204) {
                 response.json().then((rsp) => {
                     resolve(rsp);
@@ -26,5 +27,5 @@ export const sendRequest = (api, resolve, reject) => {
 export const Api = {
     getBaseList: `${API_SERVICE_HOST}/getBaseList`,
     getAttachedList: `${API_SERVICE_HOST}/getAttachedList`,
-    getCocktailsList: `${API_SERVICE_HOST}/getCocktailsList`,
+    getCocktailsRecipes: `${API_SERVICE_HOST}/getCocktailsRecipes`,
 };
