@@ -1,8 +1,70 @@
 # cocktails-guide-book
 A cocktails guide book create by OverPartyLab.
 
-Demo page: [Cocktails Guide Book](https://overpartylab.github.io/cocktails-guide-book/)
+Demo page: [Cocktails Guide Book](https://overpartylab-4c6d2.web.app/)
 
+## Env introduction
+
+We use firebase service to development our service.
+* API serverless service: firebase functions
+* Web host: firebase hosting
+* Realtime database: firebase database
+
+### Folder structure
+
+|Folder  |Function         |Notes      |
+|--------|-----------------|-----------|
+|app     |web portal       ||
+|database|database snapshot||
+|design  |design document  ||
+|docs    |github page      |will remove|
+|friebase|friebase service ||
+|script  |cicd script      ||
+
+## Login with firebase
+
+### Install dependency
+
+```sh
+npm install -g firebase-tools
+```
+
+### Start to develop
+
+#### login to firebase
+
+Please login with your google account
+
+```sh
+firebase login
+```
+
+#### Init firebase with existing project
+```sh
+firebase init
+```
+choose your porject name. ex: ```overpartylab```
+
+
+## How to deploy our serivces
+
+After login firebase, please run the script <strong>under the script folder</strong>
+
+### Deploy all services
+```sh
+sh deploy.sh
+```
+
+### Deploy api service
+```sh
+sh deploy-api.sh
+```
+
+### Deploy web portal
+ex:
+```sh
+sh deploy-web.sh
+```
 
 ## Web app
 
@@ -13,73 +75,39 @@ We use React.js to build our webapp. Source code are in /app folder.
 ```sh
 yarn install
 ```
-or
-```sh
-npm install
-```
 
 ### Run the react app in developing mode
 ```sh
 yarn start
 ```
-or
-```sh
-npm run start
-```
 
-### deploy
+### Deploy
 
-* build react file
+#### Build react file
 
 ```sh
 yarn build
 ```
-or
+
+#### Copy files to firebase/public
+
 ```sh
-npm run build
+cp -a dist/. ../firebase/public
 ```
 
-* copy files to github pages
-
+#### Deploy by firebase-cli
 ```sh
-cp app/dist docs
+firebase deploy --only hosting
 ```
 
 
 ## API Service
 
-We use firebase functions to be our API serverless service. And firebase database for our database. The database snapshot will save in /database folder.
-
-### Install dependency
-
-```sh
-npm install -g firebase-tools
-```
-
-### Start to develop
-
-* login to firebase
-
-Please login with OverPartyLab google account
-
-```sh
-firebase login
-```
-
-* init firebase with existing project
-```sh
-firebase init functions
-```
-
-choose ```cocktails-guide-api-service```
-
-![main](design/images/firebase-init.png "main")
-
 ### deploy
 
-deploy only functions
+deploy by by firebase-cli
 ```sh
-npm run deploy
+firebase deploy --only functions
 ```
 
 deploy by single functions
