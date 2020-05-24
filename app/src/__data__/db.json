@@ -89,8 +89,47 @@
             "four_seasons_green_tea": "四季春茶"
         }
     },
-    "overpartylab-recipes": {
-        "long_island_iced_tea": {
+    "overpartylab-cocktails": [
+        {
+            "key": "long_island_iced_tea",
+            "name": {
+                "zh": "長島冰茶",
+                "en": "Long Island Iced Tea"
+            },
+            "keys": ["長島冰茶", "Long Island Iced Tea", "酒感"],
+            "igtoken": "Bt_DxgkFEF9"
+        },
+        {
+            "key": "cosmopolitan",
+            "name": {
+                "zh": "柯夢波丹",
+                "en": "Cosmopolitan"
+            },
+            "keys": ["柯夢波丹", "Cosmopolitan", "甜的", "妹酒"],
+            "igtoken": "BuGcFpgFU2C"
+        },
+        {
+            "key": "mojito",
+            "name": {
+                "zh": "莫西多",
+                "en": "Mojito"
+            },
+            "keys": ["莫西多", "Mojito", "甜的", "清爽", "薄荷"],
+            "igtoken": "BuLoM1ClP6G"
+        },
+        {
+            "key": "teaffany",
+            "name": {
+                "zh": "莓荔史翠普",
+                "en": "Marie Clair named Teaffany"
+            },
+            "keys": ["莓荔史翠普", "Teaffany", "甜的", "荔枝", "茶", "茶香"],
+            "igtoken": "BuQur3Ilex8"
+        }
+    ],
+    "overpartylab-recipes": [
+        {
+            "key": "long_island_iced_tea",
             "name": {
                 "zh": "長島冰茶",
                 "en": "Long Island Iced Tea"
@@ -117,11 +156,11 @@
                 "zh": "",
                 "en": ""
             },
-            "keys": ["長島冰茶", "Long Island Iced Tea", "酒感"],
-            "image": "",
+            "keys": ["長島冰茶", "Long Island Iced Tea", "酒感", "123"],
             "igtoken": "Bt_DxgkFEF9"
         },
-        "cosmopolitan": {
+        {
+            "key": "cosmopolitan",
             "name": {
                 "zh": "柯夢波丹",
                 "en": "Cosmopolitan"
@@ -140,10 +179,12 @@
                 "zh": "先將雞尾酒杯冰杯，並把所有材料放入雪克杯中，搖至雪克杯微冰後，倒入雞尾酒杯中並加上裝飾。",
                 "en": "Chill your cocktail glass first. Put all the ingredients into cocktail shaker filled with ice. Shake it until chilled and pour into cocktail glass."
             },
-            "tips": "",
-            "keys": ["柯夢波丹", "Cosmopolitan", "甜的", "妹酒"],
-            "image": "",
+            "tips": {
+                "zh": "",
+                "en": ""
+            },
+            "keys": ["柯夢波丹", "Cosmopolitan", "甜的", "妹酒", "123"],
             "igtoken": "BuGcFpgFU2C"
         }
-    }
+    ]
 }

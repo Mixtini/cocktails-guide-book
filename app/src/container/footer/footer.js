@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import ImportContactsTwoToneIcon from '@material-ui/icons/ImportContactsTwoTone';
 import SearchTwoToneIcon from '@material-ui/icons/SearchTwoTone';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
 import ContactMailTwoToneIcon from '@material-ui/icons/ContactMailTwoTone';
 
 import styled from 'styled-components';
@@ -17,9 +15,7 @@ const Footer = ({ onPageChange }) => {
     return (
         <StyledSearch>
             <StyledBottomNavigation value={value} onChange={handleChange}>
-                <BottomNavigationAction disabled label="Search" value="search" icon={<SearchTwoToneIcon />} />
-                <BottomNavigationAction disabled label="Recipe" value="recipe" icon={<ImportContactsTwoToneIcon />} />
-                <BottomNavigationAction disabled label="Bar Surfing" value="surfing" icon={<LocationOnIcon />} />
+                <BottomNavigationAction label="Search" value="search" icon={<SearchTwoToneIcon />} />
                 <BottomNavigationAction label="Contact" value="contact" icon={<ContactMailTwoToneIcon />} />
             </StyledBottomNavigation>
         </StyledSearch>

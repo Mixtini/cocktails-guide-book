@@ -27,5 +27,5 @@ export const sendRequest = (api, resolve, reject) => {
 export const Api = {
     getBaseList: `${API_SERVICE_HOST}/getBaseList`,
     getAttachedList: `${API_SERVICE_HOST}/getAttachedList`,
-    getCocktailsRecipes: `${API_SERVICE_HOST}/getCocktailsRecipes`,
+    getCocktails: `${API_SERVICE_HOST}/getCocktails`,
 };

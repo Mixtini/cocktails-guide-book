@@ -1,9 +1,9 @@
 # cocktails-guide-book
-A cocktails guide book create by OverPartyLab.
+A cocktails search portal create by [Over Party Lab](https://www.instagram.com/over.party.lab/).
 
 Design: [Design Doc](design/design-doc.md)
 
-Demo page: [Cocktails Guide Book #beta](https://overpartylab-4c6d2.web.app/)
+Demo page: [Over Party Lab Portal #beta](https://overpartylab-4c6d2.web.app/)
 
 ## Env introduction
 
@@ -14,12 +14,14 @@ We use firebase service to development our service.
 
 ### Folder structure
 
-|Folder  |Function         |Notes      |
-|--------|-----------------|-----------|
-|app     |web portal       |react web app|
-|design  |design document  ||
-|friebase|friebase service |firebase functions, hosting and database|
-|script  |cicd script      ||
+|Folder   |Function         |Notes      |
+|---------|-----------------|-----------|
+|app      |web portal       |react web app|
+|design   |design document  ||
+|functions|firebase service ||
+|public   |firebase hosting ||
+|database |firebase database||
+|script   |cicd script      ||
 ||||
 
 ## Login with firebase
@@ -44,7 +46,7 @@ firebase login
 ```sh
 firebase init
 ```
-choose your porject name. ex: ```overpartylab```
+choose your project name. ex: ```overpartylab```
 
 
 ## How to deploy our serivces
@@ -93,7 +95,7 @@ yarn build
 #### Copy files to firebase/public
 
 ```sh
-cp -a dist/. ../firebase/public
+cp -a dist/. ../public
 ```
 
 #### Deploy by firebase-cli
