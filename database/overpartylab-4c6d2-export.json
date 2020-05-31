@@ -97,16 +97,18 @@
             "name": {
                 "en": "Long Island Iced Tea",
                 "zh": "長島冰茶"
-            }
+            },
+            "signature": false
         },
         {
             "igtoken": "BuGcFpgFU2C",
             "key": "cosmopolitan",
-            "keys": ["柯夢波丹", "Cosmopolitan", "伏特加", "君度", "甜的", "妹酒", "君度"],
+            "keys": ["柯夢波丹", "Cosmopolitan", "伏特加", "君度", "甜的", "妹酒"],
             "name": {
                 "en": "Cosmopolitan",
                 "zh": "柯夢波丹"
-            }
+            },
+            "signature": false
         },
         {
             "igtoken": "BuLoM1ClP6G",
@@ -115,7 +117,8 @@
             "name": {
                 "en": "Mojito",
                 "zh": "莫西多"
-            }
+            },
+            "signature": false
         },
         {
             "igtoken": "BuQur3Ilex8",
@@ -124,7 +127,8 @@
             "name": {
                 "en": "Marie Clair named Teaffany",
                 "zh": "莓荔史翠普"
-            }
+            },
+            "signature": true
         },
         {
             "igtoken": "BuYldJylf4g",
@@ -133,7 +137,8 @@
             "name": {
                 "en": "Honey Gin",
                 "zh": "琴蜜"
-            }
+            },
+            "signature": true
         },
         {
             "igtoken": "BudtbbilfO2",
@@ -142,7 +147,8 @@
             "name": {
                 "en": "Oriental Princess",
                 "zh": "清梅格格"
-            }
+            },
+            "signature": true
         },
         {
             "igtoken": "Bui7tiCFkVl",
@@ -151,7 +157,8 @@
             "name": {
                 "en": "Japanese Slipper",
                 "zh": "日本拖鞋"
-            }
+            },
+            "signature": false
         },
         {
             "igtoken": "BuqqT7hF3R9",
@@ -160,7 +167,8 @@
             "name": {
                 "en": "Ginjito",
                 "zh": "涼琴相悅"
-            }
+            },
+            "signature": true
         }
     ],
     "overpartylab-recipes": [

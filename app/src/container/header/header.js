@@ -5,20 +5,20 @@ import Switch from '@material-ui/core/Switch';
 
 import styled from 'styled-components';
 
-const Header = () => {
+const Header = ({ minWidth }) => {
     return (
-        <AppBar position="static">
+        <StyledAppBar minWidth={minWidth} position="static">
             <AppBarContainer>
                 <HeaderText>Over Party Lab</HeaderText>
                 <FormControlLabel
                     disabled
                     control={
-                    <Switch checked={true} value="true" />
+                        <Switch checked={true} value="true" />
                     }
                     label="Light Theme"
                 />
             </AppBarContainer>
-        </AppBar>
+        </StyledAppBar>
     );
 };
 
@@ -27,6 +27,11 @@ export default Header;
 const HeaderText = styled.div`
     font-size: 24px;
     padding: 15px;
+    
+`;
+
+const StyledAppBar = styled(AppBar)`
+    min-width: ${({minWidth}) => `${minWidth}px`};
 `;
 
 const AppBarContainer = styled.div`
@@ -34,5 +39,5 @@ const AppBarContainer = styled.div`
         background-color: #424242;
     }
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
 `;

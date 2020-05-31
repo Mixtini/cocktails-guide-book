@@ -1,18 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
-
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Switch from '@material-ui/core/Switch';
+import Chip from '@material-ui/core/Chip';
 import InstagramEmbed from 'react-instagram-embed';
+import ChipInput from 'material-ui-chip-input'
 
 import Loader from '../../components/loader';
 import { sendRequest, Api } from '../../utils/httpService';
+import { STYLE } from '../../config/common';
 
-// import MOCKDATA from '../../__data__/cocktails-guide-api-service-export.json';
+// import MOCKDATA from '../../__data__/db.json';
 
 const DEFAULT_STATE = {
-    value: '',
+    value: [],
+    signature: true,
     isSearching: false,
     isInit: false,
     list: [],
@@ -47,16 +53,20 @@ const Card = ({ value, setLoading }) => {
 };
 const Search = () => {
     const [userAction, setUserAction] = useState(DEFAULT_STATE);
-    const { value, isSearching, isInit, list, searchResultList } = userAction;
+    const { value, signature, isSearching, isInit, list, searchResultList } = userAction;
 
-    const onInputChange = (e) => {
-        const value = e.target.value;
-        setUserAction({ ...userAction, value });
-    };
     const onClickSearch = (e) => {
         setUserAction({ ...userAction, isSearching: true });
         const searchResultList = list.filter(e => {
-            return Object.values(e.keys).indexOf(value) > -1;
+            let filterRule = false;
+            for (let i = 0; i < value.length; i += 1) {
+                console.log(value[i]);
+                console.log(e.keys);
+                filterRule = Object.values(e.keys).indexOf(value[i]) > -1;
+                if (filterRule) break;
+            }
+            if(signature === false) filterRule = filterRule && (e.signature === signature);
+            return filterRule;
         });
         setUserAction({ ...userAction, searchResultList, isSearching: false });
     };
@@ -66,9 +76,21 @@ const Search = () => {
     const setLoading = (flag) => {
         setUserAction({ ...userAction, isSearching: flag });
     };
-    const onClickType = (value) => {
-        setUserAction({ ...userAction, value });
+    const onClickType = (newValue) => {
+        setUserAction({ ...userAction, value: [...value, newValue] });
     };
+    const onSwitchSignature = (e) => {
+        const signature = e.target.checked;
+        setUserAction({ ...userAction, signature });
+    };
+    const onChipInputChange = (newValue) => {
+        setUserAction({ ...userAction, value: [...value, newValue] });
+    };
+    const handleDeleteChip = (chip) => {
+        const index = value.indexOf(chip);
+        if (index !== -1) value.splice(index, 1);
+        setUserAction({ ...userAction, value });
+    }
 
     useEffect(() => {
         getCocktailsList(onUpdateList);
@@ -85,7 +107,19 @@ const Search = () => {
                 isInit && (
                     <> 
                         <Item>
-                            <ContentContainer>輸入您喜歡的風味，氣味，基酒或是直接輸入調酒名稱，我們就會推薦您適合的調酒唷！(目前功能僅開放單一風味推薦)</ContentContainer>
+                            <ContentContainer>輸入您喜歡的風味，氣味，基酒或是直接輸入調酒名稱，我們就會推薦您適合的調酒唷！</ContentContainer>
+                        </Item>
+                        <Item>
+                        <FormControlLabel
+                            control={
+                                <Switch
+                                    color="primary"
+                                    checked={signature}
+                                    onChange={onSwitchSignature}
+                                />
+                            }
+                            label={<SwitchText checked={signature}>包含 OverPartyLab 獨創調酒</SwitchText>}
+                        />
                         </Item>
                         <Item>
                             <ActionContainer>
@@ -99,11 +133,12 @@ const Search = () => {
                         <Item>
                             <SearchContainer>
                                 <StyledSearchIcon />
-                                <TextField
+                                <ChipInput
                                     label="輸入喜歡的風味，基酒或是調酒"
-                                    fullWidth={true}
-                                    onChange={onInputChange}
                                     value={value}
+                                    fullWidth={true}
+                                    onChange={(chips) => onChipInputChange(chips)}
+                                    onDelete={(chip, index) => handleDeleteChip(chip, index)}
                                 />
                             </SearchContainer>
                             <Button variant="contained" onClick={onClickSearch} color="primary">搜尋</Button>
@@ -150,24 +185,28 @@ const Container = styled.div`
 const Item = styled.div`
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: ${STYLE.PADDING}px;
 `;
 
 const ContentContainer = styled.div`
-    width: 380px;
+    width: ${STYLE.MIN_WIDTH - STYLE.PADDING}px;
 `;
 
 const ActionContainer = styled.div`
     button {
         margin: 3px;
     }
-    width: 380px;
+    width: ${STYLE.MIN_WIDTH - STYLE.PADDING}px;
+`;
+
+const SwitchText = styled.span`
+    color: ${({checked}) => checked ? 'black' : 'grey'};
 `;
 
 const SearchContainer = styled.div`
     display: flex;
-    width: 380px;
-    margin-right: 10px;
+    width: ${STYLE.MIN_WIDTH - STYLE.PADDING}px;
+    margin-right: ${STYLE.PADDING}px;
 `;
 
 const StyledSearchIcon = styled(SearchIcon)`
@@ -182,7 +221,7 @@ const Cards = styled.div`
 
 const HeaderText = styled.div`
     font-size: 28px;
-    padding: 10px;
+    padding: ${STYLE.PADDING}px;
     display: flex;
     justify-content: center;
 `;

@@ -7,6 +7,8 @@ import Footer from './footer/footer';
 import Search from './search/search';
 import Contact from './contact/contact';
 
+import { STYLE } from '../config/common';
+
 const PAGES = {
     SEARCH: 'search',
     CONTACT: 'contact'
@@ -16,7 +18,7 @@ const Main = () => {
     const [page, setPage] = React.useState(PAGES.SEARCH);
     return (
         <>
-            <Header />
+            <Header minWidth={STYLE.MIN_WIDTH} />
             <Container>
                 {
                     page === PAGES.SEARCH && (<Search />)
@@ -33,4 +35,5 @@ const Main = () => {
 export default Main;
 
 const Container = styled.div`
+    min-width: ${STYLE.MIN_WIDTH}px;
 `;
