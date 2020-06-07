@@ -36,4 +36,5 @@ export default Main;
 
 const Container = styled.div`
     min-width: ${STYLE.MIN_WIDTH}px;
+    height: calc(100vh - 64px);
 `;

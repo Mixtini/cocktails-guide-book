@@ -7,7 +7,7 @@ import ContactMailTwoToneIcon from '@material-ui/icons/ContactMailTwoTone';
 import styled from 'styled-components';
 
 const Footer = ({ onPageChange }) => {
-    const [value, setValue] = React.useState('');
+    const [value, setValue] = React.useState('search');
     const handleChange = (event, newValue) => {
         setValue(newValue);
         onPageChange(newValue);
@@ -29,12 +29,13 @@ const StyledSearch = styled.div`
     left: 0;
     bottom: 0;
     width: 100%;
-    color: white;
     text-align: center;
 `;
 
 const StyledBottomNavigation = styled(BottomNavigation)`
-    background-color: #424242;
+    && {
+        background-color: #424242;
+    }
     && button > span {
         color: white;
     }

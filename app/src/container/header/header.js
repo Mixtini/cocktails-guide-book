@@ -1,22 +1,24 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Switch from '@material-ui/core/Switch';
-
 import styled from 'styled-components';
+
+import AppBar from '@material-ui/core/AppBar';
+// import FormControlLabel from '@material-ui/core/FormControlLabel';
+// import Switch from '@material-ui/core/Switch';
+
+import COMMON_TEXT from '../../assets/wording/common.json';
 
 const Header = ({ minWidth }) => {
     return (
         <StyledAppBar minWidth={minWidth} position="static">
             <AppBarContainer>
-                <HeaderText>Over Party Lab</HeaderText>
-                <FormControlLabel
+                <HeaderText>{COMMON_TEXT.title}</HeaderText>
+                {/* <FormControlLabel
                     disabled
                     control={
                         <Switch checked={true} value="true" />
                     }
                     label="Light Theme"
-                />
+                /> */}
             </AppBarContainer>
         </StyledAppBar>
     );
