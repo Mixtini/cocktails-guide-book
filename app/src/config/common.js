@@ -4,7 +4,7 @@ export const COMMON = {
 
 export const STYLE = {
     MIN_WIDTH: 375,
-    PADDING: 10
+    PADDING: 8
 }
 
 export const LINK = {

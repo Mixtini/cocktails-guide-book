@@ -7,9 +7,9 @@ import AppBar from '@material-ui/core/AppBar';
 
 import COMMON_TEXT from '../../assets/wording/common.json';
 
-const Header = ({ minWidth }) => {
+const Header = ({ minwidth }) => {
     return (
-        <StyledAppBar minWidth={minWidth} position="static">
+        <StyledAppBar minwidth={minwidth} position="static">
             <AppBarContainer>
                 <HeaderText>{COMMON_TEXT.title}</HeaderText>
                 {/* <FormControlLabel
@@ -33,7 +33,7 @@ const HeaderText = styled.div`
 `;
 
 const StyledAppBar = styled(AppBar)`
-    min-width: ${({minWidth}) => `${minWidth}px`};
+    min-width: ${({minwidth}) => `${minwidth}px`};
 `;
 
 const AppBarContainer = styled.div`

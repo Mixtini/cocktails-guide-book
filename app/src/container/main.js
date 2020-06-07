@@ -18,7 +18,7 @@ const Main = () => {
     const [page, setPage] = React.useState(PAGES.SEARCH);
     return (
         <>
-            <Header minWidth={STYLE.MIN_WIDTH} />
+            <Header minwidth={STYLE.MIN_WIDTH} />
             <Container>
                 {
                     page === PAGES.SEARCH && (<Search />)
