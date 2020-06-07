@@ -97,6 +97,7 @@ const Search = () => {
     const { value, signature, isSearching, isInit, list, searchResultList, expanded } = userAction;
 
     const onClickSearch = (e) => {
+        list.sort(() => Math.random() - 0.5);
         const searchResultList = list.filter(e => {
             let filterRule = false;
             for (let i = 0; i < value.length; i += 1) {
@@ -120,6 +121,11 @@ const Search = () => {
     };
     const onChipInputChange = (newValue) => {
         if (value.length < 5 && value.indexOf(newValue) === -1) {
+            setUserAction({ ...userAction, value: [...value, ...newValue] });
+        }
+    };
+    const onSelectChange = (newValue) => {
+        if (value.length < 5 && value.indexOf(newValue) === -1) {
             setUserAction({ ...userAction, value: [...value, newValue] });
         }
     };
@@ -136,7 +142,7 @@ const Search = () => {
     useEffect(() => {
         getCocktailsList(onUpdateList);
     }, []);
-
+console.log(value, '---value');
     return (
         <Container>
             <Header>
@@ -172,7 +178,7 @@ const Search = () => {
                                             key={`recommend-${title}`}
                                             title={title}
                                             data={data}
-                                            onItemSelect={onChipInputChange}
+                                            onItemSelect={onSelectChange}
                                             expanded={expanded === title}
                                             onExpanded={onExpanded}
                                         />
@@ -211,7 +217,7 @@ const Search = () => {
                                     <Cards>
                                         {
                                             searchResultList.map((cocktail, idx) => {
-                                                if (idx> 5) return null;
+                                                if (idx > 4) return null;
                                                 return (
                                                     <Card
                                                         key={`key-${idx}`}

@@ -92,8 +92,9 @@ const ContactLink = styled.div`
 const Footer = styled.div`
     position: fixed;
     width: 100%;
-    bottom: 60px;
-    background-color: ${props => props.theme.backgroundColor};
+    height: 25px;
+    bottom: 55px;
+    background-color: white;
     display: flex;
     justify-content: center;
 `;
