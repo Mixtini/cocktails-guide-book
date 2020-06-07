@@ -93,7 +93,7 @@
         {
             "igtoken": "Bt_DxgkFEF9",
             "key": "long_island_iced_tea",
-            "keys": ["長島冰茶", "Long Island Iced Tea", "酒感", "可樂", "經典", "醉", "容易醉"],
+            "keys": ["長島冰茶", "Long Island Iced Tea", "伏特加", "vodka", "琴酒", "gin", "蘭姆酒", "rum", "龍舌蘭", "tequila", "君度", "cointreau", "酒感", "可樂", "經典", "醉", "長飲"],
             "name": {
                 "en": "Long Island Iced Tea",
                 "zh": "長島冰茶"
@@ -103,7 +103,7 @@
         {
             "igtoken": "BuGcFpgFU2C",
             "key": "cosmopolitan",
-            "keys": ["柯夢波丹", "Cosmopolitan", "伏特加", "君度", "甜的", "妹酒"],
+            "keys": ["柯夢波丹", "Cosmopolitan", "伏特加", "vodka", "君度", "cointreau", "甜的", "妹酒", "短飲", "果香"],
             "name": {
                 "en": "Cosmopolitan",
                 "zh": "柯夢波丹"
@@ -113,7 +113,7 @@
         {
             "igtoken": "BuLoM1ClP6G",
             "key": "mojito",
-            "keys": ["莫西多", "Mojito", "甜的", "清爽", "薄荷", "雪碧", "檸檬"],
+            "keys": ["莫西多", "Mojito", "蘭姆酒", "rum", "甜的", "清爽", "薄荷", "雪碧", "檸檬", "長飲"],
             "name": {
                 "en": "Mojito",
                 "zh": "莫西多"
@@ -123,7 +123,7 @@
         {
             "igtoken": "BuQur3Ilex8",
             "key": "teaffany",
-            "keys": ["莓荔史翠普", "Teaffany", "伏特加", "甜的", "荔枝", "茶", "茶香"],
+            "keys": ["莓荔史翠普", "Teaffany", "伏特加", "vodka", "甜的", "荔枝", "茶", "茶香", "短飲"],
             "name": {
                 "en": "Marie Clair named Teaffany",
                 "zh": "莓荔史翠普"
@@ -133,7 +133,7 @@
         {
             "igtoken": "BuYldJylf4g",
             "key": "honey_gin",
-            "keys": ["琴蜜", "Honey Gin", "琴酒", "甜的", "蜂蜜"],
+            "keys": ["琴蜜", "Honey Gin", "琴酒", "gin", "甜的", "蜂蜜", "短飲"],
             "name": {
                 "en": "Honey Gin",
                 "zh": "琴蜜"
@@ -143,7 +143,7 @@
         {
             "igtoken": "BudtbbilfO2",
             "key": "oriental_princess",
-            "keys": ["清酒", "梅酒", "日本", "優格", "甜的"],
+            "keys": ["清酒", "sake", "梅酒", "umeshu", "日本", "優格", "甜的", "短飲"],
             "name": {
                 "en": "Oriental Princess",
                 "zh": "清梅格格"
@@ -153,7 +153,7 @@
         {
             "igtoken": "Bui7tiCFkVl",
             "key": "japanese_slipper",
-            "keys": ["日本拖鞋", "Midori", "日本", "君度"],
+            "keys": ["日本拖鞋", "Midori", "日本", "君度", "cointreau", "短飲"],
             "name": {
                 "en": "Japanese Slipper",
                 "zh": "日本拖鞋"
@@ -163,10 +163,150 @@
         {
             "igtoken": "BuqqT7hF3R9",
             "key": "ginjito",
-            "keys": ["涼琴相悅", "琴酒", "gin", "糖漿"],
+            "keys": ["涼琴相悅", "琴酒", "gin", "糖漿", "酒感", "薄荷", "短飲"],
             "name": {
                 "en": "Ginjito",
                 "zh": "涼琴相悅"
+            },
+            "signature": true
+        },
+        {
+            "igtoken": "Bu8gPaRFlNZ",
+            "key": "screwdriver",
+            "keys": ["螺絲起子", "伏特加", "vodka", "甜的", "柳橙", "長飲"],
+            "name": {
+                "en": "Screwdriver",
+                "zh": "螺絲起子"
+            },
+            "signature": false
+        },
+        {
+            "igtoken": "BvBux8UlVLR",
+            "key": "high_life",
+            "keys": ["上流社會", "伏特加", "vodka", "甜的", "君度", "cointreau", "鳳梨", "蛋白", "短飲"],
+            "name": {
+                "en": "High Life",
+                "zh": "上流社會"
+            },
+            "signature": false
+        },
+        {
+            "igtoken": "BvGwwDTlTyc",
+            "key": "vodka_lime",
+            "keys": ["伏特加萊姆", "伏特加", "vodka", "酸的", "檸檬", "lemon", "lime", "鹽口"],
+            "name": {
+                "en": "Vodka Lime",
+                "zh": "伏特加萊姆"
+            },
+            "signature": false
+        },
+        {
+            "igtoken": "Bvq_AXvl0RY",
+            "key": "bees_knees",
+            "keys": ["蜂膝", "Bee Knees", "琴酒", "gin", "甜的", "酸的", "檸檬", "lemon", "短飲"],
+            "name": {
+                "en": "Bee's Knees",
+                "zh": "蜂膝"
+            },
+            "signature": false
+        },
+        {
+            "igtoken": "Bv9Kf8jFP4B",
+            "key": "salty_dog",
+            "keys": ["鹹狗", "伏特加", "vodka", "甜的", "酸的", "葡萄柚"],
+            "name": {
+                "en": "Salty dog",
+                "zh": "鹹狗"
+            },
+            "signature": false
+        },
+        {
+            "igtoken": "BwhL40wF3Ny",
+            "key": "sea_breeze",
+            "keys": ["海風", "伏特加", "vodka", "甜的", "妹酒", "葡萄柚", "蔓越梅", "長飲", "果香"],
+            "name": {
+                "en": "Sea Breeze",
+                "zh": "海風"
+            },
+            "signature": false
+        },
+        {
+            "igtoken": "Bwo1oTslZNA",
+            "key": "sidecar",
+            "keys": ["側車", "cognac", "白蘭地", "干邑", "短飲", "檸檬", "lemon"],
+            "name": {
+                "en": "Sidecar",
+                "zh": "側車"
+            },
+            "signature": false
+        },
+        {
+            "igtoken": "BwzJebUF48u",
+            "key": "gin_tonic",
+            "keys": ["琴通寧", "Gin Tonic", "tonic", "琴酒", "gin", "長飲", "檸檬", "lemon", "清爽"],
+            "name": {
+                "en": "Gin Tonic",
+                "zh": "琴通寧"
+            },
+            "signature": false
+        },
+        {
+            "igtoken": "Bw63bMqFeTa",
+            "key": "gin_fizz",
+            "keys": ["琴費士", "Gin Fizz", "琴酒", "gin", "長飲", "檸檬", "lemon", "清爽"],
+            "name": {
+                "en": "Gin Fizz",
+                "zh": "琴費士"
+            },
+            "signature": false
+        },
+        {
+            "igtoken": "BxFJj7XlnNG",
+            "key": "white_lady",
+            "keys": ["白色佳人", "White Lady", "琴酒", "gin", "短飲", "檸檬", "lemon", "君度", "cointreau"],
+            "name": {
+                "en": "White Lady",
+                "zh": "白色佳人"
+            },
+            "signature": false
+        },
+        {
+            "igtoken": "BxXGJoLlJwY",
+            "key": "sex_on_the_beach",
+            "keys": ["性感海灘", "Sex on the beach", "伏特加", "vodka", "鳳梨", "蔓越梅", "長飲", "果香", "妹酒", "清爽", "甜的"],
+            "name": {
+                "en": "Sex on the beach",
+                "zh": "性感海灘"
+            },
+            "signature": false
+        },
+        {
+            "igtoken": "ByNI8Yil6x-",
+            "key": "fernet_gin",
+            "keys": ["苦琴酒", "Fernet Gin",  "琴酒", "gin", "苦的", "酒感", "木質", "fernet", "檸檬", "lemon"],
+            "name": {
+                "en": "Fernet Gin",
+                "zh": "苦琴酒"
+            },
+            "signature": false
+        },
+        {
+            "igtoken": "Bx6-RLblgpo",
+            "key": "espresso_martini",
+            "keys": ["濃縮咖啡馬丁尼", "Espresso Martini", "伏特加", "vodka", "espresso", "咖啡"],
+            "name": {
+                "en": "Espresso Martini",
+                "zh": "濃縮咖啡馬丁尼"
+            },
+            "signature": false
+        },
+        {
+            "igtoken": "B-UUFdVlFcT",
+            "key": "tropical_woodland",
+            "keys": ["熱帶林園", "Tropical Woodland", "蘭姆酒", "rum", "威士忌", "龍眼", "木質", "桂圓", "whiskey"],
+            "name": {
+                "en": "Tropical Woodland",
+                "zh": "熱帶林園"
             },
             "signature": true
         }

@@ -5,7 +5,7 @@ export const RECOMMEND = [
     },
     {
         title: '氣味',
-        data: ['花香', '木質', '辛香料', '茶香']
+        data: ['果香', '木質', '花香', '茶香']
     },
     {
         title: '口感',
@@ -13,6 +13,6 @@ export const RECOMMEND = [
     },
     {
         title: '體驗',
-        data: ['長飲', '短飲', '妹酒', '容易醉']
+        data: ['長飲', '短飲', '妹酒', '酒感']
     }
 ];
