@@ -31,7 +31,7 @@ import {
 
 const DEFAULT_STATE = {
     value: [],
-    signature: false,
+    signature: true,
     isSearch: false,
     isInit: false,
     list: [],
@@ -117,12 +117,12 @@ const Search = () => {
         setUserAction({ ...userAction, signature });
     };
     const onChipInputChange = (newValue) => {
-        if (value.length < 5) {
+        if (value.length < 3) {
             setUserAction({ ...userAction, value: newValue, isSearch: false });
         }
     };
     const onSelectChange = (newValue) => {
-        if (value.length < 5 && value.indexOf(newValue) === -1) {
+        if (value.length < 3 && value.indexOf(newValue) === -1) {
             setUserAction({ ...userAction, value: [...value, newValue], isSearch: false });
         }
     };
