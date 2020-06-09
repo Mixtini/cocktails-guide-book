@@ -549,6 +549,116 @@
                 "zh": "威士忌沙瓦"
             },
             "signature": false
+        },
+        {
+            "igtoken": "ByxIMywFZNi",
+            "key": "gin_grey",
+            "keys": ["琴葛雷", "Gin Grey", "Gin", "琴酒", "伯爵茶","茶","茶香", "奶香", "甜的", "Earl Grey", "Bubble Tea", "Milk Tea", "奶茶", "手搖飲料", "手搖", "懶人" ],
+            "name": {
+                "en": "Gin Grey",
+                "zh": "琴．葛雷"
+            },
+            "signature": true
+        },
+        {
+            "igtoken": "By46D0plHm-",
+            "key": "gin_fruit_tea",
+            "keys": ["深琴水果茶", "Gin Fruit Tea", "Gin", "琴酒", "水果茶","茶","茶香", "水果", "甜的", "夏日", "Bubble Tea", "Fruit Tea", "手搖飲料", "手搖", "懶人" ],
+            "name": {
+                "en": "Gin Fruit Tea",
+                "zh": "深琴水果茶"
+            },
+            "signature": true
+        },
+        {
+            "igtoken": "BzD_eQdFK6i",
+            "key": "bobawalk",
+            "keys": ["波霸走路", "Bobawalk", "Whisky", "威士忌", "茶", "茶香", "奶香", "甜的", "Bubble Tea", "Milk Tea", "手搖飲料", "手搖", "懶人" ],
+            "name": {
+                "en": "Bobawalk",
+                "zh": "波霸走路"
+            },
+            "signature": true
+        },
+        {
+            "igtoken": "BzLRs9SFiu1",
+            "key": "brandy_la_tieguanyin",
+            "keys": ["白蘭地拿鐵觀音", "Brandy La TieGuanYin", "Brandy", "白蘭地", "茶", "鐵觀音", "茶香", "奶香", "甜的", "Bubble Tea", "TieGuanYin", "Milk Tea", "手搖飲料", "手搖", "懶人" ],
+            "name": {
+                "en": "Brandy La TieGuanYin",
+                "zh": "白蘭地拿鐵觀音"
+            },
+            "signature": true
+        },
+        {
+            "igtoken": "BzVicdClfyt",
+            "key": "sex_on_the_beach_ii",
+            "keys": ["性感海灘 II", "性感海灘", "Sex on the Beach II", "Vodka", "伏特加", "茶", "水果茶","茶香", "水果", "甜的","酸的", "夏日", "鳳梨", "Pineapple", "蔓越莓", "Cranberry", "Bubble Tea", "Fruit Tea", "手搖飲料", "手搖", "懶人" ],
+            "name": {
+                "en": "Sex on the Beach II",
+                "zh": "性感海灘 II"
+            },
+            "signature": true
+        },
+        {
+            "igtoken": "BznFwrzlERu",
+            "key": "sugar_cane_family",
+            "keys": ["甘蔗一家", "Sugar Cane Family", "Rum", "蘭姆酒", "萊姆酒", "朗姆酒", "茶", "水果茶","茶香", "水果", "甜的", "夏日", "甘蔗", "Sugar Cane", "Bubble Tea", "Fruit Tea", "手搖飲料", "手搖", "懶人" ],
+            "name": {
+                "en": "Sugar Cane Family",
+                "zh": "甘蔗一家"
+            },
+            "signature": true
+        },
+        {
+            "igtoken": "Bz5V3u3ln1e",
+            "key": "earl_grey_latte_x",
+            "keys": ["伯爵鮮奶茶X", "Earl Grey Latte X", "Brandy", "白蘭地", "伯爵茶","茶","茶香", "奶香", "甜的", "Earl Grey", "Bubble Tea", "Milk Tea", "奶茶", "手搖飲料", "手搖", "懶人" ],
+            "name": {
+                "en": "Earl Grey Latte X",
+                "zh": "伯爵鮮奶茶X"
+            },
+            "signature": true
+        },
+        {
+            "igtoken": "B0dj7qZFGyp",
+            "key": "te_sangria",
+            "keys": ["桑格莉亞茶", "Té Sangria", "Red Wine", "紅酒", "伯爵茶","茶香", "茶", "水果茶", "水果", "甜的","酸的", "夏日", "Earl Grey", "Bubble Tea", "Fruit Tea", "Tea", "手搖飲料", "手搖", "懶人" ],
+            "name": {
+                "en": "Té Sangria",
+                "zh": "桑格莉亞茶"
+            },
+            "signature": true
+        },
+        {
+            "igtoken": "B0vWR-pFp84",
+            "key": "before_a_nap",
+            "keys": ["午覺之前", "Before A Nap", "Rum", "蘭姆酒", "萊姆酒", "朗姆酒", "Calvados", "蘋果白蘭地", "茶", "水果茶","茶","茶香", "水果", "甜的", "酸的", "夏日", "蘆薈", "Bubble Tea", "Fruit Tea", "手搖飲料", "手搖", "懶人" ],
+            "name": {
+                "en": "Before A Nap",
+                "zh": "午覺之前"
+            },
+            "signature": true
+        },
+        {
+            "igtoken": "B1BiVSaFXOR",
+            "key": "cultured_earl_grey",
+            "keys": ["深度伯爵", "Cultured Earl Grey", "Rum", "蘭姆酒", "萊姆酒", "朗姆酒", "Calvados", "蘋果白蘭地", "伯爵茶","茶香", "茶", "水果茶", "水果", "甜的","酸的", "夏日", "Earl Grey", "Bubble Tea", "Fruit Tea", "Tea", "手搖飲料", "手搖", "懶人" ],
+            "name": {
+                "en": "Cultured Earl Grey",
+                "zh": "深度伯爵"
+            },
+            "signature": true
+        },
+        {
+            "igtoken": "B1lkUD4lerH",
+            "key": "green_breeze",
+            "keys": ["綠風", "Green Breeze", "Gin", "琴酒", "Calvados", "蘋果白蘭地", "綠茶","青茶","茶香", "茶", "甜的", "夏日", "Green Tea", "Bubble Tea", "Tea", "手搖飲料", "手搖", "懶人" ],
+            "name": {
+                "en": "Green Breeze",
+                "zh": "綠風"
+            },
+            "signature": true
         }
     ],
     "overpartylab-recipes": [
