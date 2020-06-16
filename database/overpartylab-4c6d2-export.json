@@ -93,7 +93,7 @@
         {
             "igtoken": "Bt_DxgkFEF9",
             "key": "long_island_iced_tea",
-            "keys": ["長島冰茶", "Long Island Iced Tea", "伏特加", "vodka", "琴酒", "gin", "蘭姆酒", "rum", "龍舌蘭", "tequila", "君度", "cointreau", "酒感", "可樂", "經典", "醉", "長飲", "檸檬", "lemon"],
+            "keys": ["長島冰茶", "Long Island Iced Tea", "伏特加", "vodka", "琴酒", "gin", "蘭姆酒", "rum", "龍舌蘭", "tequila", "君度", "cointreau", "酒感", "可樂", "經典", "醉", "長飲", "檸檬", "lemon", "柳橙"],
             "name": {
                 "en": "Long Island Iced Tea",
                 "zh": "長島冰茶"
@@ -173,7 +173,7 @@
         {
             "igtoken": "Bu0tHnCFZ_M",
             "key": "childhood_sweetheart",
-            "keys": ["青梅竹馬", "Childhood Sweetheart", "伏特加", "vodka", "甜的", "cranberry", "蔓越梅", "甘蔗","檸檬","lemon","sprite","雪碧","葡萄柚", "妹酒"],
+            "keys": ["青梅竹馬", "Childhood Sweetheart", "伏特加", "vodka", "甜的", "cranberry", "蔓越梅", "甘蔗", "檸檬", "lemon", "sprite", "雪碧", "葡萄柚", "妹酒"],
             "name": {
                 "en": "Childhood Sweetheart",
                 "zh": "青梅竹馬"
@@ -243,7 +243,7 @@
         {
             "igtoken": "Bv9Kf8jFP4B",
             "key": "salty_dog",
-            "keys": ["鹹狗","Salty dog", "伏特加", "vodka", "甜的", "酸的", "葡萄柚"],
+            "keys": ["鹹狗", "Salty dog", "伏特加", "vodka", "甜的", "酸的", "葡萄柚"],
             "name": {
                 "en": "Salty dog",
                 "zh": "鹹狗"
@@ -263,7 +263,7 @@
         {
             "igtoken": "BwW5nN_l8QX",
             "key": "sakura_April_1st",
-            "keys": ["愚人節才開的櫻花", "Sakura on April 1st", "琴酒", "gin", "梅酒","umeshu","接骨木花","接骨木","elderflower", "pomegranate","紅石榴","甘蔗","甘蔗汁","甜的", "妹酒","果香", "檸檬", "lemon"],
+            "keys": ["愚人節才開的櫻花", "Sakura on April 1st", "琴酒", "gin", "梅酒", "umeshu", "接骨木花", "接骨木", "elderflower", "pomegranate", "紅石榴", "甘蔗", "甘蔗汁", "甜的", "妹酒", "果香", "檸檬", "lemon"],
             "name": {
                 "en": "Sakura on April 1st",
                 "zh": "愚人節才開的櫻花"
@@ -323,7 +323,7 @@
         {
             "igtoken": "BxM02sxFogM",
             "key": "never_date",
-            "keys": ["杏好梅在一起", "Thanks God You Never Date with Her", "梅酒","umeshu","甘蔗","甘蔗汁","甜的", "杏仁", "杏仁茶"],
+            "keys": ["杏好梅在一起", "Thanks God You Never Date with Her", "梅酒", "umeshu", "甘蔗", "甘蔗汁", "甜的", "杏仁", "杏仁茶"],
             "name": {
                 "en": "Thanks God You Never Date with Her",
                 "zh": "杏好梅在一起"
@@ -343,7 +343,7 @@
         {
             "igtoken": "BxpJ8TRlv69",
             "key": "mexico_snow",
-            "keys": ["墨西哥之雪", "Snow in Mexico", "龍舌蘭","tequila","甜的", "檸檬", "lemon","可爾必思", "calpis"],
+            "keys": ["墨西哥之雪", "Snow in Mexico", "龍舌蘭", "tequila", "甜的", "檸檬", "lemon", "可爾必思", "calpis"],
             "name": {
                 "en": "Snow in Mexico",
                 "zh": "墨西哥之雪"
@@ -363,7 +363,7 @@
         {
             "igtoken": "ByDR3flhT79",
             "key": "elder_sidecar",
-            "keys": ["老漢推車", "Elder Side Car", "cognac", "白蘭地", "干邑", "短飲", "檸檬", "lemon","接骨木花","接骨木","elderflower"],
+            "keys": ["老漢推車", "Elder Side Car", "cognac", "白蘭地", "干邑", "短飲", "檸檬", "lemon", "接骨木花", "接骨木", "elderflower"],
             "name": {
                 "en": "Elder Side Car",
                 "zh": "老漢推車"
@@ -383,7 +383,7 @@
         {
             "igtoken": "ByVEa_oFbV9",
             "key": "sweet_black_magic",
-            "keys": ["甜蜜黑魔法", "Sweet Black Magic", "vodka", "伏特加", "咖啡", "咖啡酒", "coffee","檸檬", "lemon","楓糖","楓糖漿","maple"],
+            "keys": ["甜蜜黑魔法", "Sweet Black Magic", "vodka", "伏特加", "咖啡", "咖啡酒", "coffee", "檸檬", "lemon", "楓糖", "楓糖漿", "maple"],
             "name": {
                 "en": "Sweet Black Magic",
                 "zh": "甜蜜黑魔法"
@@ -393,7 +393,7 @@
         {
             "igtoken": "ByfT2zyldlt",
             "key": "maple_southside",
-            "keys": ["南方楓情", "Maple Southside", "gin", "琴酒", "檸檬", "lemon","楓糖","楓糖漿","maple", "甜的", "短飲"],
+            "keys": ["南方楓情", "Maple Southside", "gin", "琴酒", "檸檬", "lemon", "楓糖", "楓糖漿", "maple", "甜的", "短飲"],
             "name": {
                 "en": "Maple Southside",
                 "zh": "南方楓情"
@@ -403,7 +403,7 @@
         {
             "igtoken": "B1ThA2fll56",
             "key": "bourbon_grapefruit_sour",
-            "keys": ["葡萄柚波本沙瓦", "Bourbon Grapefruit Sour", "bourbon", "波本", "沙瓦","威士忌", "whiskey", "酸的", "甜的", "葡萄柚", "蜂蜜", "honey" ],
+            "keys": ["葡萄柚波本沙瓦", "Bourbon Grapefruit Sour", "bourbon", "波本", "沙瓦", "威士忌", "whiskey", "酸的", "甜的", "葡萄柚", "蜂蜜", "honey"],
             "name": {
                 "en": "Bourbon Grapefruit Sour",
                 "zh": "葡萄柚波本沙瓦"
@@ -413,7 +413,7 @@
         {
             "igtoken": "B1lkUD4lerH",
             "key": "green_breeze",
-            "keys": ["綠風", "Green Breeze", "gin", "琴酒", "四季春","四季春茶", "茶香", "茶", "頻果白蘭地", "calvados", "短飲", "甘甜" ],
+            "keys": ["綠風", "Green Breeze", "gin", "琴酒", "四季春", "四季春茶", "茶香", "茶", "頻果白蘭地", "calvados", "短飲", "甘甜"],
             "name": {
                 "en": "Green Breeze",
                 "zh": "綠風"
@@ -453,7 +453,7 @@
         {
             "igtoken": "B2tuOPtFqcB",
             "key": "singapore_sling",
-            "keys": ["新加坡司令", "Singapore Sling", "gin", "琴酒", "甜的", "君度", "cointreau", "檸檬", "lemon", "糖漿", "鳳梨", "櫻桃白蘭地", "果香" ],
+            "keys": ["新加坡司令", "Singapore Sling", "gin", "琴酒", "甜的", "君度", "cointreau", "檸檬", "lemon", "糖漿", "鳳梨", "櫻桃白蘭地", "果香"],
             "name": {
                 "en": "Singapore Sling",
                 "zh": "新加坡司令"
@@ -463,7 +463,7 @@
         {
             "igtoken": "B2_xo7WlSxp",
             "key": "tea_beer_gin_fizz",
-            "keys": ["深葉琴費茲", "Tea Beer Gin Fizz", "Gin Fizz", "琴酒", "gin", "長飲", "檸檬", "lemon", "清爽", "茶香", "茶", "接骨木花","接骨木","elderflower","啤酒"],
+            "keys": ["深葉琴費茲", "Tea Beer Gin Fizz", "Gin Fizz", "琴酒", "gin", "長飲", "檸檬", "lemon", "清爽", "茶香", "茶", "接骨木花", "接骨木", "elderflower", "啤酒"],
             "name": {
                 "en": "Tea Beer Gin Fizz",
                 "zh": "深葉琴費茲"
@@ -473,7 +473,7 @@
         {
             "igtoken": "B3R3tP2F8df",
             "key": "youth_first_love",
-            "keys": ["初戀青春", "Youth First Love", "gin", "琴酒", "rose", "花香", "玫瑰", "玫瑰花", "妹酒","甜的", "短飲","接骨木花","接骨木","elderflower", "cranberry", "蔓越梅"],
+            "keys": ["初戀青春", "Youth First Love", "gin", "琴酒", "rose", "花香", "玫瑰", "玫瑰花", "妹酒", "甜的", "短飲", "接骨木花", "接骨木", "elderflower", "cranberry", "蔓越梅"],
             "name": {
                 "en": "Youth First Love",
                 "zh": "初戀青春"
@@ -483,7 +483,7 @@
         {
             "igtoken": "B3j82rUFwVD",
             "key": "amber_iced_tea ",
-            "keys": ["琥珀冰茶", "Amber Iced Tea ", "琴酒", "gin", "短飲", "檸檬", "lemon", "tiffin", "茶香", "茶", "茶酒","黑櫻桃","maraschino"],
+            "keys": ["琥珀冰茶", "Amber Iced Tea ", "琴酒", "gin", "短飲", "檸檬", "lemon", "tiffin", "茶香", "茶", "茶酒", "黑櫻桃", "maraschino"],
             "name": {
                 "en": "Amber Iced Tea ",
                 "zh": "琥珀冰茶"
@@ -543,7 +543,7 @@
         {
             "igtoken": "B9eCnR7lYgZ",
             "key": "whiskey_sour",
-            "keys": ["威士忌沙瓦", "Whisky Sour", "bourbon", "波本", "沙瓦","威士忌", "whiskey", "酸的", "甜的", "Whisky", "檸檬", "lemon", "糖漿" ],
+            "keys": ["威士忌沙瓦", "Whisky Sour", "bourbon", "波本", "沙瓦", "威士忌", "whiskey", "酸的", "甜的", "Whisky", "檸檬", "lemon", "糖漿"],
             "name": {
                 "en": "Whisky Sour",
                 "zh": "威士忌沙瓦"
@@ -553,7 +553,7 @@
         {
             "igtoken": "ByxIMywFZNi",
             "key": "gin_grey",
-            "keys": ["琴葛雷", "Gin Grey", "Gin", "琴酒", "伯爵茶","茶","茶香", "奶香", "甜的", "Earl Grey", "Bubble Tea", "Milk Tea", "奶茶", "手搖飲料", "手搖", "懶人" ],
+            "keys": ["琴葛雷", "Gin Grey", "Gin", "琴酒", "伯爵茶", "茶", "茶香", "奶香", "甜的", "Earl Grey", "Bubble Tea", "Milk Tea", "奶茶", "手搖飲料", "手搖", "懶人"],
             "name": {
                 "en": "Gin Grey",
                 "zh": "琴．葛雷"
@@ -563,7 +563,7 @@
         {
             "igtoken": "By46D0plHm-",
             "key": "gin_fruit_tea",
-            "keys": ["深琴水果茶", "Gin Fruit Tea", "Gin", "琴酒", "水果茶","茶","茶香", "水果", "甜的", "夏日", "Bubble Tea", "Fruit Tea", "手搖飲料", "手搖", "懶人" ],
+            "keys": ["深琴水果茶", "Gin Fruit Tea", "Gin", "琴酒", "水果茶", "茶", "茶香", "水果", "甜的", "夏日", "Bubble Tea", "Fruit Tea", "手搖飲料", "手搖", "懶人"],
             "name": {
                 "en": "Gin Fruit Tea",
                 "zh": "深琴水果茶"
@@ -573,7 +573,7 @@
         {
             "igtoken": "BzD_eQdFK6i",
             "key": "bobawalk",
-            "keys": ["波霸走路", "Bobawalk", "Whisky", "威士忌", "茶", "茶香", "奶香", "甜的", "Bubble Tea", "Milk Tea", "手搖飲料", "手搖", "懶人" ],
+            "keys": ["波霸走路", "Bobawalk", "Whisky", "威士忌", "茶", "茶香", "奶香", "甜的", "Bubble Tea", "Milk Tea", "手搖飲料", "手搖", "懶人"],
             "name": {
                 "en": "Bobawalk",
                 "zh": "波霸走路"
@@ -583,7 +583,7 @@
         {
             "igtoken": "BzLRs9SFiu1",
             "key": "brandy_la_tieguanyin",
-            "keys": ["白蘭地拿鐵觀音", "Brandy La TieGuanYin", "Brandy", "白蘭地", "茶", "鐵觀音", "茶香", "奶香", "甜的", "Bubble Tea", "TieGuanYin", "Milk Tea", "手搖飲料", "手搖", "懶人" ],
+            "keys": ["白蘭地拿鐵觀音", "Brandy La TieGuanYin", "Brandy", "白蘭地", "茶", "鐵觀音", "茶香", "奶香", "甜的", "Bubble Tea", "TieGuanYin", "Milk Tea", "手搖飲料", "手搖", "懶人"],
             "name": {
                 "en": "Brandy La TieGuanYin",
                 "zh": "白蘭地拿鐵觀音"
@@ -593,7 +593,7 @@
         {
             "igtoken": "BzVicdClfyt",
             "key": "sex_on_the_beach_ii",
-            "keys": ["性感海灘 II", "性感海灘", "Sex on the Beach II", "Vodka", "伏特加", "茶", "水果茶","茶香", "水果", "甜的","酸的", "夏日", "鳳梨", "Pineapple", "蔓越莓", "Cranberry", "Bubble Tea", "Fruit Tea", "手搖飲料", "手搖", "懶人" ],
+            "keys": ["性感海灘 II", "性感海灘", "Sex on the Beach II", "Vodka", "伏特加", "茶", "水果茶", "茶香", "水果", "甜的", "酸的", "夏日", "鳳梨", "Pineapple", "蔓越莓", "Cranberry", "Bubble Tea", "Fruit Tea", "手搖飲料", "手搖", "懶人"],
             "name": {
                 "en": "Sex on the Beach II",
                 "zh": "性感海灘 II"
@@ -603,7 +603,7 @@
         {
             "igtoken": "BznFwrzlERu",
             "key": "sugar_cane_family",
-            "keys": ["甘蔗一家", "Sugar Cane Family", "Rum", "蘭姆酒", "萊姆酒", "朗姆酒", "茶", "水果茶","茶香", "水果", "甜的", "夏日", "甘蔗", "Sugar Cane", "Bubble Tea", "Fruit Tea", "手搖飲料", "手搖", "懶人" ],
+            "keys": ["甘蔗一家", "Sugar Cane Family", "Rum", "蘭姆酒", "萊姆酒", "朗姆酒", "茶", "水果茶", "茶香", "水果", "甜的", "夏日", "甘蔗", "Sugar Cane", "Bubble Tea", "Fruit Tea", "手搖飲料", "手搖", "懶人"],
             "name": {
                 "en": "Sugar Cane Family",
                 "zh": "甘蔗一家"
@@ -613,7 +613,7 @@
         {
             "igtoken": "Bz5V3u3ln1e",
             "key": "earl_grey_latte_x",
-            "keys": ["伯爵鮮奶茶X", "Earl Grey Latte X", "Brandy", "白蘭地", "伯爵茶","茶","茶香", "奶香", "甜的", "Earl Grey", "Bubble Tea", "Milk Tea", "奶茶", "手搖飲料", "手搖", "懶人" ],
+            "keys": ["伯爵鮮奶茶X", "Earl Grey Latte X", "Brandy", "白蘭地", "伯爵茶", "茶", "茶香", "奶香", "甜的", "Earl Grey", "Bubble Tea", "Milk Tea", "奶茶", "手搖飲料", "手搖", "懶人"],
             "name": {
                 "en": "Earl Grey Latte X",
                 "zh": "伯爵鮮奶茶X"
@@ -623,7 +623,7 @@
         {
             "igtoken": "B0dj7qZFGyp",
             "key": "te_sangria",
-            "keys": ["桑格莉亞茶", "Té Sangria", "Red Wine", "紅酒", "伯爵茶","茶香", "茶", "水果茶", "水果", "甜的","酸的", "夏日", "Earl Grey", "Bubble Tea", "Fruit Tea", "Tea", "手搖飲料", "手搖", "懶人" ],
+            "keys": ["桑格莉亞茶", "Té Sangria", "Red Wine", "紅酒", "伯爵茶", "茶香", "茶", "水果茶", "水果", "甜的", "酸的", "夏日", "Earl Grey", "Bubble Tea", "Fruit Tea", "Tea", "手搖飲料", "手搖", "懶人"],
             "name": {
                 "en": "Té Sangria",
                 "zh": "桑格莉亞茶"
@@ -633,7 +633,7 @@
         {
             "igtoken": "B0vWR-pFp84",
             "key": "before_a_nap",
-            "keys": ["午覺之前", "Before A Nap", "Rum", "蘭姆酒", "萊姆酒", "朗姆酒", "Calvados", "蘋果白蘭地", "茶", "水果茶","茶","茶香", "水果", "甜的", "酸的", "夏日", "蘆薈", "Bubble Tea", "Fruit Tea", "手搖飲料", "手搖", "懶人" ],
+            "keys": ["午覺之前", "Before A Nap", "Rum", "蘭姆酒", "萊姆酒", "朗姆酒", "Calvados", "蘋果白蘭地", "茶", "水果茶", "茶", "茶香", "水果", "甜的", "酸的", "夏日", "蘆薈", "Bubble Tea", "Fruit Tea", "手搖飲料", "手搖", "懶人"],
             "name": {
                 "en": "Before A Nap",
                 "zh": "午覺之前"
@@ -643,7 +643,7 @@
         {
             "igtoken": "B1BiVSaFXOR",
             "key": "cultured_earl_grey",
-            "keys": ["深度伯爵", "Cultured Earl Grey", "Rum", "蘭姆酒", "萊姆酒", "朗姆酒", "Calvados", "蘋果白蘭地", "伯爵茶","茶香", "茶", "水果茶", "水果", "甜的","酸的", "夏日", "Earl Grey", "Bubble Tea", "Fruit Tea", "Tea", "手搖飲料", "手搖", "懶人" ],
+            "keys": ["深度伯爵", "Cultured Earl Grey", "Rum", "蘭姆酒", "萊姆酒", "朗姆酒", "Calvados", "蘋果白蘭地", "伯爵茶", "茶香", "茶", "水果茶", "水果", "甜的", "酸的", "夏日", "Earl Grey", "Bubble Tea", "Fruit Tea", "Tea", "手搖飲料", "手搖", "懶人"],
             "name": {
                 "en": "Cultured Earl Grey",
                 "zh": "深度伯爵"
@@ -653,119 +653,12 @@
         {
             "igtoken": "B1lkUD4lerH",
             "key": "green_breeze",
-            "keys": ["綠風", "Green Breeze", "Gin", "琴酒", "Calvados", "蘋果白蘭地", "綠茶","青茶","茶香", "茶", "甜的", "夏日", "Green Tea", "Bubble Tea", "Tea", "手搖飲料", "手搖", "懶人" ],
+            "keys": ["綠風", "Green Breeze", "Gin", "琴酒", "Calvados", "蘋果白蘭地", "綠茶", "青茶", "茶香", "茶", "甜的", "夏日", "Green Tea", "Bubble Tea", "Tea", "手搖飲料", "手搖", "懶人"],
             "name": {
                 "en": "Green Breeze",
                 "zh": "綠風"
             },
             "signature": true
-        }
-    ],
-    "overpartylab-recipes": [
-        {
-            "history": {
-                "en": "Robert Rosebud Butt claims to have invented the Long Island Iced Tea as an entry in a contest to create a new mixed drink with triple sec in 1972 while he worked at the Oak Beach Inn on Long Island, New York.",
-                "zh": "據說在1972年，由長島橡樹灘客棧（Oak Beach Inn）的酒保發明了這種以四種基酒混製出來的飲料。"
-            },
-            "igtoken": "Bt_DxgkFEF9",
-            "key": "long_island_iced_tea",
-            "keys": [
-                "長島冰茶",
-                "Long Island Iced Tea",
-                "酒感",
-                "123"
-            ],
-            "name": {
-                "en": "Long Island Iced Tea",
-                "zh": "長島冰茶"
-            },
-            "preparation": {
-                "en": "Add all ingredients into cocktail shaker filled with ice. Shake it until chilled, then pour into glass and full up with coke.",
-                "zh": "將所有材料放入雪克杯中，搖至雪克杯微冰。取長飲杯置入冰塊，倒入混合過後的材料後再用可樂倒滿。"
-            },
-            "recipe": [
-                {
-                    "ingr": "vodka",
-                    "vol": "30"
-                },
-                {
-                    "ingr": "gin",
-                    "vol": "30"
-                },
-                {
-                    "ingr": "white_rum",
-                    "vol": "30"
-                },
-                {
-                    "ingr": "cointreau",
-                    "vol": "30"
-                },
-                {
-                    "ingr": "tequila",
-                    "vol": "10"
-                },
-                {
-                    "ingr": "lemon",
-                    "vol": "15"
-                },
-                {
-                    "ingr": "orange",
-                    "vol": "60"
-                },
-                {
-                    "ingr": "coke",
-                    "vol": "適量"
-                }
-            ],
-            "tips": {
-                "en": "",
-                "zh": ""
-            }
-        },
-        {
-            "history": {
-                "en": "Robert Rosebud Butt claims to have invented the Long Island Iced Tea as an entry in a contest to create a new mixed drink with triple sec in 1972 while he worked at the Oak Beach Inn on Long Island, New York.",
-                "zh": "據說在1972年，由長島橡樹灘客棧（Oak Beach Inn）的酒保發明了這種以四種基酒混製出來的飲料。"
-            },
-            "igtoken": "BuGcFpgFU2C",
-            "key": "cosmopolitan",
-            "keys": [
-                "柯夢波丹",
-                "Cosmopolitan",
-                "甜的",
-                "妹酒",
-                "123"
-            ],
-            "name": {
-                "en": "Cosmopolitan",
-                "zh": "柯夢波丹"
-            },
-            "preparation": {
-                "en": "Chill your cocktail glass first. Put all the ingredients into cocktail shaker filled with ice. Shake it until chilled and pour into cocktail glass.",
-                "zh": "先將雞尾酒杯冰杯，並把所有材料放入雪克杯中，搖至雪克杯微冰後，倒入雞尾酒杯中並加上裝飾。"
-            },
-            "recipe": [
-                {
-                    "ingr": "vodka",
-                    "vol": "15"
-                },
-                {
-                    "ingr": "cointreau",
-                    "vol": "15"
-                },
-                {
-                    "ingr": "lemon",
-                    "vol": "7"
-                },
-                {
-                    "ingr": "cranberry",
-                    "vol": "7"
-                }
-            ],
-            "tips": {
-                "en": "",
-                "zh": ""
-            }
         }
     ]
 }

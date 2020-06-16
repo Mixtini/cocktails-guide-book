@@ -9,6 +9,7 @@ import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 import InstagramEmbed from 'react-instagram-embed';
 import ChipInput from 'material-ui-chip-input';
@@ -36,6 +37,7 @@ const DEFAULT_STATE = {
     isInit: false,
     list: [],
     searchResultList: [],
+    showRecommend: false,
     expanded: '' 
 };
 
@@ -50,30 +52,55 @@ const getCocktailsList = (setRecipeList) => {
         });
 };
 
-const RecommendBlock = ({ title, data, expanded, onItemSelect, onExpanded }) => {
+const RecommendBlock = ({ dataObj, expanded, onItemSelect, onExpanded, showRecommend, onControlRecommend }) => {
     return (
-        <StyledExpansionPanel expanded={expanded} onChange={() => { onExpanded(title)} }>
-            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                <div>{title}</div>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
-                <ButtonGroup>
+        <>
+            <StyledRecommendBlock>
+                <OuterExpansionPanel
+                    expanded={showRecommend}
+                    onChange={onControlRecommend}
+                >
+                    <OuterExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                        <div>{SEARCH_TEXT.recommend}</div>
+                    </OuterExpansionPanelSummary>
+                    <OuterExpansionPanelDetails>
                     {
-                        data.map((e, idx) => {
+                        showRecommend && dataObj.map((e) => {
+                            const { title, data } = e;
                             return (
-                                <Button
-                                    key={`key-${idx}`}
-                                    variant="contained"
-                                    onClick={() => { onItemSelect(e)} }
+                                <StyledExpansionPanel
+                                    expanded={expanded === title}
+                                    onChange={() => { onExpanded(title)} }
+                                    key={`item-${title}`}
                                 >
-                                    {e}
-                                </Button>
-                            );
+                                    <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                                        <div>{title}</div>
+                                    </ExpansionPanelSummary>
+                                    <InnerExpansionPanelDetails>
+                                        <ButtonGroup>
+                                            {
+                                                data.map((e, idx) => {
+                                                    return (
+                                                        <Button
+                                                            key={`key-${idx}`}
+                                                            variant="contained"
+                                                            onClick={() => { onItemSelect(e)} }
+                                                        >
+                                                            {e}
+                                                        </Button>
+                                                    );
+                                                })
+                                            }
+                                        </ButtonGroup>
+                                    </InnerExpansionPanelDetails>
+                                </StyledExpansionPanel>
+                            )
                         })
-                    }
-                </ButtonGroup>
-            </ExpansionPanelDetails>
-        </StyledExpansionPanel>
+                    }   
+                    </OuterExpansionPanelDetails>
+                </ OuterExpansionPanel>
+            </StyledRecommendBlock>
+        </>
     );
 };
 
@@ -94,7 +121,7 @@ const Card = ({ value }) => {
 };
 const Search = () => {
     const [userAction, setUserAction] = useState(DEFAULT_STATE);
-    const { value, signature, isSearch, isInit, list, searchResultList, expanded } = userAction;
+    const { value, signature, isSearch, isInit, list, searchResultList, showRecommend, expanded } = userAction;
 
     const onClickSearch = (e) => {
         list.sort(() => Math.random() - 0.5);
@@ -107,7 +134,7 @@ const Search = () => {
             if(signature === false) filterRule = filterRule && (e.signature === signature);
             return filterRule;
         });
-        setUserAction({ ...userAction, searchResultList, expanded: '', isSearch: true });
+        setUserAction({ ...userAction, searchResultList, expanded: '', isSearch: true, showRecommend: false });
     };
     const onUpdateList = (list) => {
         setUserAction({ ...userAction, isInit: true, list });
@@ -135,6 +162,10 @@ const Search = () => {
         const newExpanded = expanded === clickExpanded ? '' : clickExpanded
         setUserAction({ ...userAction,  expanded: newExpanded });
     };
+    const onControlRecommend = () => {
+        const status = !showRecommend
+        setUserAction({ ...userAction,  showRecommend: status });
+    };
 
     useEffect(() => {
         getCocktailsList(onUpdateList);
@@ -153,6 +184,9 @@ const Search = () => {
                     <> 
                         <Item>
                             <Content>{SEARCH_TEXT.content}</Content>
+                        </Item>
+                        <Item>
+                            <Content>{SEARCH_TEXT.tips}</Content>
                         </Item>
                         <Item>
                         <FormControlLabel
@@ -188,23 +222,16 @@ const Search = () => {
                                 {SEARCH_TEXT.button.search}
                             </Button>
                         </Item>
-                        {
-                            RECOMMEND.map((e) => {
-                                const { title, data } = e;
-                                return (
-                                    <Item key={`item-${title}`}>
-                                        <RecommendBlock
-                                            key={`recommend-${title}`}
-                                            title={title}
-                                            data={data}
-                                            onItemSelect={onSelectChange}
-                                            expanded={expanded === title}
-                                            onExpanded={onExpanded}
-                                        />
-                                    </Item>
-                                )
-                            })
-                        }
+                        <Item>
+                            <RecommendBlock
+                                dataObj={RECOMMEND}
+                                onItemSelect={onSelectChange}
+                                showRecommend={showRecommend}
+                                expanded={expanded}
+                                onExpanded={onExpanded}
+                                onControlRecommend={onControlRecommend}
+                            />
+                        </Item>
                         <Item>
                             {
                                 searchResultList.length === 0 && value.length !== 0 && isSearch && (
@@ -271,11 +298,39 @@ const CardTitle = styled.div`
 `;
 
 const StyledExpansionPanel = styled(ExpansionPanel)`
-    width: ${STYLE.MIN_WIDTH}px;
+    width: 320px;
     && button {
-        margin-right: 12px;
-        margin-top: 5px;
+        margin: 5px;
     }
+`;
+
+const OuterExpansionPanel = styled(ExpansionPanel)`
+    width: 350px;
+    &&& {
+        background-color: #f4f4ec;
+        box-shadow: none;
+        margin-right: 20px;
+    }
+`;
+
+const OuterExpansionPanelSummary = styled(ExpansionPanelSummary)`
+    width: 350px;
+`;
+
+const OuterExpansionPanelDetails = styled(ExpansionPanelDetails)`
+    display: flex;
+    flex-direction: column;
+`;
+
+const InnerExpansionPanelDetails = styled(ExpansionPanelDetails)`
+    && {
+        padding: 5px 15px;
+    }
+`;
+
+const StyledRecommendBlock = styled.div`
+    display: flex;
+    flex-direction: column;
 `;
 
 const ButtonGroup = styled.div`
