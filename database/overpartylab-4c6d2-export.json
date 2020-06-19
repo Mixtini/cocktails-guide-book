@@ -531,6 +531,26 @@
             "signature": true
         },
         {
+            "igtoken": "B494Wrtl0TL",
+            "key": "japan_guava",
+            "keys": ["芭樂弄梅", "Japan Guava", "琴酒", "gin", "梅酒", "茶梅酒", "茶酒", "茶香", "茶", "芭樂", "甜的", "果香"],
+            "name": {
+                "en": "Japan Guava",
+                "zh": "芭樂弄梅"
+            },
+            "signature": true
+        },
+        {
+            "igtoken": "B5Shfp8l56a",
+            "key": "lychee_tea_fizz",
+            "keys": ["貴妃茶費茲", "Lychee Tea Fizz", "琴酒", "gin", "tiffin", "茶酒", "茶香", "茶", "荔枝", "甜的", "果香", "啤酒", "檸檬"],
+            "name": {
+                "en": "Lychee Tea Fizz",
+                "zh": "貴妃茶費茲"
+            },
+            "signature": true
+        },
+        {
             "igtoken": "B-UUFdVlFcT",
             "key": "tropical_woodland",
             "keys": ["熱帶林園", "Tropical Woodland", "蘭姆酒", "rum", "威士忌", "龍眼", "木質", "桂圓", "whiskey", "短飲", "酒感"],

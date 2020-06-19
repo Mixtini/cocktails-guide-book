@@ -2,7 +2,7 @@
 
 ## Intro
 
-We are using Firebase Realtime Database, the file ```cocktails-guide-api-service-export.json``` is the snapshot for the databse.
+We are using Firebase Realtime Database, the file ```cocktails-guide-api-service-export.json``` is the snapshot for the database.
 
 ## How to contribute
 1. create a temp branch
@@ -46,22 +46,60 @@ OverPartyLab recipes
 Example:
 ```json
 {
-    "cosmopolitan": {
-        "name": {
-            "zh": "柯夢波丹",
-            "en": "Cosmopolitan"
+    "history": {
+        "en": "Robert Rosebud Butt claims to have invented the Long Island Iced Tea as an entry in a contest to create a new mixed drink with triple sec in 1972 while he worked at the Oak Beach Inn on Long Island, New York.",
+        "zh": "據說在1972年，由長島橡樹灘客棧（Oak Beach Inn）的酒保發明了這種以四種基酒混製出來的飲料。"
+    },
+    "igtoken": "Bt_DxgkFEF9",
+    "key": "long_island_iced_tea",
+    "keys": [],
+    "name": {
+        "en": "Long Island Iced Tea",
+        "zh": "長島冰茶"
+    },
+    "preparation": {
+        "en": "Add all ingredients into cocktail shaker filled with ice. Shake it until chilled, then pour into glass and full up with coke.",
+        "zh": "將所有材料放入雪克杯中，搖至雪克杯微冰。取長飲杯置入冰塊，倒入混合過後的材料後再用可樂倒滿。"
+    },
+    "recipe": [
+        {
+            "ingr": "vodka",
+            "vol": "30"
         },
-        "recipe": [
-            { "ingr": "vodka", "vol": "15" },
-            { "ingr": "cointreau", "vol": "15" },
-            { "ingr": "lemon", "vol": "7" },
-            { "ingr": "cranberry", "vol": "7" }
-        ],
-        "preparation": "先將雞尾酒杯冰杯，並把所有材料放入雪克杯中，搖至雪克杯微冰後，倒入雞尾酒杯中並加上裝飾。",
-        "tips": null,
-        "keys": ["柯夢波丹", "Cosmopolitan", "甜的", "妹酒"],
-        "image": ""
+        {
+            "ingr": "gin",
+            "vol": "30"
+        },
+        {
+            "ingr": "white_rum",
+            "vol": "30"
+        },
+        {
+            "ingr": "cointreau",
+            "vol": "30"
+        },
+        {
+            "ingr": "tequila",
+            "vol": "10"
+        },
+        {
+            "ingr": "lemon",
+            "vol": "15"
+        },
+        {
+            "ingr": "orange",
+            "vol": "60"
+        },
+        {
+            "ingr": "coke",
+            "vol": "適量"
+        }
+    ],
+    "tips": {
+        "en": "",
+        "zh": ""
     }
+}
 }
 ```
 

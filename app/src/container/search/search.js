@@ -1,6 +1,8 @@
+// core
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
+// third party component
 import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -9,18 +11,11 @@ import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import ExpandLessIcon from '@material-ui/icons/ExpandLess';
-
 import InstagramEmbed from 'react-instagram-embed';
 import ChipInput from 'material-ui-chip-input';
 
+// component
 import Loader from '../../components/loader';
-
-import { sendRequest, Api } from '../../utils/httpService';
-import { STYLE } from '../../config/common';
-import { RECOMMEND } from '../../config/search';
-import SEARCH_TEXT from '../../assets/wording/search.json';
-
 import {
     Container,
     Header,
@@ -28,7 +23,10 @@ import {
     Content
 } from '../style.css.js';
 
-// import MOCKDATA from '../../__data__/db.json';
+// config and assets
+import { STYLE } from '../../config/common';
+import { RECOMMEND } from '../../config/search';
+import SEARCH_TEXT from '../../assets/wording/search.json';
 
 const DEFAULT_STATE = {
     value: [],
@@ -39,17 +37,6 @@ const DEFAULT_STATE = {
     searchResultList: [],
     showRecommend: false,
     expanded: '' 
-};
-
-const getCocktailsList = (setRecipeList) => {
-    // setRecipeList(Object.values(MOCKDATA["overpartylab-cocktails"]));
-    sendRequest(Api.getCocktails)
-        .then((data) => {
-            setRecipeList(Object.values(data));
-        })
-        .catch((err) => {
-            console.error(err);
-        });
 };
 
 const RecommendBlock = ({ dataObj, expanded, onItemSelect, onExpanded, showRecommend, onControlRecommend }) => {
@@ -119,13 +106,15 @@ const Card = ({ value }) => {
         </>
     );
 };
-const Search = () => {
+
+const Search = ({ searchPageData, getCocktailsList }) => {
     const [userAction, setUserAction] = useState(DEFAULT_STATE);
-    const { value, signature, isSearch, isInit, list, searchResultList, showRecommend, expanded } = userAction;
+    const { isInit, cocktailsList } = searchPageData;
+    const { value, signature, isSearch, searchResultList, showRecommend, expanded } = userAction;
 
     const onClickSearch = (e) => {
-        list.sort(() => Math.random() - 0.5);
-        const searchResultList = list.filter(e => {
+        cocktailsList.sort(() => Math.random() - 0.5);
+        const searchResultList = cocktailsList.filter(e => {
             let filterRule = false;
             for (let i = 0; i < value.length; i += 1) {
                 filterRule = Object.values(e.keys).indexOf(value[i]) > -1;
@@ -135,9 +124,6 @@ const Search = () => {
             return filterRule;
         });
         setUserAction({ ...userAction, searchResultList, expanded: '', isSearch: true, showRecommend: false });
-    };
-    const onUpdateList = (list) => {
-        setUserAction({ ...userAction, isInit: true, list });
     };
     const onSwitchSignature = (e) => {
         const signature = e.target.checked;
@@ -168,7 +154,9 @@ const Search = () => {
     };
 
     useEffect(() => {
-        getCocktailsList(onUpdateList);
+        if (cocktailsList && cocktailsList.length === 0) {
+            getCocktailsList();
+        }
     }, []);
 
     return (
@@ -180,7 +168,14 @@ const Search = () => {
                 !isInit && <Loader />
             }
             {
-                isInit && (
+                isInit && cocktailsList.length === 0 && (
+                    <Item>
+                        <Content>{SEARCH_TEXT.error_text}</Content>
+                    </Item>
+                )
+            }
+            {
+                isInit && cocktailsList.length > 0 && (
                     <> 
                         <Item>
                             <Content>{SEARCH_TEXT.content}</Content>
