@@ -11,11 +11,11 @@ import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import FormControl from '@material-ui/core/FormControl';
-import FormLabel from '@material-ui/core/FormLabel';
-import Slider from '@material-ui/core/Slider';
+// import Radio from '@material-ui/core/Radio';
+// import RadioGroup from '@material-ui/core/RadioGroup';
+// import FormControl from '@material-ui/core/FormControl';
+// import FormLabel from '@material-ui/core/FormLabel';
+// import Slider from '@material-ui/core/Slider';
 import InstagramEmbed from 'react-instagram-embed';
 import ChipInput from 'material-ui-chip-input';
 
@@ -29,7 +29,6 @@ import {
 } from '../style.css.js';
 
 // config and assets
-import { sendRequest, Api } from '../../utils/httpService';
 import { STYLE } from '../../config/common';
 import { RECOMMEND } from '../../config/search';
 import SEARCH_TEXT from '../../assets/wording/search.json';
@@ -50,17 +49,48 @@ const DEFAULT_USER_DATA_STATE = {
     age: 1,
 };
 
-const ageRange = (value) => {
-    if (value === 0) {
-        return '< 20'
-    } else if (value === 5) {
-        return '> 60'
-    } else {
-        const from = 20 + (value - 1) * 10;
-        const to = 20 + value * 10;
-        return `${from}-${to}`;
-    }
-}
+// const ageRange = (value) => {
+//     if (value === 0) {
+//         return '< 20'
+//     } else if (value === 5) {
+//         return '> 60'
+//     } else {
+//         const from = 20 + (value - 1) * 10;
+//         const to = 20 + value * 10;
+//         return `${from}-${to}`;
+//     }
+// }
+
+// const UserInformation = ({ userData, setUserData }) => {
+//     const { gender, age } = userData;
+//     const handleGenderChange = (e) => {
+//         setUserData({ ...userData, gender: e.target.value });
+//     };
+//     const onChangeAge = (event, newValue) => {
+//         setUserData({ ...userData, age: newValue });
+//     };
+//     const displayAge = ageRange(age);
+//     return (
+//         <FormControl component="fieldset">
+//             <FormLabel component="legend">{SEARCH_TEXT.user_data.gender}</FormLabel>
+//             <StyleRadioGroup value={gender} onChange={handleGenderChange}>
+//                 <FormControlLabel value="female" control={<Radio />} label="Female" />
+//                 <FormControlLabel value="male" control={<Radio />} label="Male" />
+//                 <FormControlLabel value="other" control={<Radio />} label="Other" />
+//             </StyleRadioGroup>
+//             <FormLabel component="legend">{`${SEARCH_TEXT.user_data.age} ${displayAge}`}</FormLabel>
+//             <Slider
+//                 value={age}
+//                 valueLabelFormat={ageRange}
+//                 onChange={onChangeAge}
+//                 valueLabelDisplay="auto"
+//                 step={1}
+//                 min={0}
+//                 max={5}
+//             />
+//         </FormControl>
+//     )
+// };
 
 const RecommendBlock = ({ dataObj, expanded, onItemSelect, onExpanded, showRecommend, onControlRecommend }) => {
     return (
@@ -130,40 +160,10 @@ const Card = ({ value }) => {
     );
 };
 
-const UserInformation = ({ userData, setUserData }) => {
-    const { gender, age } = userData;
-    const handleGenderChange = (e) => {
-        setUserData({ ...userData, gender: e.target.value });
-    };
-    const onChangeAge = (event, newValue) => {
-        setUserData({ ...userData, age: newValue });
-    };
-    const displayAge = ageRange(age);
-    return (
-        <FormControl component="fieldset">
-            <FormLabel component="legend">{SEARCH_TEXT.user_data.gender}</FormLabel>
-            <StyleRadioGroup value={gender} onChange={handleGenderChange}>
-                <FormControlLabel value="female" control={<Radio />} label="Female" />
-                <FormControlLabel value="male" control={<Radio />} label="Male" />
-                <FormControlLabel value="other" control={<Radio />} label="Other" />
-            </StyleRadioGroup>
-            <FormLabel component="legend">{`${SEARCH_TEXT.user_data.age} ${displayAge}`}</FormLabel>
-            <Slider
-                value={age}
-                valueLabelFormat={ageRange}
-                onChange={onChangeAge}
-                valueLabelDisplay="auto"
-                step={1}
-                min={0}
-                max={5}
-            />
-        </FormControl>
-    )
-};
 
 const Search = ({ searchPageData, getCocktailsList }) => {
     const [ userAction, setUserAction] = useState(DEFAULT_STATE);  
-    const [ userData, setUserData ] = useState(DEFAULT_USER_DATA_STATE);
+    // const [ userData, setUserData ] = useState(DEFAULT_USER_DATA_STATE);
 
     const { isInit, cocktailsList } = searchPageData;
     const { value, signature, isSearch, searchResultList, showRecommend, expanded } = userAction;
@@ -181,9 +181,9 @@ const Search = ({ searchPageData, getCocktailsList }) => {
         });
         setUserAction({ ...userAction, searchResultList, expanded: '', isSearch: true, showRecommend: false });
         // TODO: save user action and information
-        const userInformationData = {
-            userData, value, signature, timestamp: (new Date()).getTime()
-        };
+        // const userInformationData = {
+        //     userData, value, signature, timestamp: (new Date()).getTime()
+        // };
     };
     const onSwitchSignature = (e) => {
         const signature = e.target.checked;
@@ -243,7 +243,7 @@ const Search = ({ searchPageData, getCocktailsList }) => {
                                 <div>{SEARCH_TEXT.tips}</div>
                             </Content>
                         </Item>
-                        <Item>
+                        {/* <Item>
                             <Content>{SEARCH_TEXT.info_text}</Content>
                         </Item>
                         <Item>
@@ -251,7 +251,7 @@ const Search = ({ searchPageData, getCocktailsList }) => {
                                 userData={userData}
                                 setUserData={setUserData}
                             />
-                        </Item>
+                        </Item> */}
                         <Item>
                         <FormControlLabel
                             control={
@@ -403,8 +403,8 @@ const ButtonGroup = styled.div`
     flex-wrap: wrap;
 `;
 
-const StyleRadioGroup = styled(RadioGroup)`
-    && {
-        flex-direction: row;
-    }
-`;
+// const StyleRadioGroup = styled(RadioGroup)`
+//     && {
+//         flex-direction: row;
+//     }
+// `;
