@@ -283,7 +283,7 @@
         {
             "igtoken": "Bwo1oTslZNA",
             "key": "sidecar",
-            "keys": ["側車", "sidecar", "cognac", "白蘭地", "干邑", "短飲", "檸檬", "lemon"],
+            "keys": ["側車", "sidecar", "cognac", "白蘭地", "干邑", "短飲", "檸檬", "lemon", "君度", "cointreau"],
             "name": {
                 "en": "Sidecar",
                 "zh": "側車"
@@ -463,7 +463,7 @@
         {
             "igtoken": "B2_xo7WlSxp",
             "key": "tea_beer_gin_fizz",
-            "keys": ["深葉琴費茲", "Tea Beer Gin Fizz", "Gin Fizz", "琴酒", "gin", "長飲", "檸檬", "lemon", "清爽", "茶香", "茶", "接骨木花", "接骨木", "elderflower", "啤酒"],
+            "keys": ["深葉琴費茲", "Tea Beer Gin Fizz", "Gin Fizz", "琴酒", "gin", "長飲", "檸檬", "lemon", "清爽", "茶香", "茶", "接骨木花", "接骨木", "elderflower", "啤酒", "麥香"],
             "name": {
                 "en": "Tea Beer Gin Fizz",
                 "zh": "深葉琴費茲"
@@ -547,6 +547,56 @@
             "name": {
                 "en": "Lychee Tea Fizz",
                 "zh": "貴妃茶費茲"
+            },
+            "signature": true
+        },
+        {
+            "igtoken": "B6F3Zf2FYwn",
+            "key": "raffles_sling",
+            "keys": ["萊佛士1915經典琴司令", "Raffles 1915 Gin Sling", "gin", "琴酒", "甜的", "君度", "cointreau", "檸檬", "lemon", "糖漿", "櫻桃白蘭地"],
+            "name": {
+                "en": "Raffles 1915 Gin Sling",
+                "zh": "萊佛士1915經典琴司令"
+            },
+            "signature": false
+        },
+        {
+            "igtoken": "B6X2_9yFVlc",
+            "key": "blood_orange_sidecar",
+            "keys": ["血橙側車", "Blood Orange Sidecar", "cognac", "白蘭地", "干邑", "短飲", "檸檬", "lemon", "君度", "cointreau"],
+            "name": {
+                "en": "Blood Orange Sidecar",
+                "zh": "血橙側車"
+            },
+            "signature": true
+        },
+        {
+            "igtoken": "B6p--4OlbgF",
+            "key": "pallini_sunshine",
+            "keys": ["陽光下的帕里尼", "Pallini Sunshine", "gin", "琴酒", "葡萄柚", "果香", "短飲", "檸檬", "lemon", "君度", "cointreau"],
+            "name": {
+                "en": "Pallini Sunshine",
+                "zh": "陽光下的帕里尼"
+            },
+            "signature": true
+        },
+        {
+            "igtoken": "B7N9H1PFm3g",
+            "key": "tropical_island",
+            "keys": ["熱帶島嶼", "Tropical Island", "鳳梨", "椰子", "椰奶", "果香", "短飲", "柳橙", "果香", "熱帶", "tiki", "甜的"],
+            "name": {
+                "en": "Tropical Island",
+                "zh": "熱帶島嶼"
+            },
+            "signature": true
+        },
+        {
+            "igtoken": "BwzJebUF48u",
+            "key": "coffee_gin_tonic",
+            "keys": ["咖啡琴通寧", "Coffee Gin Tonic", "tonic", "琴酒", "gin", "長飲", "檸檬", "lemon", "清爽", "咖啡", " coffee"],
+            "name": {
+                "en": "Coffee Gin Tonic",
+                "zh": "咖啡琴通寧"
             },
             "signature": true
         },

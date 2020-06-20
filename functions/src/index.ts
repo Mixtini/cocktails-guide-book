@@ -55,3 +55,16 @@ export const testApi = functions.region('asia-east2').https.onRequest((req: any,
         res.status(200).send('API is running');
     });
 });
+
+export const saveSearchData = functions.region('asia-east2')
+    .https.onRequest((req: any, res: any) => {
+        const { body } = req;
+        const { userData, value, signature, timestamp } = body;
+        const user = { userData, value, signature, timestamp };
+        console.log(user, '-user');
+        return admin.database().ref('user-search').push(user).then(() => {
+            return cors(req, res, () => {
+                res.status(200).send({ code: 0, info: 'save data successfully' });
+            });
+        });
+});

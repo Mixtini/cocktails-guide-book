@@ -5,12 +5,11 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // background-color: #212121;
-    // color: #fff;
+    font-size: 14px;
 `;
 
 export const Header = styled.div`
-    font-size: 28px;
+    font-size: 24px;
     padding: ${STYLE.PADDING}px;
     display: flex;
     justify-content: center;

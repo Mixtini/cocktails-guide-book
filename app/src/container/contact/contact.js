@@ -34,13 +34,16 @@ const Contact = () => {
             <Item>
                 <ContactLink>
                     <StyledIcon href={LINK.FACEBOOK} target="_blank">
-                        <FacebookIcon />
+                        <FacebookIcon /> 
+                        <span>{CONTACT_TEXT.button.facebook}</span>
                     </StyledIcon>
                     <StyledIcon href={LINK.INSTAGRAM} target="_blank">
                         <InstagramIcon />
+                        <span>{CONTACT_TEXT.button.instagram}</span>
                     </StyledIcon>
                     <StyledIcon href={LINK.MEDIUM} target="_blank">
                         <CollectionsBookmarkTwoToneIcon />
+                        <span>{CONTACT_TEXT.button.medium}</span>
                     </StyledIcon>
                 </ContactLink>
             </Item>
@@ -73,8 +76,8 @@ const StyledIcon = styled.a`
         color: inherit;
         cursor: pointer; 
     }
-    && div {
-        padding: 10px;
+    && span {
+        padding-left: 10px;
     }
     display: flex;
     flex-direction: column;

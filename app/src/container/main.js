@@ -25,7 +25,7 @@ const Main = () => {
     const [searchPageData, setSearchPageData] = React.useState(DEFAULT_SEARCH_PAGE);
 
     const getCocktailsList = () => {
-        // setCocktailsList(Object.values(MOCKDATA["overpartylab-cocktails"]));
+        // setSearchPageData({ isInit: true, cocktailsList: Object.values(MOCKDATA["overpartylab-cocktails"])});
         sendRequest(Api.getCocktails)
             .then((data) => {
                 setSearchPageData({ isInit: true, cocktailsList: Object.values(data) });
