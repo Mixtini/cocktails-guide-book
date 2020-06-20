@@ -3,8 +3,8 @@ export const COMMON = {
 };
 
 export const STYLE = {
-    MIN_WIDTH: 375,
-    PADDING: 10
+    MIN_WIDTH: 350,
+    PADDING: 5
 }
 
 export const LINK = {

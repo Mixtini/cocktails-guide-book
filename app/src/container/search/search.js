@@ -1,6 +1,8 @@
+// core
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
+// third party component
 import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -9,17 +11,16 @@ import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
+import Slider from '@material-ui/core/Slider';
 import InstagramEmbed from 'react-instagram-embed';
 import ChipInput from 'material-ui-chip-input';
 
+// component
 import Loader from '../../components/loader';
-
-import { sendRequest, Api } from '../../utils/httpService';
-import { STYLE } from '../../config/common';
-import { RECOMMEND } from '../../config/search';
-import SEARCH_TEXT from '../../assets/wording/search.json';
-
 import {
     Container,
     Header,
@@ -27,53 +28,89 @@ import {
     Content
 } from '../style.css.js';
 
-// import MOCKDATA from '../../__data__/db.json';
+// config and assets
+import { sendRequest, Api } from '../../utils/httpService';
+import { STYLE } from '../../config/common';
+import { RECOMMEND } from '../../config/search';
+import SEARCH_TEXT from '../../assets/wording/search.json';
 
 const DEFAULT_STATE = {
     value: [],
-    signature: false,
-    isSearching: false,
+    signature: true,
+    isSearch: false,
     isInit: false,
     list: [],
     searchResultList: [],
+    showRecommend: false,
     expanded: '' 
 };
 
-const getCocktailsList = (setRecipeList) => {
-    // setRecipeList(Object.values(MOCKDATA["overpartylab-cocktails"]));
-    sendRequest(Api.getCocktails)
-        .then((data) => {
-            setRecipeList(Object.values(data));
-        })
-        .catch((err) => {
-            console.error(err);
-        });
+const DEFAULT_USER_DATA_STATE = {
+    gender: '',
+    age: 1,
 };
 
-const RecommendBlock = ({ title, data, expanded, onItemSelect, onExpanded }) => {
+const ageRange = (value) => {
+    if (value === 0) {
+        return '< 20'
+    } else if (value === 5) {
+        return '> 60'
+    } else {
+        const from = 20 + (value - 1) * 10;
+        const to = 20 + value * 10;
+        return `${from}-${to}`;
+    }
+}
+
+const RecommendBlock = ({ dataObj, expanded, onItemSelect, onExpanded, showRecommend, onControlRecommend }) => {
     return (
-        <StyledExpansionPanel expanded={expanded} onChange={() => { onExpanded(title)} }>
-            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                <div>{title}</div>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
-                <div>
+        <>
+            <StyledRecommendBlock>
+                <OuterExpansionPanel
+                    expanded={showRecommend}
+                    onChange={onControlRecommend}
+                >
+                    <OuterExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                        <div>{SEARCH_TEXT.recommend}</div>
+                    </OuterExpansionPanelSummary>
+                    <OuterExpansionPanelDetails>
                     {
-                        data.map((e, idx) => {
+                        showRecommend && dataObj.map((e) => {
+                            const { title, data } = e;
                             return (
-                                <Button
-                                    key={`key-${idx}`}
-                                    variant="contained"
-                                    onClick={() => { onItemSelect(e)} }
+                                <StyledExpansionPanel
+                                    expanded={expanded === title}
+                                    onChange={() => { onExpanded(title)} }
+                                    key={`item-${title}`}
                                 >
-                                    {e}
-                                </Button>
-                            );
+                                    <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                                        <div>{title}</div>
+                                    </ExpansionPanelSummary>
+                                    <InnerExpansionPanelDetails>
+                                        <ButtonGroup>
+                                            {
+                                                data.map((e, idx) => {
+                                                    return (
+                                                        <Button
+                                                            key={`key-${idx}`}
+                                                            variant="contained"
+                                                            onClick={() => { onItemSelect(e)} }
+                                                        >
+                                                            {e}
+                                                        </Button>
+                                                    );
+                                                })
+                                            }
+                                        </ButtonGroup>
+                                    </InnerExpansionPanelDetails>
+                                </StyledExpansionPanel>
+                            )
                         })
-                    }
-                </div>
-            </ExpansionPanelDetails>
-        </StyledExpansionPanel>
+                    }   
+                    </OuterExpansionPanelDetails>
+                </ OuterExpansionPanel>
+            </StyledRecommendBlock>
+        </>
     );
 };
 
@@ -92,13 +129,48 @@ const Card = ({ value }) => {
         </>
     );
 };
-const Search = () => {
-    const [userAction, setUserAction] = useState(DEFAULT_STATE);
-    const { value, signature, isSearching, isInit, list, searchResultList, expanded } = userAction;
+
+const UserInformation = ({ userData, setUserData }) => {
+    const { gender, age } = userData;
+    const handleGenderChange = (e) => {
+        setUserData({ ...userData, gender: e.target.value });
+    };
+    const onChangeAge = (event, newValue) => {
+        setUserData({ ...userData, age: newValue });
+    };
+    const displayAge = ageRange(age);
+    return (
+        <FormControl component="fieldset">
+            <FormLabel component="legend">{SEARCH_TEXT.user_data.gender}</FormLabel>
+            <StyleRadioGroup value={gender} onChange={handleGenderChange}>
+                <FormControlLabel value="female" control={<Radio />} label="Female" />
+                <FormControlLabel value="male" control={<Radio />} label="Male" />
+                <FormControlLabel value="other" control={<Radio />} label="Other" />
+            </StyleRadioGroup>
+            <FormLabel component="legend">{`${SEARCH_TEXT.user_data.age} ${displayAge}`}</FormLabel>
+            <Slider
+                value={age}
+                valueLabelFormat={ageRange}
+                onChange={onChangeAge}
+                valueLabelDisplay="auto"
+                step={1}
+                min={0}
+                max={5}
+            />
+        </FormControl>
+    )
+};
+
+const Search = ({ searchPageData, getCocktailsList }) => {
+    const [ userAction, setUserAction] = useState(DEFAULT_STATE);  
+    const [ userData, setUserData ] = useState(DEFAULT_USER_DATA_STATE);
+
+    const { isInit, cocktailsList } = searchPageData;
+    const { value, signature, isSearch, searchResultList, showRecommend, expanded } = userAction;
 
     const onClickSearch = (e) => {
-        list.sort(() => Math.random() - 0.5);
-        const searchResultList = list.filter(e => {
+        cocktailsList.sort(() => Math.random() - 0.5);
+        const searchResultList = cocktailsList.filter(e => {
             let filterRule = false;
             for (let i = 0; i < value.length; i += 1) {
                 filterRule = Object.values(e.keys).indexOf(value[i]) > -1;
@@ -107,42 +179,46 @@ const Search = () => {
             if(signature === false) filterRule = filterRule && (e.signature === signature);
             return filterRule;
         });
-        setUserAction({ ...userAction, searchResultList, expanded: '' });
-    };
-    const onUpdateList = (list) => {
-        setUserAction({ ...userAction, isInit: true, list });
-    };
-    const setLoading = (flag) => {
-        setUserAction({ ...userAction, isSearching: flag });
+        setUserAction({ ...userAction, searchResultList, expanded: '', isSearch: true, showRecommend: false });
+        // TODO: save user action and information
+        const userInformationData = {
+            userData, value, signature, timestamp: (new Date()).getTime()
+        };
     };
     const onSwitchSignature = (e) => {
         const signature = e.target.checked;
         setUserAction({ ...userAction, signature });
     };
     const onChipInputChange = (newValue) => {
-        if (value.length < 5 && value.indexOf(newValue) === -1) {
-            setUserAction({ ...userAction, value: [...value, ...newValue] });
+        if (value.length < 3) {
+            setUserAction({ ...userAction, value: newValue, isSearch: false });
         }
     };
     const onSelectChange = (newValue) => {
-        if (value.length < 5 && value.indexOf(newValue) === -1) {
-            setUserAction({ ...userAction, value: [...value, newValue] });
+        if (value.length < 3 && value.indexOf(newValue) === -1) {
+            setUserAction({ ...userAction, value: [...value, newValue], isSearch: false });
         }
     };
     const handleDeleteChip = (chip) => {
         const index = value.indexOf(chip);
         if (index !== -1) value.splice(index, 1);
-        setUserAction({ ...userAction, value });
+        setUserAction({ ...userAction, value, isSearch: false });
     };
     const onExpanded = (clickExpanded) => {
         const newExpanded = expanded === clickExpanded ? '' : clickExpanded
         setUserAction({ ...userAction,  expanded: newExpanded });
     };
+    const onControlRecommend = () => {
+        const status = !showRecommend
+        setUserAction({ ...userAction,  showRecommend: status });
+    };
 
     useEffect(() => {
-        getCocktailsList(onUpdateList);
+        if (cocktailsList && cocktailsList.length === 0) {
+            getCocktailsList();
+        }
     }, []);
-console.log(value, '---value');
+
     return (
         <Container>
             <Header>
@@ -152,10 +228,29 @@ console.log(value, '---value');
                 !isInit && <Loader />
             }
             {
-                isInit && (
+                isInit && cocktailsList.length === 0 && (
+                    <Item>
+                        <Content>{SEARCH_TEXT.error_text}</Content>
+                    </Item>
+                )
+            }
+            {
+                isInit && cocktailsList.length > 0 && (
                     <> 
                         <Item>
-                            <Content>{SEARCH_TEXT.content}</Content>
+                            <Content>
+                                <div>{SEARCH_TEXT.content}</div>
+                                <div>{SEARCH_TEXT.tips}</div>
+                            </Content>
+                        </Item>
+                        <Item>
+                            <Content>{SEARCH_TEXT.info_text}</Content>
+                        </Item>
+                        <Item>
+                            <UserInformation
+                                userData={userData}
+                                setUserData={setUserData}
+                            />
                         </Item>
                         <Item>
                         <FormControlLabel
@@ -169,23 +264,6 @@ console.log(value, '---value');
                             label={<SwitchText checked={signature}>{SEARCH_TEXT.switch_content}</SwitchText>}
                         />
                         </Item>
-                        {
-                            RECOMMEND.map((e) => {
-                                const { title, data } = e;
-                                return (
-                                    <Item key={`item-${title}`}>
-                                        <RecommendBlock
-                                            key={`recommend-${title}`}
-                                            title={title}
-                                            data={data}
-                                            onItemSelect={onSelectChange}
-                                            expanded={expanded === title}
-                                            onExpanded={onExpanded}
-                                        />
-                                    </Item>
-                                )
-                            })
-                        }
                         <Item>
                             <SearchContainer>
                                 <SearchIndicator>
@@ -209,11 +287,23 @@ console.log(value, '---value');
                             </Button>
                         </Item>
                         <Item>
+                            <RecommendBlock
+                                dataObj={RECOMMEND}
+                                onItemSelect={onSelectChange}
+                                showRecommend={showRecommend}
+                                expanded={expanded}
+                                onExpanded={onExpanded}
+                                onControlRecommend={onControlRecommend}
+                            />
+                        </Item>
+                        <Item>
                             {
-                                isSearching && <Loader />
+                                searchResultList.length === 0 && value.length !== 0 && isSearch && (
+                                    <div>{SEARCH_TEXT.no_result}</div>
+                                )
                             }
                             {
-                                !isSearching && (
+                                isSearch && (
                                     <Cards>
                                         {
                                             searchResultList.map((cocktail, idx) => {
@@ -222,7 +312,6 @@ console.log(value, '---value');
                                                     <Card
                                                         key={`key-${idx}`}
                                                         value={cocktail}
-                                                        setLoading={setLoading}
                                                     />
                                                 )
                                             })
@@ -242,6 +331,7 @@ console.log(value, '---value');
 export default Search;
 
 const SwitchText = styled.span`
+    font-size: 14px;
     color: ${({checked}) => checked ? 'black' : 'grey'};
 `;
 
@@ -273,8 +363,48 @@ const CardTitle = styled.div`
 `;
 
 const StyledExpansionPanel = styled(ExpansionPanel)`
-    width: ${STYLE.MIN_WIDTH}px;
+    width: 320px;
     && button {
-        margin-right: 8px;
+        margin: 5px;
+    }
+`;
+
+const OuterExpansionPanel = styled(ExpansionPanel)`
+    width: ${STYLE.MIN_WIDTH}px;
+    &&& {
+        background-color: #f4f4ec;
+        box-shadow: none;
+        margin-right: 20px;
+    }
+`;
+
+const OuterExpansionPanelSummary = styled(ExpansionPanelSummary)`
+    width: ${STYLE.MIN_WIDTH}px;
+`;
+
+const OuterExpansionPanelDetails = styled(ExpansionPanelDetails)`
+    display: flex;
+    flex-direction: column;
+`;
+
+const InnerExpansionPanelDetails = styled(ExpansionPanelDetails)`
+    && {
+        padding: ${STYLE.PADDING}px 15px;
+    }
+`;
+
+const StyledRecommendBlock = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+const ButtonGroup = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+`;
+
+const StyleRadioGroup = styled(RadioGroup)`
+    && {
+        flex-direction: row;
     }
 `;

@@ -1,4 +1,7 @@
 # cocktails-guide-book
+
+[![contributors](https://img.shields.io/github/contributors/overpartylab/cocktails-guide-book)](https://img.shields.io/github/contributors/overpartylab/cocktails-guide-book)
+
 A cocktails search portal create by [Over Party Lab](https://www.instagram.com/over.party.lab/).
 
 Design: [Design Doc](design/design-doc.md)

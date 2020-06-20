@@ -28,20 +28,25 @@ const Contact = () => {
             <Item>
                 <Content>{CONTACT_TEXT.content}</Content>
             </Item>
-            <ContactLink>
-                <StyledIcon href={LINK.FACEBOOK} target="_blank">
-                    <FacebookIcon />
-                    <div>{CONTACT_TEXT.button.facebook}</div>
-                </StyledIcon>
-                <StyledIcon href={LINK.INSTAGRAM} target="_blank">
-                    <InstagramIcon />
-                    <div>{CONTACT_TEXT.button.instagram}</div>
-                </StyledIcon>
-                <StyledIcon href={LINK.MEDIUM} target="_blank">
-                    <CollectionsBookmarkTwoToneIcon />
-                    <div>{CONTACT_TEXT.button.medium}</div>
-                </StyledIcon>
-            </ContactLink>
+            <Item>
+                <Content>{CONTACT_TEXT.content_recommend}</Content>
+            </Item>
+            <Item>
+                <ContactLink>
+                    <StyledIcon href={LINK.FACEBOOK} target="_blank">
+                        <FacebookIcon /> 
+                        <span>{CONTACT_TEXT.button.facebook}</span>
+                    </StyledIcon>
+                    <StyledIcon href={LINK.INSTAGRAM} target="_blank">
+                        <InstagramIcon />
+                        <span>{CONTACT_TEXT.button.instagram}</span>
+                    </StyledIcon>
+                    <StyledIcon href={LINK.MEDIUM} target="_blank">
+                        <CollectionsBookmarkTwoToneIcon />
+                        <span>{CONTACT_TEXT.button.medium}</span>
+                    </StyledIcon>
+                </ContactLink>
+            </Item>
             <Footer>
                 <div>
                     © {(new Date()).getFullYear()} <a href={LINK.INSTAGRAM} target="_blank">{CONTACT_TEXT.account}</a> v1.0.0-beta.1
@@ -71,8 +76,8 @@ const StyledIcon = styled.a`
         color: inherit;
         cursor: pointer; 
     }
-    && div {
-        padding: 10px;
+    && span {
+        padding-left: 10px;
     }
     display: flex;
     flex-direction: column;
