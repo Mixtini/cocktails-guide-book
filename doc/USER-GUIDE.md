@@ -22,4 +22,4 @@ Step 4: Do it by yourself!
 
 ### Step by step video
 
-![step-by-step](mages/step-by-step.gif "step-by-step")
+![step-by-step](images/step-by-step.gif "step-by-step")

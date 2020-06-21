@@ -10,9 +10,8 @@ A cocktails search portal create by [Over Party Lab](https://www.instagram.com/o
 
 * Design: [Design Doc](doc/DESIGN.md)
 * User Guide: [User Guide](doc/USER-GUIDE.md)
+* Database Doc: [Database Doc](doc/DATABASE-DOC.md)
 * Portal: [Over Party Lab Portal v1.0.0-beta.1](https://overpartylab-4c6d2.web.app/)
-
-![portal](doc/images/portal-1.0.0-beta.1.png "portal")
 
 ## Env introduction
 
