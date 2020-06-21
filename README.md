@@ -4,12 +4,15 @@
 [![releases](https://img.shields.io/github/v/release/overpartylab/cocktails-guide-book)](https://github.com/overpartylab/cocktails-guide-book/releases/tag/v1.0.0-beta.1)
 [![license](https://img.shields.io/github/license/overpartylab/cocktails-guide-book)](https://github.com/overpartylab/cocktails-guide-book/blob/master/LICENSE)
 
-
 A cocktails search portal create by [Over Party Lab](https://www.instagram.com/over.party.lab/).
 
-Design: [Design Doc](design/design-doc.md)
+![logo](doc/images/logo.jpg "logo")
 
-Demo page: [Over Party Lab Portal v1.0.0-beta.1](https://overpartylab-4c6d2.web.app/)
+* Design: [Design Doc](doc/DESIGN.md)
+* User Guide: [User Guide](doc/USER-GUIDE.md)
+* Portal: [Over Party Lab Portal v1.0.0-beta.1](https://overpartylab-4c6d2.web.app/)
+
+![portal](doc/images/portal-1.0.0-beta.1.png "portal")
 
 ## Env introduction
 
@@ -20,14 +23,14 @@ We use firebase service to development our service.
 
 ### Folder structure
 
-|Folder   |Function         |Notes      |
-|---------|-----------------|-----------|
-|app      |web portal       |react web app|
-|design   |design document  ||
-|functions|firebase service ||
-|public   |firebase hosting ||
-|database |firebase database||
-|script   |cicd script      ||
+|Folder   |Function         |
+|---------|-----------------|
+|app      |web portal       |
+|doc      |document         |
+|functions|firebase service |
+|public   |firebase hosting |
+|database |firebase database|
+|script   |cicd script      |
 
 ## Login with firebase
 

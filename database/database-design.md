@@ -5,10 +5,10 @@
 We are using Firebase Realtime Database, the file ```cocktails-guide-api-service-export.json``` is the snapshot for the database.
 
 ## How to contribute
-1. create a temp branch
-2. add data
+1. go to `db-update` branch
+2. add data or update keywords
 3. update database by using ```script/update-db.sh```
-4. merge branch back to master (no PR needed)
+4. commit your change into this branch (no need to merge back to master)
 
 Please see the README to learn how to setup firebase env
 README: [README#login-with-firebase](../../README.md#login-with-firebase)
@@ -25,6 +25,40 @@ The ingredients list will separate in five types. The content is key-value objec
 |attached   |副材料  |
 |homemade   |自製材料|
 |bubble_tea |手搖飲料|
+
+### overpartylab-cocktails
+
+|Attribute  |Type  |Content|
+|-----------|------|-------|
+|name       |object| zh: 中文名稱; en: 英文名稱|
+|key        |array | 使用調酒英文名當作 key，多單字使用 `-` 隔開，ex:`"long-island-iced-tea"` |
+|keys       |array | 任何想要被搜索到的關鍵字| 
+|signature  |bool  | 是不是 overpartylab 的 signature|
+|igtoken    |string| ig url 的 key |
+
+Example:
+```json
+{
+    "igtoken": "BuGcFpgFU2C",
+    "key": "cosmopolitan",
+    "keys": ["柯夢波丹", "Cosmopolitan", "伏特加", "vodka", "君度", "cointreau", "甜的", "妹酒", "短飲", "果香", "檸檬", "lemon", "cranberry", "蔓越梅"],
+    "name": {
+        "en": "Cosmopolitan",
+        "zh": "柯夢波丹"
+    },
+    "signature": false
+},
+{
+    "igtoken": "BuLoM1ClP6G",
+    "key": "mojito",
+    "keys": ["莫西多", "Mojito", "蘭姆酒", "rum", "甜的", "清爽", "薄荷", "雪碧", "檸檬", "長飲"],
+    "name": {
+        "en": "Mojito",
+        "zh": "莫西多"
+    },
+    "signature": false
+},
+```
 
 ### overpartylab-recipes
 
