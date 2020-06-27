@@ -869,6 +869,26 @@
                 "zh": "檸檬冬瓜燒酒"
             },
             "signature": true
+        },
+        {
+            "igtoken": "CBab1holZzy",
+            "key": "may_fantasia",
+            "keys": ["五月的幻想曲", "May Fantasia", "花香", "果香", "茶香", "短飲", "白酒", "wine", "甜的", "玫瑰花", "rose", "桃", "水蜜桃"],
+            "name": {
+                "en": "May Fantasia",
+                "zh": "五月的幻想曲"
+            },
+            "signature": true
+        },
+        {
+            "igtoken": "CBscaiglqUV",
+            "key": "martini",
+            "keys": ["馬丁尼", "Martini", "琴酒", "gin", "短飲", "香艾酒", "vermouth", "酒感"],
+            "name": {
+                "en": "Martini",
+                "zh": "馬丁尼"
+            },
+            "signature": false
         }
     ]
 }
