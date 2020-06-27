@@ -39,9 +39,13 @@ const DEFAULT_STATE = {
     expanded: '' 
 };
 
-const DEFAULT_USER_DATA_STATE = {
-    gender: '',
-    age: 1,
+// helper
+const findExistInTwoArray = (array1, array2) => {
+    for (let i = 0; i < array1.length; i += 1) {
+        const find = array2.findIndex(elm => elm.toLowerCase() === array1[i].toLowerCase()) > -1
+        if (find) return find;
+    }
+    return false;
 };
 
 const RecommendBlock = ({ dataObj, expanded, onItemSelect, onExpanded, showRecommend, onControlRecommend }) => {
@@ -112,7 +116,6 @@ const Card = ({ value }) => {
     );
 };
 
-
 const Search = ({ searchPageData, getCocktailsList }) => {
     const [ userAction, setUserAction] = useState(DEFAULT_STATE);  
 
@@ -124,7 +127,8 @@ const Search = ({ searchPageData, getCocktailsList }) => {
         const searchResultList = cocktailsList.filter(e => {
             let filterRule = false;
             for (let i = 0; i < value.length; i += 1) {
-                filterRule = Object.values(e.keys).indexOf(value[i]) > -1;
+                const keys = Object.values(e.keys);
+                filterRule = keys.findIndex(elm => elm.toLowerCase() == value[i].toLowerCase()) > -1
                 if (!filterRule) return filterRule;
             }
             if(signature === false) filterRule = filterRule && (e.signature === signature);
@@ -136,13 +140,15 @@ const Search = ({ searchPageData, getCocktailsList }) => {
         const signature = e.target.checked;
         setUserAction({ ...userAction, signature });
     };
-    const onChipInputChange = (newValue) => {
-        if (value.length < 3) {
+    const onChipInputChange = (newValue) => { 
+        const find = findExistInTwoArray(value, newValue);
+        if (value.length < 3 && !find) {
             setUserAction({ ...userAction, value: [...value, ...newValue], isSearch: false });
         }
     };
     const onSelectChange = (newValue) => {
-        if (value.length < 3 && value.indexOf(newValue) === -1) {
+        const find = findExistInTwoArray(value, [newValue]);
+        if (value.length < 3 && !find) {
             setUserAction({ ...userAction, value: [...value, newValue], isSearch: false });
         }
     };
@@ -211,6 +217,7 @@ const Search = ({ searchPageData, getCocktailsList }) => {
                                     label={SEARCH_TEXT.input_hint}
                                     value={value}
                                     fullWidth={true}
+                                    newChipKeys={[]}
                                     onChange={(chips) => onChipInputChange(chips)}
                                     onDelete={(chip, index) => handleDeleteChip(chip, index)}
                                 />
