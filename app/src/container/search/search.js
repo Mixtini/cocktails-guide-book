@@ -140,10 +140,9 @@ const Search = ({ searchPageData, getCocktailsList }) => {
         const signature = e.target.checked;
         setUserAction({ ...userAction, signature });
     };
-    const onChipInputChange = (newValue) => { 
-        const find = findExistInTwoArray(value, newValue);
-        if (value.length < 3 && !find) {
-            setUserAction({ ...userAction, value: [...value, ...newValue], isSearch: false });
+    const onChipInputChange = (newValue) => {
+        if (value.length < 3) {
+            setUserAction({ ...userAction, value: [...value, newValue], isSearch: false });
         }
     };
     const onSelectChange = (newValue) => {
@@ -218,7 +217,8 @@ const Search = ({ searchPageData, getCocktailsList }) => {
                                     value={value}
                                     fullWidth={true}
                                     newChipKeys={[]}
-                                    onChange={(chips) => onChipInputChange(chips)}
+                                    allowDuplicates={false}
+                                    onAdd={(chips) => onChipInputChange(chips)}
                                     onDelete={(chip, index) => handleDeleteChip(chip, index)}
                                 />
                             </SearchContainer>
