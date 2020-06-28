@@ -203,7 +203,7 @@
         {
             "igtoken": "BvGwwDTlTyc",
             "key": "vodka_lime",
-            "keys": ["伏特加萊姆", "伏特加", "vodka", "酸的", "檸檬", "lemon", "lime", "鹽口"],
+            "keys": ["伏特加萊姆", "伏特加", "vodka", "酸的", "檸檬", "lemon", "lime", "鹽口", "酒感"],
             "name": {
                 "en": "Vodka Lime",
                 "zh": "伏特加萊姆"
@@ -483,7 +483,7 @@
         {
             "igtoken": "B31o5_UFRCT",
             "key": "mango_fizz",
-            "keys": ["芒果費茲", "Mango Fizz", "Gin Fizz", "琴酒", "gin", "長飲", "檸檬", "lemon", "清爽", "果香", "芒果", "mango"],
+            "keys": ["芒果費茲", "Mango Fizz", "Gin Fizz", "琴酒", "gin", "長飲", "檸檬", "lemon", "甜的", "清爽", "果香", "芒果", "mango"],
             "name": {
                 "en": "Mango Fizz",
                 "zh": "芒果費茲"
@@ -513,7 +513,7 @@
         {
             "igtoken": "B4r_aGllVdG",
             "key": "TEAquila",
-            "keys": ["茶舌蘭", "TEAquila", "龍舌蘭", "tequila", "短飲", "檸檬", "lemon", "蜂蜜", "茶香", "茶"],
+            "keys": ["茶舌蘭", "TEAquila", "龍舌蘭", "tequila", "短飲", "檸檬", "lemon", "蜂蜜", "茶香", "茶", "甜的"],
             "name": {
                 "en": "TEAquila",
                 "zh": "茶舌蘭"
@@ -563,7 +563,7 @@
         {
             "igtoken": "B6p--4OlbgF",
             "key": "pallini_sunshine",
-            "keys": ["陽光下的帕里尼", "Pallini Sunshine", "gin", "琴酒", "葡萄柚", "果香", "短飲", "檸檬", "lemon", "君度", "cointreau"],
+            "keys": ["陽光下的帕里尼", "Pallini Sunshine", "gin", "琴酒", "葡萄柚", "果香", "酸的", "短飲", "檸檬", "lemon", "君度", "cointreau"],
             "name": {
                 "en": "Pallini Sunshine",
                 "zh": "陽光下的帕里尼"
@@ -583,7 +583,7 @@
         {
             "igtoken": "BwzJebUF48u",
             "key": "coffee_gin_tonic",
-            "keys": ["咖啡琴通寧", "Coffee Gin Tonic", "tonic", "琴酒", "gin", "長飲", "檸檬", "lemon", "清爽", "咖啡", "coffee"],
+            "keys": ["咖啡琴通寧", "Coffee Gin Tonic", "tonic", "琴酒", "gin", "長飲", "檸檬", "lemon", "酸的", "清爽", "咖啡", "coffee"],
             "name": {
                 "en": "Coffee Gin Tonic",
                 "zh": "咖啡琴通寧"
@@ -693,7 +693,7 @@
         {
             "igtoken": "By46D0plHm-",
             "key": "gin_fruit_tea",
-            "keys": ["深琴水果茶", "Gin Fruit Tea", "Gin", "琴酒", "水果茶", "茶", "茶香", "水果", "甜的", "夏日", "Bubble Tea", "Fruit Tea", "手搖飲料", "手搖", "懶人"],
+            "keys": ["深琴水果茶", "Gin Fruit Tea", "Gin", "琴酒", "水果茶", "茶", "茶香", "水果", "果香", "甜的", "夏日", "Bubble Tea", "Fruit Tea", "手搖飲料", "手搖", "懶人"],
             "name": {
                 "en": "Gin Fruit Tea",
                 "zh": "深琴水果茶"
@@ -723,7 +723,7 @@
         {
             "igtoken": "BzVicdClfyt",
             "key": "sex_on_the_beach_ii",
-            "keys": ["性感海灘 II", "性感海灘", "Sex on the Beach II", "Vodka", "伏特加", "茶", "水果茶", "茶香", "水果", "甜的", "酸的", "夏日", "鳳梨", "Pineapple", "蔓越莓", "Cranberry", "Bubble Tea", "Fruit Tea", "手搖飲料", "手搖", "懶人"],
+            "keys": ["性感海灘 II", "性感海灘", "Sex on the Beach II", "Vodka", "伏特加", "茶", "水果茶", "茶香", "水果", "果香", "甜的", "酸的", "夏日", "鳳梨", "Pineapple", "蔓越莓", "Cranberry", "Bubble Tea", "Fruit Tea", "手搖飲料", "手搖", "懶人"],
             "name": {
                 "en": "Sex on the Beach II",
                 "zh": "性感海灘 II"
@@ -733,7 +733,7 @@
         {
             "igtoken": "BznFwrzlERu",
             "key": "sugar_cane_family",
-            "keys": ["甘蔗一家", "Sugar Cane Family", "Rum", "蘭姆酒", "萊姆酒", "朗姆酒", "茶", "水果茶", "茶香", "水果", "甜的", "夏日", "甘蔗", "Sugar Cane", "Bubble Tea", "Fruit Tea", "手搖飲料", "手搖", "懶人"],
+            "keys": ["甘蔗一家", "Sugar Cane Family", "Rum", "蘭姆酒", "萊姆酒", "朗姆酒", "茶", "水果茶", "茶香", "水果", "果香", "甜的", "夏日", "甘蔗", "Sugar Cane", "Bubble Tea", "Fruit Tea", "手搖飲料", "手搖", "懶人"],
             "name": {
                 "en": "Sugar Cane Family",
                 "zh": "甘蔗一家"
@@ -753,7 +753,7 @@
         {
             "igtoken": "B0dj7qZFGyp",
             "key": "te_sangria",
-            "keys": ["桑格莉亞茶", "Té Sangria", "Red Wine", "紅酒", "伯爵茶", "茶香", "茶", "水果茶", "水果", "甜的", "酸的", "夏日", "Earl Grey", "Bubble Tea", "Fruit Tea", "Tea", "手搖飲料", "手搖", "懶人"],
+            "keys": ["桑格莉亞茶", "Té Sangria", "Red Wine", "紅酒", "伯爵茶", "茶香", "茶", "水果茶", "水果", "果香", "甜的", "酸的", "夏日", "Earl Grey", "Bubble Tea", "Fruit Tea", "Tea", "手搖飲料", "手搖", "懶人"],
             "name": {
                 "en": "Té Sangria",
                 "zh": "桑格莉亞茶"
@@ -869,6 +869,26 @@
                 "zh": "檸檬冬瓜燒酒"
             },
             "signature": true
+        },
+        {
+            "igtoken": "CBab1holZzy",
+            "key": "may_fantasia",
+            "keys": ["五月的幻想曲", "May Fantasia", "花香", "果香", "茶香", "短飲", "白酒", "wine", "甜的", "玫瑰花", "rose", "桃", "水蜜桃"],
+            "name": {
+                "en": "May Fantasia",
+                "zh": "五月的幻想曲"
+            },
+            "signature": true
+        },
+        {
+            "igtoken": "CBscaiglqUV",
+            "key": "martini",
+            "keys": ["馬丁尼", "Martini", "琴酒", "gin", "短飲", "香艾酒", "vermouth", "酒感"],
+            "name": {
+                "en": "Martini",
+                "zh": "馬丁尼"
+            },
+            "signature": false
         }
     ]
 }
