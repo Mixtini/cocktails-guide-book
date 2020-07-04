@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 // third party component
+import Fuse from 'fuse.js';
 import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -125,11 +126,14 @@ const Search = ({ searchPageData, getCocktailsList }) => {
     const onClickSearch = (e) => {
         cocktailsList.sort(() => Math.random() - 0.5);
         const searchResultList = cocktailsList.filter(e => {
+            const keys = Object.values(e.keys);
+            const fuse = new Fuse(keys, { includeScore: true });
             let filterRule = false;
             for (let i = 0; i < value.length; i += 1) {
-                const keys = Object.values(e.keys);
-                filterRule = keys.findIndex(elm => elm.toLowerCase() == value[i].toLowerCase()) > -1
-                if (!filterRule) return filterRule;
+                const result = fuse.search(value[i].toLowerCase());
+                const weight = result.filter(e => (e.score < 0.3));
+                filterRule = (result.length > 0 && weight.length > 0);
+                if (filterRule) break;
             }
             if(signature === false) filterRule = filterRule && (e.signature === signature);
             return filterRule;
