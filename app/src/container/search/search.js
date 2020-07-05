@@ -128,12 +128,12 @@ const Search = ({ searchPageData, getCocktailsList }) => {
         const searchResultList = cocktailsList.filter(e => {
             const keys = Object.values(e.keys);
             const fuse = new Fuse(keys, { includeScore: true });
-            let filterRule = false;
+            let filterRule = true;
             for (let i = 0; i < value.length; i += 1) {
                 const result = fuse.search(value[i].toLowerCase());
                 const weight = result.filter(e => (e.score < 0.3));
-                filterRule = (result.length > 0 && weight.length > 0);
-                if (filterRule) break;
+                filterRule = filterRule && (result.length > 0 && weight.length > 0);
+                if (!filterRule) break;
             }
             if(signature === false) filterRule = filterRule && (e.signature === signature);
             return filterRule;
@@ -351,9 +351,3 @@ const ButtonGroup = styled.div`
     display: flex;
     flex-wrap: wrap;
 `;
-
-// const StyleRadioGroup = styled(RadioGroup)`
-//     && {
-//         flex-direction: row;
-//     }
-// `;

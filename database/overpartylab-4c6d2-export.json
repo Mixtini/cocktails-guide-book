@@ -581,7 +581,7 @@
             "signature": true
         },
         {
-            "igtoken": "BwzJebUF48u",
+            "igtoken": "B7f-5mHFXH7",
             "key": "coffee_gin_tonic",
             "keys": ["咖啡琴通寧", "Coffee Gin Tonic", "tonic", "琴酒", "gin", "長飲", "檸檬", "lemon", "酸的", "清爽", "咖啡", "coffee"],
             "name": {
@@ -887,6 +887,26 @@
             "name": {
                 "en": "Martini",
                 "zh": "馬丁尼"
+            },
+            "signature": false
+        },
+        {
+            "igtoken": "CB-lVt3leWK",
+            "key": "ramos_gin_fFizz",
+            "keys": ["拉莫斯琴費茲", "Ramos Gin Fizz", "琴酒", "gin", "長飲", "甜的", "酸的", "鮮奶", "檸檬", "橙花水", "氣泡", "lemon", "清爽"],
+            "name": {
+                "en": "Ramos Gin Fizz",
+                "zh": "拉莫斯琴費茲"
+            },
+            "signature": false
+        },
+        {
+            "igtoken": "CCQrPv8FSxa",
+            "key": "negroni",
+            "keys": ["內格羅尼", "Negroni", "琴酒", "gin", "短飲", "苦的", "木質", "Vermouth", "Campari", "肯巴利", "酒感"],
+            "name": {
+                "en": "Negroni",
+                "zh": "內格羅尼"
             },
             "signature": false
         }
