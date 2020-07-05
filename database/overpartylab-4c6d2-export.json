@@ -899,6 +899,16 @@
                 "zh": "拉莫斯琴費茲"
             },
             "signature": false
+        },
+        {
+            "igtoken": "CCQrPv8FSxa",
+            "key": "negroni",
+            "keys": ["內格羅尼", "Negroni", "琴酒", "gin", "短飲", "苦的", "木質", "Vermouth", "Campari", "肯巴利", "酒感"],
+            "name": {
+                "en": "Negroni",
+                "zh": "內格羅尼"
+            },
+            "signature": false
         }
     ]
 }
