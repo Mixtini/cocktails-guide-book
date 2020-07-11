@@ -1,21 +1,19 @@
+// core
 import React from 'react';
-import styled from 'styled-components';
 
+// third party component
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import CollectionsBookmarkTwoToneIcon from '@material-ui/icons/CollectionsBookmarkTwoTone';
 
-import logo from '../../assets/images/overpartylab-logo.jpg';
+// components
+import { LogoImage, StyledIcon, ContactLink, Footer } from './contact.css.js';
+import { Container, Header, Item, Content} from '../style.css.js';
+
+// utils, config and assets
 import COMMON_TEXT from '../../assets/wording/common.json';
 import CONTACT_TEXT from '../../assets/wording/contact.json';
 import { LINK } from '../../config/contact';
-
-import {
-    Container,
-    Header,
-    Item,
-    Content
-} from '../style.css.js';
 
 const Contact = () => {
     return (
@@ -58,49 +56,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-const LogoImage = styled.div`
-    width: 300px;
-    height: 200px;
-    background-size: 75%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(${logo});
-`;
-
-const StyledIcon = styled.a`
-    && svg {
-        font-size: 5rem;
-    }
-    &&:visited {
-        text-decoration: inherit;
-        color: inherit;
-        cursor: pointer; 
-    }
-    && span {
-        padding-left: 10px;
-    }
-    display: flex;
-    flex-direction: column;
-    height: 100px;
-    width: 100px;
-    text-decoration: inherit;
-    color: inherit;
-    cursor: pointer;
-`;
-
-const ContactLink = styled.div`
-    display: flex;
-    justify-content: space-around;
-    padding: 8px;
-`;
-
-const Footer = styled.div`
-    position: fixed;
-    width: 100%;
-    height: 25px;
-    bottom: 55px;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-`;
