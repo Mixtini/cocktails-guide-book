@@ -30,13 +30,13 @@ import { RECOMMEND } from '../../config/search';
 import SEARCH_TEXT from '../../assets/wording/search.json';
 
 const DEFAULT_STATE = {
-    value: [],
+    value: ['果香', '甜的'],
     signature: true,
     isSearch: false,
     isInit: false,
     list: [],
     searchResultList: [],
-    showRecommend: false,
+    showRecommend: true,
     expanded: '' 
 };
 
