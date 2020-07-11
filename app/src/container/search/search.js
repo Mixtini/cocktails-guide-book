@@ -12,7 +12,6 @@ import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import InstagramEmbed from 'react-instagram-embed';
 import ChipInput from 'material-ui-chip-input';
 
 // component
@@ -103,17 +102,27 @@ const RecommendBlock = ({ dataObj, expanded, onItemSelect, onExpanded, showRecom
 
 const Card = ({ value }) => {
     const { name: { zh, en }, igtoken } = value;
+    const igPostUrl = `https://www.instagram.com/p/${igtoken}`;
+    const url = `${igPostUrl}/media/?size=l`;
+    const onClickPost = () => {
+        window.open(igPostUrl, "_blank");
+    };
     return (
-        <>
-            <CardTitle>{`${zh} (${en})`}</CardTitle>
-            <InstagramEmbed
-                url={`https://instagr.am/p/${igtoken}/`}
-                maxWidth={320}
-                hideCaption={true}
-                containerTagName='div'
-                injectScript
-            />
-        </>
+        <IGPostCard>
+            <CardTitle>
+                <ItemName>
+                    {`${zh} (${en})`}
+                </ItemName>
+                <Button
+                    variant="contained"
+                    onClick={onClickPost}
+                    color="primary"
+                >
+                    {SEARCH_TEXT.button.more}
+                </Button>
+            </CardTitle>
+            <Image url={url} onClick={onClickPost} />
+        </IGPostCard>
     );
 };
 
@@ -286,7 +295,7 @@ const SwitchText = styled.span`
 
 const SearchContainer = styled.div`
     display: flex;
-    width: ${STYLE.MIN_WIDTH - STYLE.PADDING}px;
+    width: 300px;
     margin-right: ${STYLE.PADDING}px;
 `;
 
@@ -307,8 +316,44 @@ const Cards = styled.div`
 `;
 
 const CardTitle = styled.div`
+    display: flex;
+    width: 270px;
     text-align: center;
     font-size: 1rem;
+    padding: 15px;
+    && > button {
+        margin-left: 10px;
+    }
+`;
+
+const ItemName = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 190px;
+`;
+
+const IGPostCard = styled.div`
+    margin: 10px;
+    padding-bottom: 15px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    &&:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+`;
+
+const Image = styled.div`
+    width: 300px;
+    height: 300px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(${({ url }) => url});
+    &&:hover {
+        cursor: pointer;
+    }
 `;
 
 const StyledExpansionPanel = styled(ExpansionPanel)`
