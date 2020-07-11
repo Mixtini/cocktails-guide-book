@@ -3,7 +3,7 @@ export const COMMON = {
 };
 
 export const STYLE = {
-    MIN_WIDTH: 350,
+    MIN_WIDTH: 320,
     PADDING: 5
 }
 
