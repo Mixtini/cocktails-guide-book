@@ -1,11 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
 
 // component
 import Header from './header/header';
 import Footer from './footer/footer';
 import Search from './search/search';
 import Contact from './contact/contact';
+import { MainContainer } from './style.css.js';
 
 import { sendRequest, Api } from '../utils/httpService';
 import { STYLE } from '../config/common';
@@ -39,7 +39,7 @@ const Main = () => {
     return (
         <>
             <Header minwidth={STYLE.MIN_WIDTH} />
-            <Container>
+            <MainContainer>
                 {
                     page === PAGES.SEARCH && (
                         <Search
@@ -51,15 +51,10 @@ const Main = () => {
                 {
                     page === PAGES.CONTACT && (<Contact />)
                 }
-            </Container>
+            </MainContainer>
             <Footer onPageChange={setPage} />
         </>
     );
 };
 
 export default Main;
-
-const Container = styled.div`
-    min-width: ${STYLE.MIN_WIDTH}px;
-    padding: 64px 0px;
-`;

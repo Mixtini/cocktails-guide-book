@@ -1,9 +1,9 @@
 import { COMMON } from '../config/common';
 
-const { API_SERVICE_HOST, API_KEY } = COMMON;
+const { API_SERVICE_HOST } = COMMON;
 
 // fetch data
-export const sendRequest = (api, option = { method: 'GET' }, resolve, reject) => {
+export const sendRequest = (api, option = { method: 'GET' }) => {
     const API_PATH = `https://${api}`;
     return new Promise((resolve, reject) => {
         fetch(API_PATH, option).then((response) => {

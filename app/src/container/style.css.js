@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 import { STYLE } from '../config/common';
 
+export const MainContainer = styled.div`
+    min-width: ${STYLE.MIN_WIDTH}px;
+    padding: 64px 0px;
+`;
+
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
