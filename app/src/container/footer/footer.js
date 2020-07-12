@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import SearchTwoToneIcon from '@material-ui/icons/SearchTwoTone';
@@ -20,6 +21,9 @@ const Footer = ({ onPageChange }) => {
             </StyledBottomNavigation>
         </StyledSearch>
     );
+};
+Footer.propTypes = {
+    onPageChange: PropTypes.func.isRequired
 };
 
 export default Footer;

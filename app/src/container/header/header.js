@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { HeaderText, StyledAppBar, AppBarContainer } from './header.css.js';
 
@@ -12,6 +13,9 @@ const Header = ({ minwidth }) => {
             </AppBarContainer>
         </StyledAppBar>
     );
+};
+Header.propTypes = {
+    minwidth: PropTypes.number.isRequired
 };
 
 export default Header;

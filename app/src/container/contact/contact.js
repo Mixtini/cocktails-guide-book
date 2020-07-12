@@ -48,7 +48,7 @@ const Contact = () => {
             </Item>
             <Footer>
                 <div>
-                    © {(new Date()).getFullYear()} <a href={LINK.INSTAGRAM} target="_blank">{CONTACT_TEXT.account}</a> {COMMON_TEXT.version}
+                    © {(new Date()).getFullYear()} <a href={LINK.INSTAGRAM} rel="noreferrer" target="_blank">{CONTACT_TEXT.account}</a> {COMMON_TEXT.version}
                 </div>
             </Footer>
         </Container>

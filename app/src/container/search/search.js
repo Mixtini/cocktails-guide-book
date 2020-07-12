@@ -1,5 +1,6 @@
 // core
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 // third party component
 import Fuse from 'fuse.js';
@@ -99,6 +100,14 @@ const RecommendBlock = ({ dataObj, expanded, onItemSelect, onExpanded, showRecom
         </>
     );
 };
+RecommendBlock.propTypes = {
+    dataObj: PropTypes.object.isRequired,
+    expanded: PropTypes.string.isRequired,
+    onItemSelect: PropTypes.func.isRequired,
+    onExpanded: PropTypes.func.isRequired,
+    showRecommend: PropTypes.bool.isRequired,
+    onControlRecommend: PropTypes.func.isRequired
+};
 
 const Card = ({ value }) => {
     const { name: { zh, en }, igtoken } = value;
@@ -125,6 +134,9 @@ const Card = ({ value }) => {
         </IGPostCard>
     );
 };
+Card.propTypes = {
+    value: PropTypes.object.isRequired
+};
 
 const Search = ({ searchPageData, getCocktailsList }) => {
     const [ userAction, setUserAction] = useState(DEFAULT_STATE);  
@@ -132,7 +144,7 @@ const Search = ({ searchPageData, getCocktailsList }) => {
     const { isInit, cocktailsList } = searchPageData;
     const { value, signature, isSearch, searchResultList, showRecommend, expanded } = userAction;
 
-    const onClickSearch = (e) => {
+    const onClickSearch = () => {
         cocktailsList.sort(() => Math.random() - 0.5);
         const searchResultList = cocktailsList.filter(e => {
             const keys = Object.values(e.keys);
@@ -167,7 +179,7 @@ const Search = ({ searchPageData, getCocktailsList }) => {
     const handleDeleteChip = (chip) => {
         const index = value.indexOf(chip);
         if (index !== -1) value.splice(index, 1);
-        setUserAction({ ...userAction, value, isSearch: false });
+        setUserAction({ ...userAction, value, isSearch: false, showRecommend: true });
     };
     const onExpanded = (clickExpanded) => {
         const newExpanded = expanded === clickExpanded ? '' : clickExpanded
@@ -284,6 +296,10 @@ const Search = ({ searchPageData, getCocktailsList }) => {
             }
         </Container>
     );
+};
+Search.propTypes = {
+    getCocktailsList: PropTypes.object.isRequired,
+    searchPageData: PropTypes.func.isRequired
 };
 
 export default Search;
