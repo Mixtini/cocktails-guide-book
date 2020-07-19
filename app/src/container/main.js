@@ -9,7 +9,7 @@ import { MainContainer } from './style.css.js';
 
 import { sendRequest, Api } from '../utils/httpService';
 import { STYLE } from '../config/common';
-// import MOCKDATA from '../__data__/db.json';
+
 const PAGES = {
     SEARCH: 'search',
     CONTACT: 'contact'
@@ -25,9 +25,9 @@ const Main = () => {
     const [searchPageData, setSearchPageData] = React.useState(DEFAULT_SEARCH_PAGE);
 
     const getCocktailsList = () => {
-        // setSearchPageData({ isInit: true, cocktailsList: Object.values(MOCKDATA["overpartylab-cocktails"])});
         sendRequest(Api.getCocktails)
-            .then((data) => {
+            .then((rsp) => {
+                const { data } = rsp;
                 setSearchPageData({ isInit: true, cocktailsList: Object.values(data) });
             })
             .catch((err) => {
