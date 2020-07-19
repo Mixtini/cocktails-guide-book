@@ -15,7 +15,7 @@ export const sendRequest = (api, option = { method: 'GET' }) => {
                     resolve('Not a json resp body');
                 });
             } else {
-                reject('unexpect error');
+                reject('Unexpected error');
             }          
         }, (error) => {
             console.log('reject');
@@ -25,8 +25,6 @@ export const sendRequest = (api, option = { method: 'GET' }) => {
 };
 
 export const Api = {
-    getBaseList: `${API_SERVICE_HOST}/getBaseList`,
-    getAttachedList: `${API_SERVICE_HOST}/getAttachedList`,
-    getCocktails: `${API_SERVICE_HOST}/getCocktails`,
-    saveSearchData: `${API_SERVICE_HOST}/saveSearchData`,
+    getIngredients: `${API_SERVICE_HOST}/ingredient.json`,
+    getCocktails: `${API_SERVICE_HOST}/cocktails.json`
 };
