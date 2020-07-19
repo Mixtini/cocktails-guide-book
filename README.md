@@ -4,124 +4,40 @@
 [![releases](https://img.shields.io/github/v/release/overpartylab/cocktails-guide-book)](https://github.com/overpartylab/cocktails-guide-book/releases/tag/v1.0.0-beta.1)
 [![license](https://img.shields.io/github/license/overpartylab/cocktails-guide-book)](https://github.com/overpartylab/cocktails-guide-book/blob/master/LICENSE)
 
-A cocktails search portal create by [Over Party Lab](https://www.instagram.com/over.party.lab/).
-
 ![logo](doc/images/logo.jpg "logo")
 
-* Design: [Design Doc](doc/DESIGN.md)
-* User Guide: [User Guide](doc/USER-GUIDE.md)
-* Database Doc: [Database Doc](doc/DATABASE-DOC.md)
-* Portal: [Over Party Lab Portal v1.0.0-beta.1](https://overpartylab-4c6d2.web.app/)
+A cocktails search portal create by [Over Party Lab](https://www.instagram.com/over.party.lab/).
 
-## Env introduction
+<b>User Guide</b>
+
+* [User Guide](doc/USER-GUIDE.md)
+
+<b>Dev Doc</b>
+
+* [Design Doc](doc/DESIGN.md)
+* [Database Doc](doc/DATABASE-DOC.md)
+* [Development Doc](doc/DEVELOPMENT.md)
+
+<b>Portal</b>
+
+* [Over Party Lab Portal v1.0.0](https://overpartylab-4c6d2.web.app/)
+
+## Env Introduction
 
 We use firebase service to development our service.
-* API serverless service: firebase functions
 * Web host: firebase hosting
-* Realtime database: firebase database
+* ~~Firebase functions and database~~ (deprecated)
+> Google firebase cloud function will not support the Node.js v8 runtime environment soon. If we migrate to the Node.js v10, need to change our project to "Pay as you go"(Blaze plan). For the cost concern, we are not planning to maintain a free service with cost. Since we are not too much data in our database, we can put database JSON in our code base. Use Github as the static file server.
 
-### Folder structure
+<b>Folder Structure</b>
 
 |Folder   |Function         |
 |---------|-----------------|
 |app      |web portal       |
+|database |database file    |
 |doc      |document         |
-|functions|firebase service |
-|public   |firebase hosting |
-|database |firebase database|
-|script   |cicd script      |
+|script   |deploy script    |
 
-## Login with firebase
+## Contribute
 
-### Install dependency
-
-```sh
-npm install -g firebase-tools
-```
-
-### Start to develop
-
-#### login to firebase
-
-Please login with your google account
-
-```sh
-firebase login
-```
-
-#### Init firebase with existing project
-```sh
-firebase init
-```
-choose your project name. ex: ```overpartylab```
-
-
-## How to deploy our serivces
-
-After login firebase, please run the script <strong>under the script folder</strong>
-
-### Deploy all services
-```sh
-sh deploy.sh
-```
-
-### Deploy api service
-```sh
-sh deploy-api.sh
-```
-
-### Deploy web portal
-ex:
-```sh
-sh deploy-web.sh
-```
-
-## Web app
-
-We use React.js to build our webapp. Source code are in /app folder.
-
-### Install dependency
-
-```sh
-yarn install
-```
-
-### Run the react app in developing mode
-```sh
-yarn start
-```
-
-### Deploy
-
-#### Build react file
-
-```sh
-yarn build
-```
-
-#### Copy files to firebase/public
-
-```sh
-cp -a dist/. ../public
-```
-
-#### Deploy by firebase-cli
-```sh
-firebase deploy --only hosting
-```
-
-
-## API Service
-
-### deploy
-
-deploy by by firebase-cli
-```sh
-firebase deploy --only functions
-```
-
-deploy by single functions
-ex:
-```sh
-firebase deploy --only functions:getAttachedList
-```
+If you want to contribute our project, please create an issue first. Send a pull request after finishing your change.

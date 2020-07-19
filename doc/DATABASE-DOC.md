@@ -2,20 +2,20 @@
 
 ## Intro
 
-We are using Firebase Realtime Database, the file ```cocktails-guide-api-service-export.json``` is the snapshot for the database.
+We are using Github static file as our database. All the file are in the databse folder(master branch).
 
 ## How to contribute
-1. go to `db-update` branch
-2. add data or update keywords
-3. update database by using ```script/update-db.sh```
-4. commit your change into this branch (no need to merge back to master)
-
-Please see the README to learn how to setup firebase env
-README: [README#login-with-firebase](../../README.md#login-with-firebase)
+1. Create a update branch
+2. Add data or update keywords
+3. Send a pull request
 
 ## Table Schema
 
-### config
+### ingredient
+
+```
+database/ingredient.json
+```
 
 The ingredients list will separate in five types. The content is key-value object type.
 |Type       |Content|
@@ -26,7 +26,11 @@ The ingredients list will separate in five types. The content is key-value objec
 |homemade   |自製材料|
 |bubble_tea |手搖飲料|
 
-### overpartylab-cocktails
+### cocktails
+
+```
+database/cocktails.json
+```
 
 |Attribute  |Type  |Content|
 |-----------|------|-------|
@@ -60,7 +64,9 @@ Example:
 },
 ```
 
-### overpartylab-recipes
+### recipes
+
+> TODO
 
 OverPartyLab recipes
 
