@@ -11,7 +11,6 @@ import { LogoImage, StyledIcon, ContactLink, Footer } from './contact.css.js';
 import { Container, Header, Item, Content} from '../style.css.js';
 
 // utils, config and assets
-import COMMON_TEXT from '../../assets/wording/common.json';
 import CONTACT_TEXT from '../../assets/wording/contact.json';
 import { LINK } from '../../config/contact';
 
@@ -48,7 +47,7 @@ const Contact = () => {
             </Item>
             <Footer>
                 <div>
-                    © {(new Date()).getFullYear()} <a href={LINK.INSTAGRAM} rel="noreferrer" target="_blank">{CONTACT_TEXT.account}</a> {COMMON_TEXT.version}
+                    © {(new Date()).getFullYear()} <a href={LINK.INSTAGRAM} rel="noreferrer" target="_blank">{CONTACT_TEXT.account}</a> {process.env.APP_VERSION}
                 </div>
             </Footer>
         </Container>

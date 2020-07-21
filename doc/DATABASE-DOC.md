@@ -2,7 +2,7 @@
 
 ## Intro
 
-We are using Github static file as our database. All the file are in the databse folder(master branch).
+We are using Github static file as our database. All the file are in the database folder(master branch).
 
 ## How to contribute
 1. Create a update branch
