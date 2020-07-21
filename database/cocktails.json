@@ -823,6 +823,26 @@
                 "zh": "內格羅尼"
             },
             "signature": false
+        },
+        {
+            "igtoken": "CCipxu6lY60",
+            "key": "blackcurrant_oolong_tea",
+            "keys": ["黑醋栗烏龍茶", "May Fantasia", "果香", "茶香", "清爽", "長飲", "甜的", "琴酒", "gin", "烏龍茶"],
+            "name": {
+                "en": "Blackcurrant Oolong Tea",
+                "zh": "黑醋栗烏龍茶"
+            },
+            "signature": true
+        },
+        {
+            "igtoken": "CC0lc17F4lx",
+            "key": "taste_of_autumn",
+            "keys": ["金風玉露", "Taste of Autumn", "清爽", "果香", "長飲", "甜的", "琴酒", "gin", "小黃瓜", "柚子", "苦精", "tonic", "gin tonic", "通寧"],
+            "name": {
+                "en": "Taste of Autumn",
+                "zh": "金風玉露"
+            },
+            "signature": true
         }
     ]
 }
