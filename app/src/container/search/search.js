@@ -37,6 +37,7 @@ import { Container, Header, Item, Content } from '../style.css.js';
 import { findExistInTwoArray } from '../../utils/helper';
 import { RECOMMEND } from '../../config/search';
 import SEARCH_TEXT from '../../assets/wording/search.json';
+import SELECTOR from '../../assets/selector.json';
 
 const DEFAULT_STATE = {
     value: ['果香', '甜的'],
@@ -198,7 +199,7 @@ const Search = ({ searchPageData, getCocktailsList }) => {
 
     return (
         <Container>
-            <Header>
+            <Header data-testid={SELECTOR.SEARCH.TITLE} >
                 <div>{SEARCH_TEXT.title}</div>
             </Header>
             {
@@ -207,7 +208,9 @@ const Search = ({ searchPageData, getCocktailsList }) => {
             {
                 isInit && cocktailsList.length === 0 && (
                     <Item>
-                        <Content>{SEARCH_TEXT.error_text}</Content>
+                        <Content data-testid={SELECTOR.SEARCH.CONTENT}>
+                            {SEARCH_TEXT.error_text}
+                        </Content>
                     </Item>
                 )
             }
@@ -215,7 +218,7 @@ const Search = ({ searchPageData, getCocktailsList }) => {
                 isInit && cocktailsList.length > 0 && (
                     <> 
                         <Item>
-                            <Content>
+                            <Content data-testid={SELECTOR.SEARCH.CONTENT}>
                                 <div>{SEARCH_TEXT.content}</div>
                                 <div>{SEARCH_TEXT.tips}</div>
                             </Content>
@@ -298,8 +301,8 @@ const Search = ({ searchPageData, getCocktailsList }) => {
     );
 };
 Search.propTypes = {
-    getCocktailsList: PropTypes.object.isRequired,
-    searchPageData: PropTypes.func.isRequired
+    getCocktailsList: PropTypes.func.isRequired,
+    searchPageData: PropTypes.object.isRequired
 };
 
 export default Search;
