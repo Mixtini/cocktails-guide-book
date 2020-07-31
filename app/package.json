@@ -15,7 +15,7 @@
     "@babel/core": "7.2.2",
     "@babel/preset-env": "7.3.1",
     "@babel/preset-react": "7.0.0",
-    "@testing-library/jest-dom": "^5.11.1",
+    "@testing-library/jest-dom": "5.11.1",
     "@testing-library/react": "10.4.7",
     "babel-loader": "8.0.5",
     "css-loader": "2.1.0",
@@ -38,5 +38,20 @@
     "react-dom": "16.8.1",
     "styled-components": "5.0.1",
     "url-loader": "4.1.0"
-  }
+  },
+  "jest": {
+    "moduleFileExtensions": [
+        "js",
+        "jsx"
+    ],
+    "moduleDirectories": [
+        "node_modules",
+        "bower_components",
+        "shared"
+    ],
+    "moduleNameMapper": {
+        "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+        "\\.(css|less|scss)$": "identity-obj-proxy"
+    }
+}
 }
