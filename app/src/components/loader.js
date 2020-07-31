@@ -2,13 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 import CircularProgress from '@material-ui/core/CircularProgress';
+import SELECTOR from '../assets/selector.json';
 
 export const SmallLoader = () => (
     <CircularProgress />
 );
 
 const Loader = () => (
-    <LoaderContainer>
+    <LoaderContainer data-testid={SELECTOR.COMMON.LOADER}>
         <CircularProgress />
     </LoaderContainer>
 );

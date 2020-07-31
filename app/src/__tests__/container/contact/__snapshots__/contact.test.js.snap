@@ -1,0 +1,314 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test <Contact /> Contact should display as expected 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="sc-AxgMl jjHGyo"
+      >
+        <div
+          class="sc-AxheI bXOzDv"
+        >
+          <div>
+            聯絡我們
+          </div>
+        </div>
+        <div
+          class="sc-Axmtr bKgdsa"
+        >
+          <div
+            class="sc-AxjAm FSbux"
+          />
+        </div>
+        <div
+          class="sc-Axmtr bKgdsa"
+        >
+          <div
+            class="sc-AxmLO dbEozq"
+          >
+            如果喜歡我們的分享，不妨來追蹤四個研酒生所創立的 Instagram 與 Facebook 粉絲頁吧！我們會在上面不定時分享調酒以及各種酒類資訊，也歡迎隨時跟我們討論交流酒類的新知識。
+          </div>
+        </div>
+        <div
+          class="sc-Axmtr bKgdsa"
+        >
+          <div
+            class="sc-AxmLO dbEozq"
+          >
+            有任何對於網站的建議或是想要什麼功能也可以私訊我們跟我們說喔！
+          </div>
+        </div>
+        <div
+          class="sc-Axmtr bKgdsa"
+        >
+          <div
+            class="sc-AxiKw fpphWz"
+          >
+            <a
+              class="sc-AxirZ jLuMgh"
+              href="https://www.facebook.com/over.party.lab/"
+              target="_blank"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z"
+                />
+              </svg>
+              <span>
+                Facebook
+              </span>
+            </a>
+            <a
+              class="sc-AxirZ jLuMgh"
+              href="https://www.instagram.com/over.party.lab/"
+              target="_blank"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"
+                />
+              </svg>
+              <span>
+                Instagram
+              </span>
+            </a>
+            <a
+              class="sc-AxirZ jLuMgh"
+              href="https://medium.com/@overpartylab"
+              target="_blank"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20 4h-1v9l-3-2.25L13 13V4H8v12h12z"
+                  opacity=".3"
+                />
+                <path
+                  d="M4 22h14v-2H4V6H2v14c0 1.1.9 2 2 2zm18-6V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2zM15 4h2v5l-1-.75L15 9V4zM8 4h5v9l3-2.25L19 13V4h1v12H8V4z"
+                />
+              </svg>
+              <span>
+                Medium
+              </span>
+            </a>
+          </div>
+        </div>
+        <div
+          class="sc-AxhCb ieaFmM"
+        >
+          <div>
+            © 
+            2020
+             
+            <a
+              href="https://www.instagram.com/over.party.lab/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              @over.party.lab
+            </a>
+             
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="sc-AxgMl jjHGyo"
+    >
+      <div
+        class="sc-AxheI bXOzDv"
+      >
+        <div>
+          聯絡我們
+        </div>
+      </div>
+      <div
+        class="sc-Axmtr bKgdsa"
+      >
+        <div
+          class="sc-AxjAm FSbux"
+        />
+      </div>
+      <div
+        class="sc-Axmtr bKgdsa"
+      >
+        <div
+          class="sc-AxmLO dbEozq"
+        >
+          如果喜歡我們的分享，不妨來追蹤四個研酒生所創立的 Instagram 與 Facebook 粉絲頁吧！我們會在上面不定時分享調酒以及各種酒類資訊，也歡迎隨時跟我們討論交流酒類的新知識。
+        </div>
+      </div>
+      <div
+        class="sc-Axmtr bKgdsa"
+      >
+        <div
+          class="sc-AxmLO dbEozq"
+        >
+          有任何對於網站的建議或是想要什麼功能也可以私訊我們跟我們說喔！
+        </div>
+      </div>
+      <div
+        class="sc-Axmtr bKgdsa"
+      >
+        <div
+          class="sc-AxiKw fpphWz"
+        >
+          <a
+            class="sc-AxirZ jLuMgh"
+            href="https://www.facebook.com/over.party.lab/"
+            target="_blank"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z"
+              />
+            </svg>
+            <span>
+              Facebook
+            </span>
+          </a>
+          <a
+            class="sc-AxirZ jLuMgh"
+            href="https://www.instagram.com/over.party.lab/"
+            target="_blank"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"
+              />
+            </svg>
+            <span>
+              Instagram
+            </span>
+          </a>
+          <a
+            class="sc-AxirZ jLuMgh"
+            href="https://medium.com/@overpartylab"
+            target="_blank"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 4h-1v9l-3-2.25L13 13V4H8v12h12z"
+                opacity=".3"
+              />
+              <path
+                d="M4 22h14v-2H4V6H2v14c0 1.1.9 2 2 2zm18-6V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2zM15 4h2v5l-1-.75L15 9V4zM8 4h5v9l3-2.25L19 13V4h1v12H8V4z"
+              />
+            </svg>
+            <span>
+              Medium
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        class="sc-AxhCb ieaFmM"
+      >
+        <div>
+          © 
+          2020
+           
+          <a
+            href="https://www.instagram.com/over.party.lab/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            @over.party.lab
+          </a>
+           
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
