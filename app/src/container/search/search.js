@@ -1,6 +1,5 @@
 // core
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 
 // third party component
 import Fuse from 'fuse.js';
@@ -216,10 +215,6 @@ const Search = () => {
             }
         </Container>
     );
-};
-Search.propTypes = {
-    getCocktailsList: PropTypes.func.isRequired,
-    searchPageData: PropTypes.object.isRequired
 };
 
 export default Search;

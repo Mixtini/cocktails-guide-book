@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import PropTypes from 'prop-types';
 
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import SearchTwoToneIcon from '@material-ui/icons/SearchTwoTone';
@@ -16,14 +15,15 @@ const Footer = () => {
     return (
         <StyledSearch>
             <StyledBottomNavigation value={value} onChange={handleChange}>
-                <Link to="/search"><BottomNavigationAction label="Search" value="search" icon={<SearchTwoToneIcon />} /></Link>
-                <Link to="/contact"><BottomNavigationAction label="Contact" value="contact" icon={<ContactMailTwoToneIcon />} /></Link>
+                <Link to="/search">
+                    <BottomNavigationAction label="Search" value="search" icon={<SearchTwoToneIcon />} />
+                </Link>
+                <Link to="/contact">
+                    <BottomNavigationAction label="Contact" value="contact" icon={<ContactMailTwoToneIcon />} />
+                </Link>
             </StyledBottomNavigation>
         </StyledSearch>
     );
-};
-Footer.propTypes = {
-    onPageChange: PropTypes.func.isRequired
 };
 
 export default Footer;
