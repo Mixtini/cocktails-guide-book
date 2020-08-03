@@ -9,20 +9,14 @@ import SELECTOR from '../../../assets/selector.json';
 expect.extend({ toBeInTheDocument });
 
 describe('Test <Search />', () => {
-    const initProps = {
-        searchPageData: {
-            isInit: false, cocktailsList: []
-        },
-        getCocktailsList: jest.fn()
-    };
     let search;
-    const renderSearch = (props) => {
+    const renderSearch = () => {
         return (
-            <Search {...props} />
+            <Search />
         );
     };
     beforeEach(() => {
-        search = render(renderSearch(initProps));
+        search = render(renderSearch());
     });
 
     afterEach(() => {
@@ -36,17 +30,5 @@ describe('Test <Search />', () => {
     test('Title should display as expected', () => {
         const title = search.getByTestId(SELECTOR.SEARCH.TITLE).textContent;
         expect(title).toBe(SEARCH_TEXT.title);
-    });
-
-    test('Loader should display as expected when not init', () => {
-        const loader = search.getByTestId(SELECTOR.COMMON.LOADER);
-        expect(loader).toBeInTheDocument();
-    });
-
-    test('Error content should display as expected when no data', () => {
-        const props = { ...initProps, searchPageData: { ...initProps.searchPageData, isInit: true }}
-        search.rerender(<Search {...props} />)
-        const content = search.getByTestId(SELECTOR.SEARCH.CONTENT).textContent;
-        expect(content).toBe(SEARCH_TEXT.error_text);
     });
 });

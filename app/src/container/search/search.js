@@ -1,13 +1,11 @@
 // core
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 
 // third party component
 import Fuse from 'fuse.js';
 import Button from '@material-ui/core/Button';
 import Switch from '@material-ui/core/Switch';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ChipInput from 'material-ui-chip-input';
 
 // components
@@ -17,24 +15,15 @@ import {
     SearchContainer,
     SearchIndicator,
     StyledSearchIcon,
-    Cards,
-    CardTitle,
-    ItemName,
-    IGPostCard,
-    Image,
-    StyledExpansionPanel,
-    OuterExpansionPanel,
-    OuterExpansionPanelSummary,
-    OuterExpansionPanelDetails,
-    InnerExpansionPanelSummary,
-    InnerExpansionPanelDetails,
-    StyledRecommendBlock,
-    ButtonGroup
+    Cards
 } from './search.css.js';
 import { Container, Header, Item, Content } from '../style.css.js';
+import Card from './components/card';
+import RecommendBlock from './components/recommendBlock';
 
 // utils, config and assets
 import { findExistInTwoArray } from '../../utils/helper';
+import { sendRequest, Api } from '../../utils/httpService';
 import { RECOMMEND } from '../../config/search';
 import SEARCH_TEXT from '../../assets/wording/search.json';
 import SELECTOR from '../../assets/selector.json';
@@ -43,108 +32,35 @@ const DEFAULT_STATE = {
     value: ['果香', '甜的'],
     signature: true,
     isSearch: false,
-    isInit: false,
     list: [],
     searchResultList: [],
     showRecommend: true,
     expanded: '' 
 };
 
-const RecommendBlock = ({ dataObj, expanded, onItemSelect, onExpanded, showRecommend, onControlRecommend }) => {
-    return (
-        <>
-            <StyledRecommendBlock>
-                <OuterExpansionPanel
-                    expanded={showRecommend}
-                    onChange={onControlRecommend}
-                >
-                    <OuterExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                        <div>{SEARCH_TEXT.recommend}</div>
-                    </OuterExpansionPanelSummary>
-                    <OuterExpansionPanelDetails>
-                    {
-                        showRecommend && dataObj.map((e) => {
-                            const { title, data } = e;
-                            return (
-                                <StyledExpansionPanel
-                                    expanded={expanded === title}
-                                    onChange={() => { onExpanded(title)} }
-                                    key={`item-${title}`}
-                                >
-                                    <InnerExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                                        <div>{title}</div>
-                                    </InnerExpansionPanelSummary>
-                                    <InnerExpansionPanelDetails>
-                                        <ButtonGroup>
-                                            {
-                                                data.map((e, idx) => {
-                                                    return (
-                                                        <Button
-                                                            key={`key-${idx}`}
-                                                            variant="contained"
-                                                            onClick={() => { onItemSelect(e)} }
-                                                        >
-                                                            {e}
-                                                        </Button>
-                                                    );
-                                                })
-                                            }
-                                        </ButtonGroup>
-                                    </InnerExpansionPanelDetails>
-                                </StyledExpansionPanel>
-                            )
-                        })
-                    }   
-                    </OuterExpansionPanelDetails>
-                </ OuterExpansionPanel>
-            </StyledRecommendBlock>
-        </>
-    );
-};
-RecommendBlock.propTypes = {
-    dataObj: PropTypes.object.isRequired,
-    expanded: PropTypes.string.isRequired,
-    onItemSelect: PropTypes.func.isRequired,
-    onExpanded: PropTypes.func.isRequired,
-    showRecommend: PropTypes.bool.isRequired,
-    onControlRecommend: PropTypes.func.isRequired
-};
+const DEFAULT_SEARCH_PAGE = {
+    isInit: false,
+    cocktailsList: []
+}
 
-const Card = ({ value }) => {
-    const { name: { zh, en }, igtoken } = value;
-    const igPostUrl = `https://www.instagram.com/p/${igtoken}`;
-    const url = `${igPostUrl}/media/?size=l`;
-    const onClickPost = () => {
-        window.open(igPostUrl, "_blank");
-    };
-    return (
-        <IGPostCard>
-            <CardTitle>
-                <ItemName>
-                    {`${zh} (${en})`}
-                </ItemName>
-                <Button
-                    variant="contained"
-                    onClick={onClickPost}
-                    color="primary"
-                >
-                    {SEARCH_TEXT.button.more}
-                </Button>
-            </CardTitle>
-            <Image url={url} onClick={onClickPost} />
-        </IGPostCard>
-    );
-};
-Card.propTypes = {
-    value: PropTypes.object.isRequired
-};
-
-const Search = ({ searchPageData, getCocktailsList }) => {
-    const [ userAction, setUserAction] = useState(DEFAULT_STATE);  
+const Search = () => {
+    const [userAction, setUserAction] = useState(DEFAULT_STATE);  
+    const [searchPageData, setSearchPageData] = React.useState(DEFAULT_SEARCH_PAGE);
 
     const { isInit, cocktailsList } = searchPageData;
     const { value, signature, isSearch, searchResultList, showRecommend, expanded } = userAction;
 
+    const getCocktailsList = () => {
+        sendRequest(Api.getCocktails)
+            .then((rsp) => {
+                const { data } = rsp;
+                setSearchPageData({ isInit: true, cocktailsList: Object.values(data) });
+            })
+            .catch((err) => {
+                console.error(err);
+                setSearchPageData({ isInit: true, cocktailsList: [] });
+            });
+    };
     const onClickSearch = () => {
         cocktailsList.sort(() => Math.random() - 0.5);
         const searchResultList = cocktailsList.filter(e => {
@@ -299,10 +215,6 @@ const Search = ({ searchPageData, getCocktailsList }) => {
             }
         </Container>
     );
-};
-Search.propTypes = {
-    getCocktailsList: PropTypes.func.isRequired,
-    searchPageData: PropTypes.object.isRequired
 };
 
 export default Search;

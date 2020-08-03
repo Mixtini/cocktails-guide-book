@@ -17,27 +17,13 @@ Object {
           </div>
         </div>
         <div
-          class="sc-AxjAm eVIwUz"
-          data-testid="LOADER"
+          class="sc-fzoXzr bUqkMr"
         >
           <div
-            class="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
-            role="progressbar"
-            style="width: 40px; height: 40px;"
+            class="sc-fzpjYC eNPMNJ"
+            data-testid="CONTENT"
           >
-            <svg
-              class="MuiCircularProgress-svg"
-              viewBox="22 22 44 44"
-            >
-              <circle
-                class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
-                cx="44"
-                cy="44"
-                fill="none"
-                r="20.2"
-                stroke-width="3.6"
-              />
-            </svg>
+            Sorry! 發生了預期外的錯誤，可能是系統或是網路出了點問題，請稍後再重新整理試試看 😣，如果還是有問題請聯絡我們！謝謝
           </div>
         </div>
       </div>
@@ -56,27 +42,13 @@ Object {
         </div>
       </div>
       <div
-        class="sc-AxjAm eVIwUz"
-        data-testid="LOADER"
+        class="sc-fzoXzr bUqkMr"
       >
         <div
-          class="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
-          role="progressbar"
-          style="width: 40px; height: 40px;"
+          class="sc-fzpjYC eNPMNJ"
+          data-testid="CONTENT"
         >
-          <svg
-            class="MuiCircularProgress-svg"
-            viewBox="22 22 44 44"
-          >
-            <circle
-              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
-              cx="44"
-              cy="44"
-              fill="none"
-              r="20.2"
-              stroke-width="3.6"
-            />
-          </svg>
+          Sorry! 發生了預期外的錯誤，可能是系統或是網路出了點問題，請稍後再重新整理試試看 😣，如果還是有問題請聯絡我們！謝謝
         </div>
       </div>
     </div>
