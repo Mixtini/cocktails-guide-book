@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 // component
 import Header from './header/header';
@@ -7,52 +8,22 @@ import Search from './search/search';
 import Contact from './contact/contact';
 import { MainContainer } from './style.css.js';
 
-import { sendRequest, Api } from '../utils/httpService';
 import { STYLE } from '../config/common';
 
-const PAGES = {
-    SEARCH: 'search',
-    CONTACT: 'contact'
-}
-
-const DEFAULT_SEARCH_PAGE = {
-    isInit: false,
-    cocktailsList: []
-}
-
 const Main = () => {
-    const [page, setPage] = React.useState(PAGES.SEARCH);
-    const [searchPageData, setSearchPageData] = React.useState(DEFAULT_SEARCH_PAGE);
-
-    const getCocktailsList = () => {
-        sendRequest(Api.getCocktails)
-            .then((rsp) => {
-                const { data } = rsp;
-                setSearchPageData({ isInit: true, cocktailsList: Object.values(data) });
-            })
-            .catch((err) => {
-                console.error(err);
-                setSearchPageData({ isInit: true, cocktailsList: [] });
-            });
-    };
-
     return (
         <>
             <Header minwidth={STYLE.MIN_WIDTH} />
-            <MainContainer>
-                {
-                    page === PAGES.SEARCH && (
-                        <Search
-                            searchPageData={searchPageData}
-                            getCocktailsList={getCocktailsList}
-                        />
-                    )
-                }
-                {
-                    page === PAGES.CONTACT && (<Contact />)
-                }
-            </MainContainer>
-            <Footer onPageChange={setPage} />
+            <BrowserRouter>
+                <MainContainer>
+                    <Switch>
+                        <Route exact path="/" render={() => <Redirect to="/search" />} />
+                        <Route exact path="/search" component={Search} />
+                        <Route exact path="/contact" component={Contact} />
+                    </Switch>
+                </MainContainer>
+                <Footer />
+            </BrowserRouter>
         </>
     );
 };

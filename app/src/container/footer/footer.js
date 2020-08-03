@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
@@ -7,17 +8,16 @@ import ContactMailTwoToneIcon from '@material-ui/icons/ContactMailTwoTone';
 
 import { StyledSearch, StyledBottomNavigation } from './footer.css.js';
 
-const Footer = ({ onPageChange }) => {
+const Footer = () => {
     const [value, setValue] = React.useState('search');
     const handleChange = (event, newValue) => {
         setValue(newValue);
-        onPageChange(newValue);
     };
     return (
         <StyledSearch>
             <StyledBottomNavigation value={value} onChange={handleChange}>
-                <BottomNavigationAction label="Search" value="search" icon={<SearchTwoToneIcon />} />
-                <BottomNavigationAction label="Contact" value="contact" icon={<ContactMailTwoToneIcon />} />
+                <Link to="/search"><BottomNavigationAction label="Search" value="search" icon={<SearchTwoToneIcon />} /></Link>
+                <Link to="/contact"><BottomNavigationAction label="Contact" value="contact" icon={<ContactMailTwoToneIcon />} /></Link>
             </StyledBottomNavigation>
         </StyledSearch>
     );

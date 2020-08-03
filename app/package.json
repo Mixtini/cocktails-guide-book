@@ -36,22 +36,24 @@
     "material-ui-chip-input": "2.0.0-beta.2",
     "react": "16.8.1",
     "react-dom": "16.8.1",
+    "react-router": "5.2.0",
+    "react-router-dom": "5.2.0",
     "styled-components": "5.0.1",
     "url-loader": "4.1.0"
   },
   "jest": {
     "moduleFileExtensions": [
-        "js",
-        "jsx"
+      "js",
+      "jsx"
     ],
     "moduleDirectories": [
-        "node_modules",
-        "bower_components",
-        "shared"
+      "node_modules",
+      "bower_components",
+      "shared"
     ],
     "moduleNameMapper": {
-        "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-        "\\.(css|less|scss)$": "identity-obj-proxy"
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss)$": "identity-obj-proxy"
     }
-}
+  }
 }
