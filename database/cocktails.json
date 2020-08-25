@@ -843,6 +843,56 @@
                 "zh": "金風玉露"
             },
             "signature": true
+        },
+        {
+            "igtoken": "CDGjW0ElAVG",
+            "key": "grape_cocktails",
+            "keys": ["葡萄調酒", "Grape Cocktails", "果香", "甜的", "白蘭地", "麗葉酒", "lillet", "cognac", "葡萄", "grape", "甜的"],
+            "name": {
+                "en": "Grape Cocktails",
+                "zh": "葡萄調酒"
+            },
+            "signature": true
+        },
+        {
+            "igtoken": "CDYoCpQF6O_",
+            "key": "arnaud",
+            "keys": ["阿爾諾", "Arnaud", "酒感", "琴酒", "香艾酒", "黑醋栗", "gin", "vermouth", "馬丁尼", "martini"],
+            "name": {
+                "en": "Arnaud",
+                "zh": "阿爾諾"
+            },
+            "signature": false
+        },
+        {
+            "igtoken": "CDqoaGVDwSa",
+            "key": "jasmine_tea",
+            "keys": ["茉莉花茶", "Jasmine Tea", "花香", "茶香", "琴酒", "烏龍茶", "oolong", "gin", "jasmine", "茉莉花", "甜的"],
+            "name": {
+                "en": "Jasmine Tea",
+                "zh": "茉莉花茶"
+            },
+            "signature": true
+        },
+        {
+            "igtoken": "CD8rFM-HACf",
+            "key": "jasmine",
+            "keys": ["茉莉公主", "Jasmine", "花香", "果香", "琴酒", "蔓越梅", "cranberry", "gin", "jasmine", "茉莉花", "甜的", "honey", "蜂蜜"],
+            "name": {
+                "en": "Jasmine",
+                "zh": "茉莉公主"
+            },
+            "signature": true
+        },
+        {
+            "igtoken": "CEOrVmcHAAx",
+            "key": "monkey_punch",
+            "keys": ["猴子喝潘趣", "Monkey Punch", "果香", "蘭姆酒", "鳳梨", "pineapple", "run", "薑汁汽水", "ginger", "甜的", "honey", "蜂蜜", "lemon", "檸檬"],
+            "name": {
+                "en": "Monkey Punch",
+                "zh": "猴子喝潘趣"
+            },
+            "signature": true
         }
     ]
 }
