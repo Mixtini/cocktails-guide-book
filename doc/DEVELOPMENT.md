@@ -19,6 +19,7 @@ firebase login
 ```
 
 ### Init firebase with existing project
+
 ```sh
 firebase init
 ```
@@ -45,14 +46,12 @@ yarn start
 yarn build
 ```
 
-
-## Deploy services
-
-After login firebase, please run the script <strong>under the script folder</strong>
-
 ### Deploy web portal
+
+The deploy script will build frontend code first. Then run the deploy by using firebase-cli.
+
 ```sh
-sh deploy.sh
+yarn deploy
 ```
 
 ## Reference

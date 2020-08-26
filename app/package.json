@@ -1,13 +1,14 @@
 {
   "name": "cocktails-guide-book-react",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.2",
+  "description": "A cocktails search portal create by Over Party Lab",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
     "lint": "eslint src/*.js",
-    "test": "jest test"
+    "test": "jest test",
+    "deploy": "yarn build && firebase login && firebase deploy --only hosting"
   },
   "author": "Sean Chou(@sean1093)",
   "license": "MIT",
