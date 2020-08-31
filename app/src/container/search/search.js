@@ -26,6 +26,7 @@ import RecommendBlock from './components/recommendBlock';
 import { findExistInTwoArray } from '../../utils/helper';
 import { sendRequest, Api } from '../../utils/httpService';
 import { RECOMMEND } from '../../config/search';
+import { ROUTE } from '../../config/common';
 import SEARCH_TEXT from '../../assets/wording/search.json';
 import SELECTOR from '../../assets/selector.json';
 
@@ -76,7 +77,7 @@ const Search = () => {
         const searchParams = value.length === 0 ? '' : new URLSearchParams({
             [SEARCH_KEY]: value.join(',')
         });
-        history.push(`/search?${searchParams}`);
+        history.push(`${ROUTE.SEARCH.path}?${searchParams}`);
     };
     const updateSearchInput = (value, isSearch, showRecommend) => {
         setUserAction(state => ({ ...state, value, isSearch, showRecommend }));

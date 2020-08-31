@@ -8,7 +8,7 @@ import Search from './search/search';
 import Contact from './contact/contact';
 import { MainContainer } from './style.css.js';
 
-import { STYLE } from '../config/common';
+import { STYLE, ROUTE } from '../config/common';
 
 const Main = () => {
     return (
@@ -17,9 +17,9 @@ const Main = () => {
             <BrowserRouter>
                 <MainContainer>
                     <Switch>
-                        <Route exact path="/" render={() => <Redirect to="/search" />} />
-                        <Route exact path="/search" component={Search} />
-                        <Route exact path="/contact" component={Contact} />
+                        <Route exact path="/" render={() => <Redirect to={ROUTE.SEARCH.path} />} />
+                        <Route exact path={ROUTE.SEARCH.path} component={Search} />
+                        <Route exact path={ROUTE.CONTACT.path} component={Contact} />
                     </Switch>
                 </MainContainer>
                 <Footer />
