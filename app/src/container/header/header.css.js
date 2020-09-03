@@ -6,6 +6,16 @@ export const HeaderText = styled.div`
     padding: 15px; 
 `;
 
+export const HeaderInfo = styled.div`
+    display: flex;
+`;
+
+export const InfoItem = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+`;
+
 export const StyledAppBar = styled(AppBar)`
     min-width: ${({minwidth}) => `${minwidth}px`};
 `;
