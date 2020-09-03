@@ -29,3 +29,14 @@ export const Item = styled.div`
 export const Content = styled.div`
     width: ${STYLE.MIN_WIDTH - STYLE.PADDING}px;
 `;
+
+export const StyledIcon = styled.a`
+    && svg {
+        ${({ svgSize }) => svgSize && (`font-size: ${svgSize}`)};
+    }
+    ${({ height }) => height && height};
+    ${({ width }) => width && width};
+    margin: 10px;
+    color: inherit;
+    cursor: pointer;
+`;
