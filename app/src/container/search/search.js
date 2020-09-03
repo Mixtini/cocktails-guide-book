@@ -1,5 +1,6 @@
 // core
 import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 
 // third party component
 import Fuse from 'fuse.js';
@@ -25,11 +26,13 @@ import RecommendBlock from './components/recommendBlock';
 import { findExistInTwoArray } from '../../utils/helper';
 import { sendRequest, Api } from '../../utils/httpService';
 import { RECOMMEND } from '../../config/search';
+import { ROUTE } from '../../config/common';
 import SEARCH_TEXT from '../../assets/wording/search.json';
 import SELECTOR from '../../assets/selector.json';
 
+const SEARCH_KEY = 'searchKey';
 const DEFAULT_STATE = {
-    value: ['果香', '甜的'],
+    value: [],
     signature: true,
     isSearch: false,
     list: [],
@@ -37,19 +40,50 @@ const DEFAULT_STATE = {
     showRecommend: true,
     expanded: '' 
 };
-
 const DEFAULT_SEARCH_PAGE = {
     isInit: false,
     cocktailsList: []
-}
+};
+
+// helper
+const filterCocktails = (cocktailsList, searchKeys, signature) => {
+    cocktailsList.sort(() => Math.random() - 0.5);
+    return cocktailsList.filter(e => {
+        const keys = Object.values(e.keys);
+        const fuse = new Fuse(keys, { includeScore: true });
+        let filterRule = true;
+        for (let i = 0; i < searchKeys.length; i += 1) {
+            const result = fuse.search(searchKeys[i].toLowerCase());
+            const weight = result.filter(e => (e.score < 0.3));
+            filterRule = filterRule && (result.length > 0 && weight.length > 0);
+            if (!filterRule) break;
+        }
+        if(signature === false) filterRule = filterRule && (e.signature === signature);
+        return filterRule;
+    });
+};
 
 const Search = () => {
+    const history = useHistory();
+
+    // state
     const [userAction, setUserAction] = useState(DEFAULT_STATE);  
     const [searchPageData, setSearchPageData] = React.useState(DEFAULT_SEARCH_PAGE);
-
     const { isInit, cocktailsList } = searchPageData;
     const { value, signature, isSearch, searchResultList, showRecommend, expanded } = userAction;
+    
+    // update function
+    const updateURL = (value) => {
+        const searchParams = value.length === 0 ? '' : new URLSearchParams({
+            [SEARCH_KEY]: value.join(',')
+        });
+        history.push(`${ROUTE.SEARCH.path}?${searchParams}`);
+    };
+    const updateSearchInput = (value, isSearch, showRecommend) => {
+        setUserAction(state => ({ ...state, value, isSearch, showRecommend }));
+    };
 
+    // fetch data
     const getCocktailsList = () => {
         sendRequest(Api.getCocktails)
             .then((rsp) => {
@@ -61,57 +95,69 @@ const Search = () => {
                 setSearchPageData({ isInit: true, cocktailsList: [] });
             });
     };
+
+    // event handler
     const onClickSearch = () => {
-        cocktailsList.sort(() => Math.random() - 0.5);
-        const searchResultList = cocktailsList.filter(e => {
-            const keys = Object.values(e.keys);
-            const fuse = new Fuse(keys, { includeScore: true });
-            let filterRule = true;
-            for (let i = 0; i < value.length; i += 1) {
-                const result = fuse.search(value[i].toLowerCase());
-                const weight = result.filter(e => (e.score < 0.3));
-                filterRule = filterRule && (result.length > 0 && weight.length > 0);
-                if (!filterRule) break;
-            }
-            if(signature === false) filterRule = filterRule && (e.signature === signature);
-            return filterRule;
+        const searchResultList = filterCocktails(cocktailsList, value, signature);
+        setUserAction({
+            ...userAction,
+            searchResultList,
+            expanded: '',
+            isSearch: true,
+            showRecommend: false
         });
-        setUserAction({ ...userAction, searchResultList, expanded: '', isSearch: true, showRecommend: false });
     };
     const onSwitchSignature = (e) => {
         const signature = e.target.checked;
-        setUserAction({ ...userAction, signature });
+        setUserAction(state => ({ ...state, signature }));
     };
     const onChipInputChange = (newValue) => {
         if (value.length < 3) {
-            setUserAction({ ...userAction, value: [...value, newValue], isSearch: false });
+            const searchValues = [...value, newValue];
+            updateSearchInput(searchValues, false, true);
+            updateURL(searchValues);
         }
     };
     const onSelectChange = (newValue) => {
         const find = findExistInTwoArray(value, [newValue]);
         if (value.length < 3 && !find) {
-            setUserAction({ ...userAction, value: [...value, newValue], isSearch: false });
+            const searchValues = [...value, newValue];
+            updateSearchInput(searchValues, false, true);
+            updateURL(searchValues);
         }
     };
     const handleDeleteChip = (chip) => {
         const index = value.indexOf(chip);
         if (index !== -1) value.splice(index, 1);
-        setUserAction({ ...userAction, value, isSearch: false, showRecommend: true });
+        updateSearchInput(value, false, true);
+        setUserAction(state => ({ ...state, value, isSearch: false, showRecommend: true }));
+        updateURL(value);
     };
     const onExpanded = (clickExpanded) => {
         const newExpanded = expanded === clickExpanded ? '' : clickExpanded
-        setUserAction({ ...userAction,  expanded: newExpanded });
+        setUserAction(state => ({ ...state,  expanded: newExpanded }));
     };
     const onControlRecommend = () => {
         const status = !showRecommend
-        setUserAction({ ...userAction,  showRecommend: status });
+        setUserAction(state => ({ ...state,  showRecommend: status }));
     };
 
+    // effect hooks
     useEffect(() => {
         if (cocktailsList && cocktailsList.length === 0) {
             getCocktailsList();
         }
     }, []);
+
+    // get query strings from the url and update to search input
+    useEffect(() => {
+        const searchParams = new URLSearchParams(location.search);
+        const elements = searchParams.get(SEARCH_KEY);
+        if (elements) {
+            const searchValue = elements.split(',');
+            updateSearchInput(searchValue, false, true);
+        }
+    }, [location.search]);
 
     return (
         <Container>

@@ -7,19 +7,29 @@ import ContactMailTwoToneIcon from '@material-ui/icons/ContactMailTwoTone';
 
 import { StyledSearch, StyledBottomNavigation } from './footer.css.js';
 
+import { ROUTE } from '../../config/common';
+
 const Footer = () => {
-    const [value, setValue] = React.useState('search');
+    const [value, setValue] = React.useState(ROUTE.SEARCH.key);
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
     return (
         <StyledSearch>
             <StyledBottomNavigation value={value} onChange={handleChange}>
-                <Link to="/search">
-                    <BottomNavigationAction label="Search" value="search" icon={<SearchTwoToneIcon />} />
+                <Link to={ROUTE.SEARCH.path}>
+                    <BottomNavigationAction
+                        label={ROUTE.SEARCH.display}
+                        value={ROUTE.SEARCH.key}
+                        icon={<SearchTwoToneIcon />}
+                    />
                 </Link>
-                <Link to="/contact">
-                    <BottomNavigationAction label="Contact" value="contact" icon={<ContactMailTwoToneIcon />} />
+                <Link to={ROUTE.CONTACT.path}>
+                    <BottomNavigationAction
+                        label={ROUTE.CONTACT.display}
+                        value={ROUTE.CONTACT.key}
+                        icon={<ContactMailTwoToneIcon />}
+                    />
                 </Link>
             </StyledBottomNavigation>
         </StyledSearch>
