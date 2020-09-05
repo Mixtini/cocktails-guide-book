@@ -36,13 +36,3 @@ export const ContactLink = styled.div`
     justify-content: space-around;
     padding: 8px;
 `;
-
-export const Footer = styled.div`
-    position: fixed;
-    width: 100%;
-    height: 25px;
-    bottom: 55px;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-`;

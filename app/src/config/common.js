@@ -1,5 +1,6 @@
 export const COMMON = {
-    API_SERVICE_HOST: 'raw.githubusercontent.com/overpartylab/cocktails-guide-book/master/database/'
+    API_SERVICE_HOST: 'raw.githubusercontent.com/overpartylab/cocktails-guide-book/master/database/',
+    VERSION: process.env.APP_VERSION
 };
 
 export const STYLE = {
@@ -17,11 +18,11 @@ export const ROUTE = {
     SEARCH: {
         key: 'search',
         path: '/search',
-        display: 'Search'
+        display: 'Search Cocktails'
     },
     CONTACT: {
         key: 'contact',
         path: '/contact',
-        display: 'Contact'
+        display: 'Contact Us'
     }
 };

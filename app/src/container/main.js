@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 // component
 import Header from './header/header';
-import Footer from './footer/footer';
+import SideNav from './header/sideNav';
 import Search from './search/search';
 import Contact from './contact/contact';
 import { MainContainer } from './style.css.js';
@@ -11,9 +11,10 @@ import { MainContainer } from './style.css.js';
 import { STYLE, ROUTE } from '../config/common';
 
 const Main = () => {
+    const [openSideMenu, setOpenSideMenu] = useState(false)
     return (
         <>
-            <Header minwidth={STYLE.MIN_WIDTH} />
+            <Header minwidth={STYLE.MIN_WIDTH} setOpenSideMenu={setOpenSideMenu} />
             <BrowserRouter>
                 <MainContainer>
                     <Switch>
@@ -22,7 +23,10 @@ const Main = () => {
                         <Route exact path={ROUTE.CONTACT.path} component={Contact} />
                     </Switch>
                 </MainContainer>
-                <Footer />
+                <SideNav
+                    open={openSideMenu}
+                    onClose={()=> {setOpenSideMenu(false);}}
+                />
             </BrowserRouter>
         </>
     );
