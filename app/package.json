@@ -10,6 +10,11 @@
     "test": "jest test",
     "deploy": "yarn build && firebase login && firebase deploy --only hosting"
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "sh scripts/git-hook-prepush.sh"
+    }
+  },
   "author": "Sean Chou(@sean1093)",
   "license": "MIT",
   "devDependencies": {
@@ -34,6 +39,7 @@
     "@material-ui/icons": "4.9.1",
     "dotenv-webpack": "2.0.0",
     "fuse.js": "6.4.0",
+    "husky": "^4.2.5",
     "material-ui-chip-input": "2.0.0-beta.2",
     "react": "16.8.1",
     "react-dom": "16.8.1",
