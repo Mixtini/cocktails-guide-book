@@ -2,8 +2,12 @@ import styled from 'styled-components';
 import AppBar from '@material-ui/core/AppBar';
 
 export const HeaderText = styled.div`
+    height: 45px;
     font-size: 18px;
-    padding: 15px; 
+    padding-left: 15px; 
+    && > button {
+        color: #ffffff;
+    }
 `;
 
 export const HeaderInfo = styled.div`
@@ -17,11 +21,15 @@ export const InfoItem = styled.div`
 `;
 
 export const StyledAppBar = styled(AppBar)`
-    min-width: ${({minwidth}) => `${minwidth}px`};
+    && {
+        height: 45px;
+        min-width: ${({minwidth}) => `${minwidth}px`};
+    }
 `;
 
 export const AppBarContainer = styled.div`
     && {
+        height: 45px;
         background-color: #424242;
     }
     display: flex;

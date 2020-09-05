@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { STYLE } from '../config/common';
+import logo from '../assets/images/overpartylab-logo.jpg';
 
 export const MainContainer = styled.div`
     min-width: ${STYLE.MIN_WIDTH}px;
@@ -39,4 +40,14 @@ export const StyledIcon = styled.a`
     margin: 10px;
     color: inherit;
     cursor: pointer;
+`;
+
+export const LogoImage = styled.div`
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    background-size: 100px 100px;
+    border-radius: 50px;
+    background-repeat: no-repeat;
+    background-image: url(${logo});
 `;

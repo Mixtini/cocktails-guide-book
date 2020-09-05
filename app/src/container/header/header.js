@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -10,11 +12,19 @@ import { StyledIcon } from '../style.css.js';
 import COMMON_TEXT from '../../assets/wording/common.json';
 import { LINK } from '../../config/contact';
 
-const Header = ({ minwidth }) => {
+const Header = ({ minwidth, setOpenSideMenu }) => {
     return (
         <StyledAppBar minwidth={minwidth} position="fixed">
             <AppBarContainer>
-                <HeaderText>{COMMON_TEXT.title}</HeaderText>
+                <HeaderText>
+                    <IconButton
+                        onClick={() => { setOpenSideMenu(true);}}
+                        edge="start"
+                    >
+                        <MenuIcon />
+                    </IconButton>
+                    {COMMON_TEXT.title}
+                </HeaderText>
                 <HeaderInfo>
                     <InfoItem>
                         <StyledIcon href={LINK.INSTAGRAM} target="_blank" svgSize="2rem">
@@ -37,7 +47,8 @@ const Header = ({ minwidth }) => {
     );
 };
 Header.propTypes = {
-    minwidth: PropTypes.number.isRequired
+    minwidth: PropTypes.number.isRequired,
+    setOpenSideMenu: PropTypes.func.isRequired,
 };
 
 export default Header;

@@ -7,7 +7,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import CollectionsBookmarkTwoToneIcon from '@material-ui/icons/CollectionsBookmarkTwoTone';
 
 // components
-import { LogoImage, StyledIcon, ContactLink, Footer } from './contact.css.js';
+import { LogoImage, StyledIcon, ContactLink } from './contact.css.js';
 import { Container, Header, Item, Content} from '../style.css.js';
 
 // utils, config and assets
@@ -45,11 +45,6 @@ const Contact = () => {
                     </StyledIcon>
                 </ContactLink>
             </Item>
-            <Footer>
-                <div>
-                    © {(new Date()).getFullYear()} <a href={LINK.INSTAGRAM} rel="noreferrer" target="_blank">{CONTACT_TEXT.account}</a> {process.env.APP_VERSION}
-                </div>
-            </Footer>
         </Container>
     );
 };

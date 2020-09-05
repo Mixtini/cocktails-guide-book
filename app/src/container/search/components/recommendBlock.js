@@ -73,7 +73,7 @@ const RecommendBlock = ({ dataObj, expanded, onItemSelect, onExpanded, showRecom
     );
 };
 RecommendBlock.propTypes = {
-    dataObj: PropTypes.object.isRequired,
+    dataObj: PropTypes.array.isRequired,
     expanded: PropTypes.string.isRequired,
     onItemSelect: PropTypes.func.isRequired,
     onExpanded: PropTypes.func.isRequired,
