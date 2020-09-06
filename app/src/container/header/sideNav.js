@@ -6,9 +6,7 @@ import PropTypes from 'prop-types';
 // third party component
 import Drawer from '@material-ui/core/Drawer';
 import IconButton from '@material-ui/core/IconButton';
-import SearchTwoToneIcon from '@material-ui/icons/SearchTwoTone';
-import ContactMailTwoToneIcon from '@material-ui/icons/ContactMailTwoTone';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 
 // components
 import { LogoImage } from '../style.css.js';
@@ -35,25 +33,23 @@ const SideNav = ({ open, onClose }) => {
                     <SideNavTitle>
                         {COMMON_TEXT.title}
                         <IconButton onClick={onClose}>
-                            <ChevronRightIcon />
+                            <ChevronLeftIcon />
                         </IconButton>
                     </SideNavTitle>
                     <SideNavLogo>
                         <LogoImage />
                     </SideNavLogo>
                     <SideNavLinkBlock>
-                        <SideNavLink>
-                            <Link to={ROUTE.SEARCH.path} onClick={onClose}>
-                                <SearchTwoToneIcon />
-                                {ROUTE.SEARCH.display}
-                            </Link>
-                        </SideNavLink>
-                        <SideNavLink>
-                            <Link to={ROUTE.CONTACT.path} onClick={onClose}>
-                                <ContactMailTwoToneIcon />
-                                {ROUTE.CONTACT.display}
-                            </Link>
-                        </SideNavLink>
+                        {
+                            Object.keys(ROUTE).map(r => (
+                                <SideNavLink key={`route-${ROUTE[r].key}`}>
+                                    <Link to={ROUTE[r].path} onClick={onClose}>
+                                        {ROUTE[r].icon}
+                                        {ROUTE[r].display}
+                                    </Link>
+                                </SideNavLink>
+                            ))
+                        }
                     </SideNavLinkBlock>
                 </SideNavContent>
             </SideNavContainer>

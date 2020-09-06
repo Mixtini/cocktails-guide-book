@@ -1,3 +1,8 @@
+import React from 'react';
+import SearchTwoToneIcon from '@material-ui/icons/SearchTwoTone';
+import LocalBarTwoToneIcon from '@material-ui/icons/LocalBarTwoTone';
+import ContactMailTwoToneIcon from '@material-ui/icons/ContactMailTwoTone';
+
 export const COMMON = {
     API_SERVICE_HOST: 'raw.githubusercontent.com/overpartylab/cocktails-guide-book/master/database/',
     VERSION: process.env.APP_VERSION
@@ -19,11 +24,19 @@ export const ROUTE = {
     SEARCH: {
         key: 'search',
         path: '/search',
-        display: 'Search Cocktails'
+        display: 'Search Cocktails',
+        icon: <SearchTwoToneIcon />
+    },
+    ALCOHOL_LIST: {
+        key: 'alcoholList',
+        path: '/alcoholList',
+        display: 'Alcohol List',
+        icon: <LocalBarTwoToneIcon />
     },
     CONTACT: {
         key: 'contact',
         path: '/contact',
-        display: 'Contact Us'
+        display: 'Contact Us',
+        icon: <ContactMailTwoToneIcon />
     }
 };
