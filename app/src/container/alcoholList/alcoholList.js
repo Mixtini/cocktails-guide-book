@@ -2,7 +2,13 @@
 import React, { useState, useEffect } from 'react';
 
 // third party component
-
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
 
 // components
 import Loader from '../../components/loader';
@@ -10,11 +16,12 @@ import { Container, Header, Item} from '../style.css.js';
 
 // utils, config and assets
 import { sendRequest, Api } from '../../utils/httpService';
+import { COLUMN_HEADER } from '../../config/alcoholList';
 import CONTACT_TEXT from '../../assets/wording/alcoholList.json';
 
 const DEFAULT_PAGE_DATA = {
     isInit: false,
-    list: {}
+    list: { gin: [] }
 };
 
 const AlcoholList = () => {
@@ -23,6 +30,7 @@ const AlcoholList = () => {
     const { isInit, list } = alcoholDataList;
 
     // get all alcohol list
+    const { gin } = list;
     // const { gin, rum, tequila, whiskey, vodka } = list;
 
     // fetch data
@@ -30,17 +38,17 @@ const AlcoholList = () => {
         sendRequest(Api.getAlcoholList)
             .then((rsp) => {
                 const { data } = rsp;
-                setAlcoholDataList({ isInit: true, cocktailsList: Object.values(data) });
+                setAlcoholDataList({ isInit: true, list: data });
             })
             .catch((err) => {
                 console.error(err);
-                setAlcoholDataList({ isInit: true, cocktailsList: [] });
+                setAlcoholDataList({ isInit: true, list: [] });
             });
     };
 
     // effect hooks
     useEffect(() => {
-        if (list && Object.keys(list).length === 0) {
+        if (gin.length === 0) {
             getAlcoholList();
         }
     }, []);
@@ -54,9 +62,38 @@ const AlcoholList = () => {
                 !isInit && <Loader />
             }
             {
-                isInit && (
+                isInit && Object.keys(list).length > 0 && gin && (
                     <Item>
-                        Coming Soon...
+                        <TableContainer component={Paper}>
+                            <Table stickyHeader>
+                                <TableHead>
+                                    <TableRow>
+                                        {
+                                            COLUMN_HEADER.map(header => {
+                                                <TableCell key={header.key} align={header.align}>
+                                                    {header.display}
+                                                </TableCell> 
+                                            })
+                                        }
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    {
+                                        gin.map((row) => (
+                                            <TableRow key={row.name}>
+                                                <TableCell>
+                                                    {row.name}
+                                                </TableCell>
+                                                <TableCell align="right">{row.price}</TableCell>
+                                                <TableCell align="right">{row.taste}</TableCell>
+                                                <TableCell align="right">{row.suitable}</TableCell>
+                                                <TableCell align="right">{row.buy}</TableCell>
+                                            </TableRow>
+                                        ))
+                                    }
+                                </TableBody>
+                            </Table>
+                        </TableContainer>
                     </Item>
                 )
             }
