@@ -20,7 +20,7 @@ A cocktails search portal create by [Over Party Lab](https://www.instagram.com/o
 
 <b>Portal</b>
 
-* [Over Party Lab Portal v1.0.1](https://overpartylab-4c6d2.web.app/)
+* [Over Party Lab Portal](https://overpartylab-4c6d2.web.app/)
 
 ## Env Introduction
 

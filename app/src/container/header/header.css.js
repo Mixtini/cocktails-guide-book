@@ -23,7 +23,7 @@ export const InfoItem = styled.div`
 export const StyledAppBar = styled(AppBar)`
     && {
         height: 45px;
-        min-width: ${({minwidth}) => `${minwidth}px`};
+        min-width: ${({ minwidth }) => `${ minwidth }px`};
     }
 `;
 

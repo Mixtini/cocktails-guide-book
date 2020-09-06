@@ -40,7 +40,7 @@ const RecommendBlock = ({ dataObj, expanded, onItemSelect, onExpanded, showRecom
                                 <StyledExpansionPanel
                                     expanded={expanded === title}
                                     onChange={() => { onExpanded(title)} }
-                                    key={`item-${title}`}
+                                    key={`expansionPanel-${title}`}
                                 >
                                     <InnerExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                                         <div>{title}</div>
@@ -48,10 +48,10 @@ const RecommendBlock = ({ dataObj, expanded, onItemSelect, onExpanded, showRecom
                                     <InnerExpansionPanelDetails>
                                         <ButtonGroup>
                                             {
-                                                data.map((e, idx) => {
+                                                data.map((e) => {
                                                     return (
                                                         <Button
-                                                            key={`key-${idx}`}
+                                                            key={`button-${e}`}
                                                             variant="contained"
                                                             onClick={() => { onItemSelect(e)} }
                                                         >

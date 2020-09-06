@@ -1,3 +1,4 @@
+// core
 import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
@@ -8,6 +9,7 @@ import Search from './search/search';
 import Contact from './contact/contact';
 import { MainContainer } from './style.css.js';
 
+// utils, config and assets
 import { STYLE, ROUTE } from '../config/common';
 
 const Main = () => {
