@@ -4,6 +4,7 @@ import LocalBarTwoToneIcon from '@material-ui/icons/LocalBarTwoTone';
 import ContactMailTwoToneIcon from '@material-ui/icons/ContactMailTwoTone';
 
 export const COMMON = {
+    API_PREFIX: 'https://',
     API_SERVICE_HOST: 'raw.githubusercontent.com/overpartylab/cocktails-guide-book/master/database/',
     VERSION: process.env.APP_VERSION
 };
