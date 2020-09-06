@@ -1,0 +1,84 @@
+{
+    "info": {
+        "code": 0,
+        "msg": "Over Party Lab alcohol list"
+    },
+    "data": {
+        "gin": [
+            {
+                "name": "Tanqueray No. Ten",
+                "price": "$ 900~$ 1,100",
+                "taste": "清新柑橘，很好的平衡",
+                "suitable": "凍飲、Gin & Tonic 或是 Gimlet",
+                "buy": "酒專"
+            },
+            {
+                "name": "Tanqueray Malacca Gin",
+                "price": "$ 1,100~$ 1,300",
+                "taste": "較甜、檸檬皮與草本",
+                "suitable": "加一點冰塊融水後飲用",
+                "buy": "酒專"
+            },
+            {
+                "name": "Beefeater Pink Gin",
+                "price": "$ 700~$ 900",
+                "taste": "甜味、草莓香氣",
+                "suitable": "草莓 Gin & Tonic",
+                "buy": "酒專、家樂福"
+            },
+            {
+                "name": "Beefeater 24",
+                "price": "$ 1,200~$ 1,300",
+                "taste": "檸檬皮、柑橘，尾韻茶的澀味",
+                "suitable": "凍飲、Martini",
+                "buy": "酒專"
+            },
+            {
+                "name": "Gin Sul",
+                "price": "$ 1,200~$ 1,600",
+                "taste": "柑橘風味強烈、一點點花草氣息",
+                "suitable": "Gin & Tonic 或 Gimlet",
+                "buy": "酒專"
+            },
+            {
+                "name": "Mirabeau Rosé Gin",
+                "price": "$ 799",
+                "taste": "草本氣味、淡淡花香",
+                "suitable": "Gin & Tonic",
+                "buy": "Costco"
+            },
+            {
+                "name": "London №1 Gin",
+                "price": "$1,000 ~ $1,200",
+                "taste": "柑橘、肉桂與辛香料",
+                "suitable": "Martini、柑橘類相關的調酒",
+                "buy": "酒專"
+            },
+            {
+                "name": "Hayman’s Old Tom Gin",
+                "price": "$ 700 ~$ 800",
+                "taste": "草本香氣與微甜的果香感",
+                "suitable": "Gin & Tonic",
+                "buy": "酒專"
+            },
+            {
+                "name": "Hayman’s Sloe Gin",
+                "price": "$ 650 ~$ 800",
+                "taste": "黑醋栗與莓果類的香氣",
+                "suitable": "加冰純飲",
+                "buy": "酒專"
+            },
+            {
+                "name": "London to Lima Gin",
+                "price": "$ 1,500 ~$ 1,800",
+                "taste": "辛香料的胡椒香氣",
+                "suitable": "凍飲",
+                "buy": "酒展"
+            }
+        ],
+        "rum": [],
+        "tequila": [],
+        "whiskey": [],
+        "vodka": []
+    }
+}
