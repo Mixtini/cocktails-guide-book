@@ -41,7 +41,7 @@ const SideNav = ({ open, onClose }) => {
                     </SideNavLogo>
                     <SideNavLinkBlock>
                         {
-                            Object.keys(ROUTE).map(r => (
+                            Object.keys(ROUTE).filter(e => ROUTE[e].release).map(r => (
                                 <SideNavLink key={`route-${ROUTE[r].key}`}>
                                     <Link to={ROUTE[r].path} onClick={onClose}>
                                         {ROUTE[r].icon}

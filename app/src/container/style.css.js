@@ -23,6 +23,13 @@ export const Header = styled.div`
 
 export const Item = styled.div`
     display: flex;
+    justify-content: ${({ locate }) => locate ? locate : 'center' };
+    padding: ${STYLE.PADDING}px;
+`;
+
+export const ItemName = styled.div`
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     padding: ${STYLE.PADDING}px;
 `;

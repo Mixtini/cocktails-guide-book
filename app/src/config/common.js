@@ -26,18 +26,21 @@ export const ROUTE = {
         key: 'search',
         path: '/search',
         display: 'Search Cocktails',
-        icon: <SearchTwoToneIcon />
+        icon: <SearchTwoToneIcon />,
+        release: true
     },
     ALCOHOL_LIST: {
         key: 'alcoholList',
         path: '/alcoholList',
         display: 'Alcohol List',
-        icon: <LocalBarTwoToneIcon />
+        icon: <LocalBarTwoToneIcon />,
+        release: false
     },
     CONTACT: {
         key: 'contact',
         path: '/contact',
         display: 'Contact Us',
-        icon: <ContactMailTwoToneIcon />
+        icon: <ContactMailTwoToneIcon />,
+        release: true
     }
 };
