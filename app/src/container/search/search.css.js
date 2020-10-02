@@ -28,6 +28,10 @@ export const StyledSearchIcon = styled(SearchIcon)`
     height: 48px;
 `;
 
+export const StyledLink = styled.a`
+    text-decoration: none;
+`
+
 export const Cards = styled.div`
     display: flex;
     flex-direction: column;
