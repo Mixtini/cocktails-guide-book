@@ -6,10 +6,10 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-fzoyAV hNfnvy"
+        class="sc-fzoLag dhPVQq"
       >
         <div
-          class="sc-fzoLag iXuQQf"
+          class="sc-fzoXzr fTEPZR"
           data-testid="TITLE"
         >
           <div>
@@ -17,10 +17,10 @@ Object {
           </div>
         </div>
         <div
-          class="sc-fzoXzr bGvJsw"
+          class="sc-fzpjYC cAohOb"
         >
           <div
-            class="sc-fznxsB gZZrEG"
+            class="sc-fznJRM fydqsm"
             data-testid="CONTENT"
           >
             Sorry! 發生了預期外的錯誤，可能是系統或是網路出了點問題，請稍後再重新整理試試看 😣，如果還是有問題請聯絡我們！謝謝
@@ -31,10 +31,10 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-fzoyAV hNfnvy"
+      class="sc-fzoLag dhPVQq"
     >
       <div
-        class="sc-fzoLag iXuQQf"
+        class="sc-fzoXzr fTEPZR"
         data-testid="TITLE"
       >
         <div>
@@ -42,10 +42,10 @@ Object {
         </div>
       </div>
       <div
-        class="sc-fzoXzr bGvJsw"
+        class="sc-fzpjYC cAohOb"
       >
         <div
-          class="sc-fznxsB gZZrEG"
+          class="sc-fznJRM fydqsm"
           data-testid="CONTENT"
         >
           Sorry! 發生了預期外的錯誤，可能是系統或是網路出了點問題，請稍後再重新整理試試看 😣，如果還是有問題請聯絡我們！謝謝

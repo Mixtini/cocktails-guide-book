@@ -893,6 +893,56 @@
                 "zh": "猴子喝潘趣"
             },
             "signature": true
+        },
+        {
+            "igtoken": "CEgrOSGH2NL",
+            "key": "oriental_lady",
+            "keys": ["東方淑女", "Oriental lady", "甜的", "果香", "伏特加", "vodka", "君度", "橙酒", "cointreau", "lemon", "檸檬", "蔓越梅", "cranberry", "茶香", "烏龍茶", "cosmopolitan", "柯夢波丹"],
+            "name": {
+                "en": "Oriental lady",
+                "zh": "東方淑女"
+            },
+            "signature": true
+        },
+        {
+            "igtoken": "CFEvbpSnUCc",
+            "key": "indigo_wind",
+            "keys": ["靛色之風", "Indigo wind", "甜的", "果香", "伏特加", "vodka", "君度", "橙酒", "cointreau", "lemon", "檸檬", "藍莓", "blueberry", "cosmopolitan", "柯夢波丹"],
+            "name": {
+                "en": "Indigo wind",
+                "zh": "靛色之風"
+            },
+            "signature": true
+        },
+        {
+            "igtoken": "CEyy0CGH0qK",
+            "key": "satans_whiskers",
+            "keys": ["撒旦的鬍鬚", "Satan's Whiskers", "酒感", "琴酒", "gin", "cognac", "白蘭地", "vermouth", "bitters", "苦精", "香艾酒", "orange", "柳橙汁"],
+            "name": {
+                "en": "Satan's Whiskers",
+                "zh": "撒旦的鬍鬚"
+            },
+            "signature": false
+        },
+        {
+            "igtoken": "CFXHrhknEfG",
+            "key": "metropole",
+            "keys": ["大都會", "Metropole", "酒感", "cognac", "白蘭地", "vermouth", "bitters", "苦精", "香艾酒", "馬丁尼", "martini"],
+            "name": {
+                "en": "Metropole",
+                "zh": "大都會"
+            },
+            "signature": false
+        },
+        {
+            "igtoken": "CFpCMTindle",
+            "key": "no_longer_human",
+            "keys": ["人間失格", "No Longer Human", "酒感", "琴酒", "gin", "campari", "肯巴利", "vermouth", "bitters", "苦精", "香艾酒", "黑醋栗", "blackcurrant"],
+            "name": {
+                "en": "No Longer Human",
+                "zh": "人間失格"
+            },
+            "signature": false
         }
     ]
 }

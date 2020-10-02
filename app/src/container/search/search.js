@@ -16,7 +16,8 @@ import {
     SearchContainer,
     SearchIndicator,
     StyledSearchIcon,
-    Cards
+    Cards,
+    StyledLink
 } from './search.css.js';
 import { Container, Header, Item, Content } from '../style.css.js';
 import Card from './components/card';
@@ -184,6 +185,11 @@ const Search = () => {
                                 <div>{SEARCH_TEXT.content}</div>
                                 <div>{SEARCH_TEXT.tips}</div>
                             </Content>
+                        </Item>
+                        <Item>
+                            <StyledLink href="https://medium.com/p/e668a4544f36" target="_blank">
+                                {SEARCH_TEXT.how_to_use}
+                            </StyledLink>
                         </Item>
                         <Item>
                         <FormControlLabel
