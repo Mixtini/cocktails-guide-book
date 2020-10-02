@@ -1,3 +1,4 @@
+// core
 import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
@@ -5,9 +6,11 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Header from './header/header';
 import SideNav from './header/sideNav';
 import Search from './search/search';
+import AlcoholList from './alcoholList/alcoholList';
 import Contact from './contact/contact';
 import { MainContainer } from './style.css.js';
 
+// utils, config and assets
 import { STYLE, ROUTE } from '../config/common';
 
 const Main = () => {
@@ -20,6 +23,7 @@ const Main = () => {
                     <Switch>
                         <Route exact path="/" render={() => <Redirect to={ROUTE.SEARCH.path} />} />
                         <Route exact path={ROUTE.SEARCH.path} component={Search} />
+                        <Route exact path={ROUTE.ALCOHOL_LIST.path} component={AlcoholList} />
                         <Route exact path={ROUTE.CONTACT.path} component={Contact} />
                     </Switch>
                 </MainContainer>

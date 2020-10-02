@@ -1,10 +1,10 @@
 import { COMMON } from '../config/common';
 
-const { API_SERVICE_HOST } = COMMON;
+const { API_PREFIX, API_SERVICE_HOST } = COMMON;
 
 // fetch data
 export const sendRequest = (api, option = { method: 'GET' }) => {
-    const API_PATH = `https://${api}`;
+    const API_PATH = `${API_PREFIX}${api}`;
     return new Promise((resolve, reject) => {
         fetch(API_PATH, option).then((response) => {
             if (response.status === 200 || response.status === 204) {
@@ -26,5 +26,6 @@ export const sendRequest = (api, option = { method: 'GET' }) => {
 
 export const Api = {
     getIngredients: `${API_SERVICE_HOST}/ingredient.json`,
-    getCocktails: `${API_SERVICE_HOST}/cocktails.json`
+    getCocktails: `${API_SERVICE_HOST}/cocktails.json`,
+    getAlcoholList: `${API_SERVICE_HOST}/alcoholList.json`
 };

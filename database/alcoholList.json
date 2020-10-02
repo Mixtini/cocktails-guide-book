@@ -6,6 +6,76 @@
     "data": {
         "gin": [
             {
+                "name": "Gordon’s London Dry Gin",
+                "price": "$ 350~$ 450",
+                "taste": "杜松子香氣平平",
+                "suitable": "較複雜的調酒",
+                "buy": "大賣場、酒專、機場"
+            },
+            {
+                "name": "Beefeater London Dry Gin",
+                "price": "$ 350~$ 450",
+                "taste": "杜松子的氣味稍重",
+                "suitable": "搭配氣味較強勢的碳酸飲料",
+                "buy": "7–11、大賣場、酒專、機場"
+            },
+            {
+                "name": "Bombay Sapphire London Dry Gin",
+                "price": "$ 500~$ 650",
+                "taste": "橘橙類的果皮香氣，杜松子",
+                "suitable": "蜂蜜琴酒，或偏甜的調酒",
+                "buy": "大賣場、酒專、機場"
+            },
+            {
+                "name": "Tanqueray London Dry Gin",
+                "price": "$ 600~$ 800",
+                "taste": "柑橘皮、淡雅檸檬香",
+                "suitable": "各式調酒或加冰直接飲用",
+                "buy": "大賣場、酒專、機場"
+            },
+            {
+                "name": "KAVALAN Gin",
+                "price": "$ 750~$ 800",
+                "taste": "泥土味，啜飲時有柑橘與金棗香氣",
+                "suitable": "Gin & Tonic",
+                "buy": "大賣場、酒專"
+            },
+            {
+                "name": "ROKU Gin",
+                "price": "$ 900~$ 1,000",
+                "taste": "柚子、茶香與山椒風味",
+                "suitable": "Gin & Tonic或清爽系列調酒",
+                "buy": "酒專、機場、大賣場"
+            },
+            {
+                "name": "Hendrick’s Gin",
+                "price": "$ 950~$ 1,100",
+                "taste": "小黃瓜、玫瑰",
+                "suitable": "搭配花草類調製，或是偏甜的酒飲",
+                "buy": "酒專、機場、大賣場"
+            },
+            {
+                "name": "№3 London Dry Gin",
+                "price": "$ 1,200~$ 1,400",
+                "taste": "檸檬皮香氣",
+                "suitable": "Gin Tonic 或是凍飲",
+                "buy": "酒專"
+            },
+            {
+                "name": "KI NO BI Kyoto Dry Gin",
+                "price": "$ 1,200~$ 1,400",
+                "taste": "柑橘香氣、一點特殊的苦味",
+                "suitable": "Gin Tonic、White Lady",
+                "buy": "酒專"
+            },
+            {
+                "name": "Monkey 47 Dry Gin",
+                "price": "$ 1,300~$ 1,500",
+                "taste": "杜松子、熱帶水果味",
+                "suitable": "純飲或是簡單的Gin Tonic",
+                "buy": "酒專"
+            },
+            {
                 "name": "Tanqueray No. Ten",
                 "price": "$ 900~$ 1,100",
                 "taste": "清新柑橘，很好的平衡",
@@ -75,10 +145,6 @@
                 "suitable": "凍飲",
                 "buy": "酒展"
             }
-        ],
-        "rum": [],
-        "tequila": [],
-        "whiskey": [],
-        "vodka": []
+        ]
     }
 }

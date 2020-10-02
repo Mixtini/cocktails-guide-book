@@ -88,7 +88,7 @@ const Search = () => {
         sendRequest(Api.getCocktails)
             .then((rsp) => {
                 const { data } = rsp;
-                setSearchPageData({ isInit: true, cocktailsList: Object.values(data) });
+                setSearchPageData({ isInit: true, cocktailsList: data });
             })
             .catch((err) => {
                 console.error(err);

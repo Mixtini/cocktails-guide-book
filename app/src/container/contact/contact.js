@@ -12,7 +12,7 @@ import { Container, Header, Item, Content} from '../style.css.js';
 
 // utils, config and assets
 import CONTACT_TEXT from '../../assets/wording/contact.json';
-import { LINK } from '../../config/contact';
+import { LINK } from '../../config/common';
 
 const Contact = () => {
     return (

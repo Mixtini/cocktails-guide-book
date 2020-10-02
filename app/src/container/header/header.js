@@ -1,16 +1,21 @@
+// core
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// third party component
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import GitHubIcon from '@material-ui/icons/GitHub';
+
+// components
 import { HeaderText, HeaderInfo, InfoItem, StyledAppBar, AppBarContainer } from './header.css.js';
 import { StyledIcon } from '../style.css.js';
 
+// utils, config and assets
 import COMMON_TEXT from '../../assets/wording/common.json';
-import { LINK } from '../../config/contact';
+import { LINK } from '../../config/common';
 
 const Header = ({ minwidth, setOpenSideMenu }) => {
     return (
