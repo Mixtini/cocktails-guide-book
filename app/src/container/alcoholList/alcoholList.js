@@ -19,7 +19,7 @@ import { StyledTableContainer, StyledSelect } from './alcoholList.css.js';
 // utils, config and assets
 import { sendRequest, Api } from '../../utils/httpService';
 import { COLUMN_HEADER } from '../../config/alcoholList';
-import CONTACT_TEXT from '../../assets/wording/alcoholList.json';
+import TEXT from '../../assets/wording/alcoholList.json';
 
 const DEFAULT_PAGE_DATA = {
     isInit: false,
@@ -27,6 +27,9 @@ const DEFAULT_PAGE_DATA = {
 };
 const DEFAULT_USER_ACTION = {
     type: 'gin'
+};
+const tempMapping = {
+    gin: '琴酒'
 };
 
 const AlcoholList = () => {
@@ -39,7 +42,6 @@ const AlcoholList = () => {
     // get all alcohol list
     const alcoholType = Object.keys(list);
     const { gin } = list;
-    // const { gin, rum, tequila, whiskey, vodka } = list;
 
     // fetch data
     const getAlcoholList = () => {
@@ -64,7 +66,7 @@ const AlcoholList = () => {
     return (
         <Container>
             <Header>
-                <div>{CONTACT_TEXT.title}</div>
+                <div>{TEXT.title}</div>
             </Header>
             {
                 !isInit && <Loader />
@@ -73,11 +75,11 @@ const AlcoholList = () => {
                 isInit && Object.keys(list).length > 0 && gin && (
                     <>
                         <Item locate="start">
-                            <ItemName>品項：
-                            </ItemName>
+                            <ItemName>{TEXT.selector.title}</ItemName>
                             <FormControl variant="outlined">
                                 <StyledSelect
                                     value={type}
+                                    renderValue={(type) => tempMapping[type]}
                                     onChange={(e) => { setUserAction({ ...userAction, type: e.target.value }); }}
                                 >
                                     {
@@ -107,10 +109,10 @@ const AlcoholList = () => {
                                                     <TableCell>
                                                         {row.name}
                                                     </TableCell>
-                                                    <TableCell align="right">{row.price}</TableCell>
-                                                    <TableCell align="right">{row.taste}</TableCell>
-                                                    <TableCell align="right">{row.suitable}</TableCell>
-                                                    <TableCell align="right">{row.buy}</TableCell>
+                                                    <TableCell>{row.price}</TableCell>
+                                                    <TableCell>{row.taste}</TableCell>
+                                                    <TableCell>{row.suitable}</TableCell>
+                                                    <TableCell>{row.buy}</TableCell>
                                                 </TableRow>
                                             ))
                                         }

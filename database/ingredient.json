@@ -36,14 +36,12 @@
             "white_sugar": "白砂糖"
         },
         "base": {
-            "bourbon_whiskey": "波本威士忌",
             "cognac": "干邑白蘭地",
-            "dark_rum": "黑蘭姆酒",
+            "rum": "蘭姆酒",
             "gin": "琴酒",
             "tequila": "龍舌蘭",
             "vodka": "伏特加",
-            "whiskey": "威士忌",
-            "white_rum": "白蘭姆酒"
+            "whiskey": "威士忌"
         },
         "bubble_tea": {
             "big_bubble_milk_tea": "波霸奶茶",

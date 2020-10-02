@@ -1,7 +1,7 @@
 export const COLUMN_HEADER = [
-    { key: 'name', align: 'left', display: 'Name' },
-    { key: 'price', align: 'right', display: 'Price' },
-    { key: 'taste', align: 'right', display: 'Taste' },
-    { key: 'suitable', align: 'right', display: 'Suitable' },
-    { key: 'buy', align: 'right', display: 'Buy' }
+    { key: 'name', align: 'left', display: '品項' },
+    { key: 'price', align: 'left', display: '價格' },
+    { key: 'taste', align: 'left', display: '口感' },
+    { key: 'suitable', align: 'left', display: '如何飲用' },
+    { key: 'buy', align: 'left', display: '哪裏買' }
 ];

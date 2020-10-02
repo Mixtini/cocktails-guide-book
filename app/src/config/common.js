@@ -32,9 +32,9 @@ export const ROUTE = {
     ALCOHOL_LIST: {
         key: 'alcoholList',
         path: '/alcoholList',
-        display: 'Alcohol List',
+        display: 'Find your alcohol',
         icon: <LocalBarTwoToneIcon />,
-        release: false
+        release: true
     },
     CONTACT: {
         key: 'contact',
