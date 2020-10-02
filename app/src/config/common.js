@@ -34,7 +34,7 @@ export const ROUTE = {
         path: '/alcoholList',
         display: 'Find your alcohol',
         icon: <LocalBarTwoToneIcon />,
-        release: true
+        release: false
     },
     CONTACT: {
         key: 'contact',
