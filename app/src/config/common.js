@@ -5,7 +5,7 @@ import ContactMailTwoToneIcon from '@material-ui/icons/ContactMailTwoTone';
 
 export const COMMON = {
     API_PREFIX: 'https://',
-    API_SERVICE_HOST: 'raw.githubusercontent.com/overpartylab/cocktails-guide-book/master/database/',
+    API_SERVICE_HOST: 'raw.githubusercontent.com/over-party-lab/cocktails-data-storage/master/cocktails/',
     VERSION: process.env.APP_VERSION
 };
 

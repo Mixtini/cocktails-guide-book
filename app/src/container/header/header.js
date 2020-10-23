@@ -41,11 +41,11 @@ const Header = ({ minwidth, setOpenSideMenu }) => {
                             <FacebookIcon /> 
                         </StyledIcon>
                     </InfoItem>
-                    <InfoItem>
+                    {/* <InfoItem>
                         <StyledIcon href={LINK.GITHUB} target="_blank" svgSize="2rem">
                             <GitHubIcon /> 
                         </StyledIcon>
-                    </InfoItem>
+                    </InfoItem> */}
                 </HeaderInfo>
             </AppBarContainer>
         </StyledAppBar>
