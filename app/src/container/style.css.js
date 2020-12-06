@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { STYLE } from '../config/common';
-import logo from '../assets/images/overpartylab-logo.jpg';
+import logo from '../assets/images/logo.jpg';
 
 export const MainContainer = styled.div`
     min-width: ${STYLE.MIN_WIDTH}px;

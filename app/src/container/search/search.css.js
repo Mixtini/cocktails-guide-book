@@ -58,7 +58,7 @@ export const ItemName = styled.div`
 
 export const IGPostCard = styled.div`
     margin: 10px;
-    padding-bottom: 15px;
+    /* padding-bottom: 15px; */
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;

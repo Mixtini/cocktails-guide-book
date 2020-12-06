@@ -5,6 +5,7 @@ module.exports = {
   output: {
     publicPath: '/'
   },
+  entry: ['@babel/polyfill', './src/index.js'],
   module: {
     rules: [
       {
