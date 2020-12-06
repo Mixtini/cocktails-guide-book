@@ -28,7 +28,7 @@ Object {
           <div
             class="sc-AxmLO dbEozq"
           >
-            如果喜歡我們的分享，不妨來追蹤四個研酒生所創立的 Instagram 與 Facebook 粉絲頁吧！我們會在上面不定時分享調酒以及各種酒類資訊，也歡迎隨時跟我們討論交流酒類的新知識。
+            如果喜歡我們的分享，不妨來追蹤我們 Mixtini 吧！也歡迎隨時跟我們討論交流酒類的新知識。
           </div>
         </div>
         <div
@@ -48,7 +48,7 @@ Object {
           >
             <a
               class="sc-AxirZ jLuMgh"
-              href="https://www.facebook.com/over.party.lab/"
+              href="https://www.facebook.com/Mixtini-Co-103665374941599"
               target="_blank"
             >
               <svg
@@ -68,7 +68,7 @@ Object {
             </a>
             <a
               class="sc-AxirZ jLuMgh"
-              href="https://www.instagram.com/over.party.lab/"
+              href="https://www.instagram.com/mixtini.co/"
               target="_blank"
             >
               <svg
@@ -84,30 +84,6 @@ Object {
               </svg>
               <span>
                 Instagram
-              </span>
-            </a>
-            <a
-              class="sc-AxirZ jLuMgh"
-              href="https://medium.com/@overpartylab"
-              target="_blank"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root"
-                focusable="false"
-                role="presentation"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 4h-1v9l-3-2.25L13 13V4H8v12h12z"
-                  opacity=".3"
-                />
-                <path
-                  d="M4 22h14v-2H4V6H2v14c0 1.1.9 2 2 2zm18-6V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2zM15 4h2v5l-1-.75L15 9V4zM8 4h5v9l3-2.25L19 13V4h1v12H8V4z"
-                />
-              </svg>
-              <span>
-                Medium
               </span>
             </a>
           </div>
@@ -139,7 +115,7 @@ Object {
         <div
           class="sc-AxmLO dbEozq"
         >
-          如果喜歡我們的分享，不妨來追蹤四個研酒生所創立的 Instagram 與 Facebook 粉絲頁吧！我們會在上面不定時分享調酒以及各種酒類資訊，也歡迎隨時跟我們討論交流酒類的新知識。
+          如果喜歡我們的分享，不妨來追蹤我們 Mixtini 吧！也歡迎隨時跟我們討論交流酒類的新知識。
         </div>
       </div>
       <div
@@ -159,7 +135,7 @@ Object {
         >
           <a
             class="sc-AxirZ jLuMgh"
-            href="https://www.facebook.com/over.party.lab/"
+            href="https://www.facebook.com/Mixtini-Co-103665374941599"
             target="_blank"
           >
             <svg
@@ -179,7 +155,7 @@ Object {
           </a>
           <a
             class="sc-AxirZ jLuMgh"
-            href="https://www.instagram.com/over.party.lab/"
+            href="https://www.instagram.com/mixtini.co/"
             target="_blank"
           >
             <svg
@@ -195,30 +171,6 @@ Object {
             </svg>
             <span>
               Instagram
-            </span>
-          </a>
-          <a
-            class="sc-AxirZ jLuMgh"
-            href="https://medium.com/@overpartylab"
-            target="_blank"
-          >
-            <svg
-              aria-hidden="true"
-              class="MuiSvgIcon-root"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M20 4h-1v9l-3-2.25L13 13V4H8v12h12z"
-                opacity=".3"
-              />
-              <path
-                d="M4 22h14v-2H4V6H2v14c0 1.1.9 2 2 2zm18-6V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2zM15 4h2v5l-1-.75L15 9V4zM8 4h5v9l3-2.25L19 13V4h1v12H8V4z"
-              />
-            </svg>
-            <span>
-              Medium
             </span>
           </a>
         </div>

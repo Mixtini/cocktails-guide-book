@@ -25,7 +25,11 @@ export const sendRequest = (api, option = { method: 'GET' }) => {
 };
 
 export const Api = {
-    getIngredients: `${API_SERVICE_HOST}/ingredient.json`,
-    getCocktails: `${API_SERVICE_HOST}/cocktails.json`,
-    getAlcoholList: `${API_SERVICE_HOST}/alcoholList.json`
+    GET_COCKTAILS: {
+        CLASSIC: `${API_SERVICE_HOST}/cocktails/classic.json`,
+        SIGN_OVER_PARTY_LAB: `${API_SERVICE_HOST}/cocktails/signature_overpartylab.json`
+    },
+    getIngredients: `${API_SERVICE_HOST}/alcohol/ingredient.json`,
+    getCocktails: `${API_SERVICE_HOST}/cocktails/cocktails.json`,
+    getAlcoholList: `${API_SERVICE_HOST}/alcohol/alcoholList.json`
 };

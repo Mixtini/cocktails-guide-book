@@ -4,7 +4,6 @@ import React from 'react';
 // third party component
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import CollectionsBookmarkTwoToneIcon from '@material-ui/icons/CollectionsBookmarkTwoTone';
 
 // components
 import { LogoImage, StyledIcon, ContactLink } from './contact.css.js';
@@ -38,10 +37,6 @@ const Contact = () => {
                     <StyledIcon href={LINK.INSTAGRAM} target="_blank">
                         <InstagramIcon />
                         <span>{CONTACT_TEXT.button.instagram}</span>
-                    </StyledIcon>
-                    <StyledIcon href={LINK.MEDIUM} target="_blank">
-                        <CollectionsBookmarkTwoToneIcon />
-                        <span>{CONTACT_TEXT.button.medium}</span>
                     </StyledIcon>
                 </ContactLink>
             </Item>

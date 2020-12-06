@@ -85,16 +85,16 @@ const Search = () => {
     };
 
     // fetch data
-    const getCocktailsList = () => {
-        sendRequest(Api.getCocktails)
-            .then((rsp) => {
-                const { data } = rsp;
-                setSearchPageData({ isInit: true, cocktailsList: data });
-            })
-            .catch((err) => {
-                console.error(err);
-                setSearchPageData({ isInit: true, cocktailsList: [] });
-            });
+    const getCocktailsList = async () => {
+        try {
+            const { data: classic } = await sendRequest(Api.GET_COCKTAILS.CLASSIC);
+            const { data: signOplab } = await sendRequest(Api.GET_COCKTAILS.SIGN_OVER_PARTY_LAB);
+            const cocktailData = [...classic, ...signOplab];
+            setSearchPageData({ isInit: true, cocktailsList: cocktailData });
+        } catch (err) {
+            console.error(err);
+            setSearchPageData({ isInit: true, cocktailsList: [] });
+        }
     };
 
     // event handler

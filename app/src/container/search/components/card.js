@@ -9,8 +9,8 @@ import Button from '@material-ui/core/Button';
 import {
     CardTitle,
     ItemName,
-    IGPostCard,
-    Image
+    IGPostCard
+    // Image
 } from '../search.css.js';
 
 // utils, config and assets
@@ -19,7 +19,7 @@ import SEARCH_TEXT from '../../../assets/wording/search.json';
 const Card = ({ value }) => {
     const { name: { zh, en }, igtoken } = value;
     const igPostUrl = `https://www.instagram.com/p/${igtoken}`;
-    const url = `${igPostUrl}/media/?size=l`;
+    // const url = `${igPostUrl}/media/?size=l`;
     const onClickPost = () => {
         window.open(igPostUrl, "_blank");
     };
@@ -32,12 +32,12 @@ const Card = ({ value }) => {
                 <Button
                     variant="contained"
                     onClick={onClickPost}
-                    color="primary"
+                    color="secondary"
                 >
                     {SEARCH_TEXT.button.more}
                 </Button>
             </CardTitle>
-            <Image url={url} onClick={onClickPost} />
+            {/* <Image url={url} onClick={onClickPost} /> */}
         </IGPostCard>
     );
 };

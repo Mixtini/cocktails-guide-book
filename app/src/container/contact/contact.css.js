@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import logo from '../../assets/images/overpartylab-logo.jpg';
+import logo from '../../assets/images/logo.jpg';
 
 export const LogoImage = styled.div`
     width: 300px;
