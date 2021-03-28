@@ -17,7 +17,8 @@ import {
     SearchIndicator,
     StyledSearchIcon,
     Cards,
-    StyledLink
+    StyledLink,
+    Toast
 } from './search.css.js';
 import { Container, Header, Item, Content } from '../style.css.js';
 import Card from './components/card';
@@ -30,6 +31,7 @@ import { RECOMMEND } from '../../config/search';
 import { ROUTE } from '../../config/common';
 import SEARCH_TEXT from '../../assets/wording/search.json';
 import SELECTOR from '../../assets/selector.json';
+import COMMON_TEXT from '../../assets/wording/common.json';
 
 const SEARCH_KEY = 'searchKey';
 const DEFAULT_STATE = {
@@ -162,6 +164,9 @@ const Search = () => {
 
     return (
         <Container>
+            <Toast>
+                {COMMON_TEXT.news}
+            </Toast>
             <Header data-testid={SELECTOR.SEARCH.TITLE} >
                 <div>{SEARCH_TEXT.title}</div>
             </Header>

@@ -121,3 +121,9 @@ export const ButtonGroup = styled.div`
     display: flex;
     flex-wrap: wrap;
 `;
+
+export const Toast = styled.div`
+    font-size: 16px;
+    padding: 12px;
+    background-color: #83b9ff;
+`;

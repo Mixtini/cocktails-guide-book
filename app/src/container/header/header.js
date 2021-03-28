@@ -7,7 +7,6 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import GitHubIcon from '@material-ui/icons/GitHub';
 
 // components
 import { HeaderText, HeaderInfo, InfoItem, StyledAppBar, AppBarContainer } from './header.css.js';

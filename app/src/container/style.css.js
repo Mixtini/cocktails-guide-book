@@ -4,7 +4,7 @@ import logo from '../assets/images/logo.jpg';
 
 export const MainContainer = styled.div`
     min-width: ${STYLE.MIN_WIDTH}px;
-    padding: 64px 0px;
+    padding-top: 45px;
 `;
 
 export const Container = styled.div`

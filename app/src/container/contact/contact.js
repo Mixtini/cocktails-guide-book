@@ -23,7 +23,7 @@ const Contact = () => {
                 <LogoImage />
             </Item>
             <Item>
-                <Content>{CONTACT_TEXT.content}</Content>
+                {CONTACT_TEXT.content}
             </Item>
             <Item>
                 <Content>{CONTACT_TEXT.content_recommend}</Content>

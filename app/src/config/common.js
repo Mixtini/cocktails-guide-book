@@ -34,7 +34,7 @@ export const ROUTE = {
         path: '/alcoholList',
         display: '找瓶適合你的酒',
         icon: <LocalBarTwoToneIcon />,
-        release: true
+        release: false
     },
     CONTACT: {
         key: 'contact',
