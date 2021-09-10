@@ -58,3 +58,10 @@ export const LogoImage = styled.div`
     background-repeat: no-repeat;
     background-image: url(${logo});
 `;
+
+export const Info = styled.div`
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+    padding-top: 40px;
+`;
