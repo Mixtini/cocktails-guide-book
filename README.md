@@ -1,12 +1,14 @@
 # cocktails-guide-book
 
-[![contributors](https://img.shields.io/github/contributors/overpartylab/cocktails-guide-book)](https://github.com/overpartylab/cocktails-guide-book/graphs/contributors)
-[![releases](https://img.shields.io/github/v/release/overpartylab/cocktails-guide-book)](https://github.com/overpartylab/cocktails-guide-book/releases/tag/v1.0.0-beta.1)
-[![license](https://img.shields.io/github/license/overpartylab/cocktails-guide-book)](https://github.com/overpartylab/cocktails-guide-book/blob/master/LICENSE)
+[![contributors](https://img.shields.io/github/contributors/overpartylab/cocktails-guide-book)](https://github.com/Mixtini/cocktails-guide-book/graphs/contributors)
+[![releases](https://img.shields.io/github/v/release/overpartylab/cocktails-guide-book)](https://github.com/Mixtini/cocktails-guide-book/releases/tag/v1.0.2)
+[![license](https://img.shields.io/github/license/overpartylab/cocktails-guide-book)](https://github.com/Mixtini/cocktails-guide-book/blob/master/LICENSE)
 
-![logo](doc/images/logo.jpg "logo")
+![logo](doc/images/logo.png "logo")
 
-A cocktails search portal create by [Over Party Lab](https://www.instagram.com/over.party.lab/).
+A POC cocktails search portal created by [Mixtini](https://www.instagram.com/mixtini.co).
+
+This service is the version for `Proof of Concept`. The official version is working in progress and can be visited by the same URL path.
 
 <b>User Guide</b>
 
@@ -20,7 +22,7 @@ A cocktails search portal create by [Over Party Lab](https://www.instagram.com/o
 
 <b>Portal</b>
 
-* [Over Party Lab Portal](https://overpartylab-4c6d2.web.app/)
+* [Mixtini Cocktails Search Portal](https://overpartylab-4c6d2.web.app/)
 
 ## Env Introduction
 

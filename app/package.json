@@ -1,7 +1,7 @@
 {
   "name": "cocktails-guide-book-react",
-  "version": "1.0.2",
-  "description": "A cocktails search portal create by Over Party Lab",
+  "version": "1.0.5",
+  "description": "A cocktails search portal create by Mixtini",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
